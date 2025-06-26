@@ -1,0 +1,150 @@
+/* HeroSection.module.css */
+
+/* Hero Carousel */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    font-size: 3rem;
+  }
+  
+  .overlay :is(h1, h2, p) {
+    color: white;
+    -webkit-text-stroke: 0.1px black;
+    text-shadow:
+      -1px -1px 0 black,
+       1px -1px 0 black,
+      -1px  1px 0 black,
+       1px  1px 0 black;
+  }
+  
+  .heading {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  /* CTA Bar – Mobile First */
+  .ctaBar {
+    background-color: #095ea3;
+    color: white;
+    display: flex;
+    flex-direction: column;       /* stack vertically */
+    align-items: center;          /* center items */
+    justify-content: center;
+    gap: 1rem;                    /* space between items */
+    padding: 2rem 1rem;           /* taller bar on mobile */
+    width: 100%;
+  }
+  
+  .ctaText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+  }
+  
+  .ctaCall {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .ctaCall a {
+    color: #6bb742;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .ctaLocations {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .ctaButton {
+    background-color: white;
+    color: #095ea3;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;                  /* full width on mobile */
+    transition: background 0.3s;
+    font-size: 1rem;
+  }
+  
+  .ctaButton:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Desktop Layout */
+  @media (min-width: 768px) {
+      .hero {
+          height: 87vh;
+      }
+    .ctaBar {
+      flex-direction: row;        /* row on desktop */
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;         /* slightly less tall */
+    }
+  
+    .ctaText {
+      align-items: flex-start;
+      text-align: left;
+      gap: 0.5rem;
+      margin-left: 12rem;
+    }
+  
+    .ctaCall {
+      font-size: 1.5rem;
+    }
+  
+    .ctaLocations {
+      font-size: 1.1rem;
+    }
+  
+    .ctaButton {
+      width: auto;                /* shrink to content */
+      padding: 0.75rem 5rem;
+      margin-right: 12rem;
+      font-size: 1.1rem;
+    }
+  }
+  

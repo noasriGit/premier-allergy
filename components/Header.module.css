@@ -1,0 +1,174 @@
+/* Header.module.css */
+
+/* Base Header */
+.header {
+    background-color: #ffffff;
+    padding-top: 1rem;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Logo + Contact + Hamburger Container */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  /* Logo */
+  .logo {
+    flex-shrink: 0;
+    order: 1; /* default order */
+  }
+  .logoImage {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Contact Info */
+  .contact {
+    text-align: center;
+    padding-bottom: 1rem;
+    order: 3; /* default order */
+  }
+  .phone {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #095ea3;
+    text-decoration: none;
+    display: block;
+  }
+  .phone:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Hamburger (hidden on desktop) */
+  .hamburger {
+    display: none;
+    font-size: 1.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #095ea3;
+    order: 2; /* default between logo and contact */
+  }
+  
+  /* Desktop Nav */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #095ea3;
+    padding: 1rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .navList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 3rem;
+  }
+  .navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .navLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile Dropdown Menu */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #095ea3;
+    width: 100%;
+  }
+  .mobileNavList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .mobileNavItem {
+    width: 100%;
+    text-align: center;
+  }
+  .mobileLink {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: block;
+  }
+  .mobileLink:last-child {
+    border-bottom: none;
+  }
+  .mobileLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* MOBILE STYLES */
+  @media (max-width: 768px) {
+    /* Shrink logo & text */
+    .logoImage {
+      max-width: 180px;
+    }
+    .phone {
+      font-size: 1rem;
+    }
+    .cta {
+      font-size: 0.8rem;
+    }
+  
+    /* Hide desktop nav, show hamburger */
+    .navbar {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  
+    /* Force single-row and reorder items */
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .hamburger {
+      order: 1;       /* far left */
+      margin-left: 1rem;
+    }
+    .logo {
+      order: 2;       /* center */
+      margin: 0 1rem;
+    }
+    .contact {
+      order: 3;       /* far right */
+      flex-grow: 1;
+      text-align: right;
+      margin-right: 1rem;
+    }
+  }
+  
