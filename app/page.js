@@ -33,10 +33,10 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ServicesSection />
-      <InfoSection />
+      <EthosSection />
       <PatientResourcesSection />
       <MissionSection />
-      <EthosSection />
+      <InfoSection />
     </>
   )
 }

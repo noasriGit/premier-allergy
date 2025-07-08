@@ -7,13 +7,13 @@ import styles from './ServicesSection.module.css'
 
 const services = [
   {
-    href: '/services/allergy-testing',
+    href: '/services',
     img: '/services1.jpg',
     title: 'Allergy Treatments',
     desc: 'Allergies represent the most common acute and chronic disorders affecting about 20% of population both children and adults worldwide.',
   },
   {
-    href: '/services/asthma-management',
+    href: '/services/asthma',
     img: '/services2.jpg',
     title: 'Asthma Management',
     desc: 'Asthma is a common chronic disease affecting tens of millions of Americans and a major public health problem in the US and worldwide.',

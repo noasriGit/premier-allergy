@@ -1,0 +1,131 @@
+.section {
+    background: #f7f7f7;
+    padding: 2rem 1rem;
+    text-align: center;
+    align-content: center;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+  
+  .achievements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -50px;
+    margin-bottom: 1.5rem;
+    flex-wrap: nowrap;
+    overflow-x: none;
+  }
+  
+  .achievements img {
+    transform: rotate(-5deg);
+    margin-right: -30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .locationHeader{
+      padding: 2rem;
+  }
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+    color: #333;
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+  
+  .locationCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+   
+  }
+  
+  .card {
+    background: #fff;
+    padding-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    
+  }
+  
+  .googleRating {
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: #095ea3;
+  }
+  
+  .reviews {
+    margin-bottom: 2rem;
+  }
+  
+  .reviews h3 {
+    font-size: 1.25rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .reviews p {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  .cardImage {
+    width: 100%;
+    height: auto;
+    
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .googleRatingLink {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #0072c6;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .googleRatingLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* Tablet and Up */
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .locationCards {
+      flex-direction: row;
+      justify-content:center;
+      gap: 7rem;
+    }
+  
+    .card {
+      width: 30%;
+      height: 35%;
+    }
+  
+    .achievements {
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    .achievements img {
+      transform: none;
+      margin: 0;
+    }
+    .paragraph{
+        padding-top: 1rem;
+        max-width: 60%;
+    }
+  }
+  

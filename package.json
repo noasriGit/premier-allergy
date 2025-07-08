@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "clean": "rm -rf .next node_modules && npm install"
   },
   "dependencies": {
+    "framer-motion": "^12.23.0",
     "next": "15.3.4",
     "next-seo": "6.8.0",
     "next-sitemap": "4.2.3",

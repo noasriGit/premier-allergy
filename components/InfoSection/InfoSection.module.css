@@ -1,0 +1,50 @@
+.section {
+  padding: 2rem 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.heading {
+  font-size: 1.75rem; /* ~28px on mobile */
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #efefef;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 1.125rem; /* ~18px */
+  line-height: 1.75;
+}
+
+.cardTitle {
+  background-color: #e5e5e5;
+  padding: 0.3rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .heading {
+    font-size: 1.75rem; /* ~36px for better visual anchor */
+  }
+
+  .card {
+    font-size: 1.25rem; /* ~20px */
+    padding: 2rem;
+  }
+}

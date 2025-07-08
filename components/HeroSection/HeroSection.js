@@ -8,7 +8,7 @@ import styles from './HeroSection.module.css'
 const slides = [
   {
     image: '/hero1.jpg',
-    heading: 'Expert Allergy & Asthma Care in Maryland',
+    heading: 'Maryland and Virginia’s Premier Clinics for Allergy Testing and Asthma Management',
     buttonLink: '/contact',
   },
   {
@@ -16,7 +16,7 @@ const slides = [
     heading: 'Skin Testing & Immunotherapy',
     buttonLink: '/services',
   },
-  {
+  { 
     image: '/hero3.jpg',
     heading: 'Care for All Ages',
     buttonLink: '/about',

@@ -11,6 +11,7 @@ main {
   box-sizing: border-box;
 }
 body, html {
+  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
   width: 100%;

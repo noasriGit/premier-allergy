@@ -25,6 +25,9 @@
   }
   
   .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: white;
     border-radius: 8px;
     overflow: hidden;
@@ -53,17 +56,20 @@
   
   /* Card content */
   .card h3 {
+    text-align: center;
     font-size: 1.25rem;
     margin: 1rem;
   }
   
   .card p {
+    text-align: center;
     font-size: 1rem;
     margin: 0 1rem 1rem;
   }
   
   /* Button */
   .button {
+    text-align: center;
     display: inline-block;
     margin: 0 1rem 1rem;
     padding: 0.5rem 1rem;
