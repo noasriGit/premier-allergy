@@ -51,7 +51,7 @@ export default function EthosSection() {
   return (
     <section className={styles.section} aria-labelledby="ethos-title">
       <h2 id="ethos-title" className={styles.heading}>
-        Trusted Allergy & Asthma Care with a Proven Track Record
+        Trusted Allergy &amp; Asthma Care with a Proven Track Record
       </h2>
 
       {/* Achievements */}
@@ -133,8 +133,8 @@ export default function EthosSection() {
       {/* Reviews */}
       <div className={styles.reviews}>
         <h3>What Our Patients Say</h3>
-        <p>"Truly the best allergist I've ever been to. Dr. Bocek is incredibly thorough and kind."</p>
-        <p>"Amazing staff and spotless facilities. I finally have relief from my asthma!"</p>
+        <p>&quot;Truly the best allergist I&apos;ve ever been to. Dr. Bocek is incredibly thorough and kind.&quot;</p>
+        <p>&quot;Amazing staff and spotless facilities. I finally have relief from my asthma!&quot;</p>
       </div>
 
       {/* CTA */}
