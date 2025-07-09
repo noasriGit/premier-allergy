@@ -170,6 +170,45 @@
       text-align: right;
       margin-right: 1rem;
     }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      position: relative;
+    }
+  
+    .hamburger {
+      display: block;
+      order: 1;
+      z-index: 2;
+    }
+  
+    .logo {
+      order: 2;
+      display: block;
+      z-index: 2;
+    }
+  
+    .logoImage {
+      max-width: 180px;
+      height: auto;
+    }
+  
+    .contact {
+      order: 3;
+      text-align: right;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+  
+    .phone {
+      font-size: 1rem;
+    }
+  
+    .cta {
+      display: none; /* Optional: hide to avoid text crowding */
+    }
   }
   .arrow {
     display: inline-block;
