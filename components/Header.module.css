@@ -25,7 +25,7 @@
   /* Logo */
   .logo {
     flex-shrink: 0;
-    order: 1; /* default order */
+    order: 2; /* default order */
   }
   .logoImage {
     max-width: 260px;
@@ -57,12 +57,12 @@
   /* Hamburger (hidden on desktop) */
   .hamburger {
     display: none;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
     color: #095ea3;
-    order: 2; /* default between logo and contact */
+    order: 1; /* default between logo and contact */
   }
   
   /* Desktop Nav */
@@ -131,7 +131,7 @@
   @media (max-width: 768px) {
     /* Shrink logo & text */
     .logoImage {
-      max-width: 180px;
+      max-width: 150px;
     }
     .phone {
       font-size: 1rem;
@@ -175,7 +175,7 @@
     }
   
     .logoImage {
-      max-width: 180px;
+      max-width: 150px;
       height: auto;
     }
   
@@ -184,7 +184,7 @@
       text-align: right;
       font-size: 0.8rem;
       flex-shrink: 1;
-        max-width: 130px; /* Limits text overflow */
+        max-width: 110px; /* Limits text overflow */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
