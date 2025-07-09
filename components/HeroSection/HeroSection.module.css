@@ -46,7 +46,7 @@
   
   .overlay :is(h1, h2, p) {
     color: white;
-    -webkit-text-stroke: 1px #095ea3;
+    -webkit-text-stroke: 1px #fbfbfb;
     text-shadow:
       -1px -1px 0 #095ea3,
        1px -1px 0 #095ea3,
