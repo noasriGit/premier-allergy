@@ -7,10 +7,20 @@ import styles from './Header.module.css'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+
+  const handleToggleServices = () => setServicesOpen((prev) => !prev)
 
   const navLinks = [
     { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
+    {
+      label: 'Services',
+      dropdown: [
+        { href: '/services/asthma', label: 'Asthma Management' },
+        { href: '/services/allergy-testing', label: 'Allergy Testing' },
+        { href: '/services/immunotherapy', label: 'Immunotherapy' },
+      ],
+    },
     { href: '/locations', label: 'Locations' },
     { href: '/forms', label: 'Forms' },
     { href: '/insurance', label: 'Insurance' },
@@ -44,7 +54,7 @@ export default function Header() {
           <span className={styles.cta}>Call and make an appointment</span>
         </div>
 
-        {/* Hamburger Icon (mobile only) */}
+        {/* Hamburger Icon */}
         <button
           type="button"
           className={styles.hamburger}
@@ -58,31 +68,79 @@ export default function Header() {
       {/* Desktop Nav */}
       <nav className={styles.navbar} aria-label="Primary navigation">
         <ul className={styles.navList}>
-          {navLinks.map(({ href, label }) => (
-            <li key={href} className={styles.navItem}>
-              <Link href={href} className={styles.navLink}>
-                {label}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map((link) =>
+            link.dropdown ? (
+              <li key={link.label} className={styles.navItem}>
+                <button
+                  className={styles.navLink}
+                  onClick={handleToggleServices}
+                  aria-haspopup="true"
+                  aria-expanded={servicesOpen}
+                >
+                  {link.label}
+                  <span
+                    className={`${styles.arrow} ${servicesOpen ? styles.arrowUp : styles.arrowDown}`}
+                  />
+                </button>
+                <ul className={`${styles.dropdownMenu} ${servicesOpen ? styles.showDropdown : ''}`}>
+                  {link.dropdown.map((sub) => (
+                    <li key={sub.href}>
+                      <Link href={sub.href} className={styles.dropdownLink}>
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li key={link.href} className={styles.navItem}>
+                <Link href={link.href} className={styles.navLink}>
+                  {link.label}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
       </nav>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <nav className={styles.mobileMenu} aria-label="Mobile navigation">
           <ul className={styles.mobileNavList}>
-            {navLinks.map(({ href, label }) => (
-              <li key={href} className={styles.mobileNavItem}>
-                <Link
-                  href={href}
-                  className={styles.mobileLink}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) =>
+              link.dropdown ? (
+                <li key={link.label} className={styles.mobileNavItem}>
+                  <button
+                    onClick={handleToggleServices}
+                    className={styles.mobileLink}
+                    aria-haspopup="true"
+                    aria-expanded={servicesOpen}
+                  >
+                    {link.label}
+                    <span
+                      className={`${styles.arrow} ${servicesOpen ? styles.arrowUp : styles.arrowDown}`}
+                    />
+                  </button>
+                  {servicesOpen && (
+                    <ul className={styles.mobileDropdown}>
+                      {link.dropdown.map((sub) => (
+                        <li key={sub.href}>
+                          <Link href={sub.href} className={styles.mobileSubLink}>
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ) : (
+                <li key={link.href} className={styles.mobileNavItem}>
+                  <Link href={link.href} className={styles.mobileLink} onClick={() => setMenuOpen(false)}>
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         </nav>
       )}

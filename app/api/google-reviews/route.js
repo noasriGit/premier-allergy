@@ -15,10 +15,12 @@ export async function GET(request) {
 
     const googleApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=rating,user_ratings_total&key=${apiKey}`;
 
-    // Create an https agent that disables SSL verification (for local testing ONLY)
-    const agent = new https.Agent({ rejectUnauthorized: false });
+    // ✅ Only use custom agent in development to bypass SSL verification errors
+    const isDev = process.env.NODE_ENV === 'development';
+    const agent = isDev ? new https.Agent({ rejectUnauthorized: false }) : undefined;
 
-    const response = await fetch(googleApiUrl, { agent });
+    const fetchOptions = agent ? { agent } : undefined;
+    const response = await fetch(googleApiUrl, fetchOptions);
 
     if (!response.ok) {
       throw new Error(`Google API returned status ${response.status}`);

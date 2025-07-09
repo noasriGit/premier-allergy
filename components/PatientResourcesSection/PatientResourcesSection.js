@@ -14,7 +14,7 @@ export default function PatientResourcesSection() {
       <div className={styles.cardGrid}>
         <div className={styles.card}>
           <Image
-            src="/resources/forms.jpg"
+            src="/resources/forms.png"
             alt="Patient Forms"
             width={300}
             height={200}
@@ -27,7 +27,7 @@ export default function PatientResourcesSection() {
 
         <div className={styles.card}>
           <Image
-            src="/resources/portal.jpg"
+            src="/resources/portal.png"
             alt="Patient Portal"
             width={300}
             height={200}
@@ -40,7 +40,7 @@ export default function PatientResourcesSection() {
 
         <div className={styles.card}>
           <Image
-            src="/resources/updates.jpg"
+            src="/resources/updates.png"
             alt="News and Updates"
             width={300}
             height={200}
