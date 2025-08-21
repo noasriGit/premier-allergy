@@ -19,7 +19,7 @@ export default function BeforeYouVisitPage() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Before Your First Visit</h1>
           <p className={styles.heroSubtitle}>
-            Welcome to Premier Allergy and Asthma Centers! We're here to help you prepare for your appointment.
+            Welcome to Premier Allergy and Asthma Centers! We&apos;re here to help you prepare for your appointment.
           </p>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function BeforeYouVisitPage() {
               </p>
               <div className={styles.contactInfo}>
                 <p><strong>Need Help?</strong> Please call our administrator at <a href="tel:8555287348">855-5CURE4U (528-7348)</a> if you have not received email with the link and your login credentials within 24 hours of scheduling your appointment.</p>
-                <p><em>Also, please be sure to check your "spam" or "junk" mailboxes if you have not received this email.</em></p>
+                <p><em>Also, please be sure to check your &ldquo;spam&rdquo; or &ldquo;junk&rdquo; mailboxes if you have not received this email.</em></p>
               </div>
             </div>
           </div>
@@ -76,8 +76,8 @@ export default function BeforeYouVisitPage() {
             <div className={styles.stepContent}>
               <h3>Complete Forms in Advance</h3>
               <p>
-                Please carefully review all information in our "new patient registration packet" and 
-                complete the included "patient registration form". The packet contains important 
+                Please carefully review all information in our &ldquo;new patient registration packet&rdquo; and 
+                complete the included &ldquo;patient registration form&rdquo;. The packet contains important 
                 information about your visit and our policies.
               </p>
               <p>
@@ -183,7 +183,7 @@ export default function BeforeYouVisitPage() {
         <div className={styles.ctaContent}>
           <h2>Ready for Your Visit?</h2>
           <p>
-            If you have any questions about preparing for your appointment, please don't hesitate to contact us.
+            If you have any questions about preparing for your appointment, please don&apos;t hesitate to contact us.
           </p>
           <div className={styles.ctaButtons}>
             <a href="tel:8555287348" className={styles.ctaButton}>

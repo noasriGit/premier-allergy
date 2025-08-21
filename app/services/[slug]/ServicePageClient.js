@@ -178,7 +178,7 @@ export default function ServicePageClient({ service, availableSections }) {
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaTitle}>Ready to Get Relief?</h2>
             <p className={styles.ctaText}>
-              Don't let {service.title.toLowerCase()} control your life. Our expert team is here to help you find the right treatment plan.
+              Don&apos;t let {service.title.toLowerCase()} control your life. Our expert team is here to help you find the right treatment plan.
             </p>
             <div className={styles.ctaButtons}>
               <Link href="/contact" className={styles.ctaButtonPrimary}>

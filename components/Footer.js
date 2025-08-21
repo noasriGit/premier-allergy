@@ -1,4 +1,6 @@
 // components/Footer.js
+import Link from 'next/link'
+
 export default function Footer() {
     return (
       <footer style={footerStyle}>
@@ -12,7 +14,7 @@ export default function Footer() {
             <h5>Quick Links</h5>
             <ul style={linkListStyle}>
               <li><a href="/about">About Us</a></li>
-              <li><a href="/services">Services</a></li>
+              <li><Link href="/services">Services</Link></li>
               <li><a href="/locations">Locations</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>

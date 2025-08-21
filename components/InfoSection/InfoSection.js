@@ -147,7 +147,7 @@ export default function InfoSection() {
           viewport={{ once: true }}
         >
           <p className={styles.ctaText}>
-            Experience the quality of care you've been looking for. Schedule your consultation today.
+            Experience the quality of care you&apos;ve been looking for. Schedule your consultation today.
           </p>
         </motion.div>
       </div>

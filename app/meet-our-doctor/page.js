@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './page.module.css'
 
 export const metadata = {
@@ -51,7 +52,7 @@ export default function MeetOurDoctorPage() {
                  <li>PhD: Weizmann Institute of Science, Israel (Allergy/Immunology)</li>
                  <li>Residency: Department of Medicine, SUNY Stony Brook, NY</li>
                  <li>Fellowship: National Institute of Allergy and Infectious Diseases (NIAID), NIH</li>
-                 <li>Additional Training: Walter Reed Army Medical Center & Children's National Hospital</li>
+                 <li>Additional Training: Walter Reed Army Medical Center & Children&apos;s National Hospital</li>
                  <li>Board Certification: American Board of Internal Medicine & Allergy/Immunology</li>
                </ul>
              </div>
@@ -163,9 +164,9 @@ export default function MeetOurDoctorPage() {
                          <div className={styles.testimonialCard}>
                <div className={styles.testimonialStars}>★★★★★</div>
                <p className={styles.testimonialText}>
-                 "Dr. Bocek is incredibly knowledgeable and caring. He took the time 
+                 &ldquo;Dr. Bocek is incredibly knowledgeable and caring. He took the time 
                  to understand my complex allergy history and developed a treatment plan 
-                 that has significantly improved my quality of life."
+                 that has significantly improved my quality of life.&rdquo;
                </p>
                <p className={styles.testimonialAuthor}>- Sarah M.</p>
              </div>
@@ -173,9 +174,9 @@ export default function MeetOurDoctorPage() {
              <div className={styles.testimonialCard}>
                <div className={styles.testimonialStars}>★★★★★</div>
                <p className={styles.testimonialText}>
-                 "After struggling with asthma for years, Dr. Bocek helped me get it 
+                 &ldquo;After struggling with asthma for years, Dr. Bocek helped me get it 
                  under control. His expertise and patience made all the difference in 
-                 my treatment journey."
+                 my treatment journey.&rdquo;
                </p>
                <p className={styles.testimonialAuthor}>- Michael R.</p>
              </div>
@@ -183,9 +184,9 @@ export default function MeetOurDoctorPage() {
              <div className={styles.testimonialCard}>
                <div className={styles.testimonialStars}>★★★★★</div>
                <p className={styles.testimonialText}>
-                 "The immunotherapy treatment plan Dr. Bocek created for my seasonal 
+                 &ldquo;The immunotherapy treatment plan Dr. Bocek created for my seasonal 
                  allergies has been life-changing. I can finally enjoy outdoor activities 
-                 without constant symptoms."
+                 without constant symptoms.&rdquo;
                </p>
                <p className={styles.testimonialAuthor}>- Jennifer L.</p>
              </div>
@@ -205,9 +206,9 @@ export default function MeetOurDoctorPage() {
             <a href="/contact" className={styles.ctaButton}>
               Schedule Appointment
             </a>
-            <a href="/services" className={styles.ctaButtonSecondary}>
+            <Link href="/services" className={styles.ctaButtonSecondary}>
               View Our Services
-            </a>
+            </Link>
           </div>
         </div>
       </section>
