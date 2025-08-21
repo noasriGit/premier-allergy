@@ -39,6 +39,7 @@ export default function Footer() {
     padding: '2rem 1rem 1rem',
     marginTop: '3rem',
     fontSize: '0.9rem',
+    color: '#000000',
   };
   
   const footerContentStyle = {
