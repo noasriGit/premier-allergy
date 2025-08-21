@@ -6,32 +6,186 @@ import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
+// Star Rating Component
+const StarRating = ({ rating, reviewCount, isLoading, error, className }) => {
+  const renderStars = (rating) => {
+    const stars = []
+    const fullStars = Math.floor(rating)
+    const hasHalfStar = rating % 1 !== 0
+    
+    // Full stars
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(
+        <svg key={`full-${i}`} className={styles.starFull} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      )
+    }
+    
+    // Half star
+    if (hasHalfStar) {
+      stars.push(
+        <svg key="half" className={styles.starHalf} viewBox="0 0 24 24" fill="currentColor">
+          <defs>
+            <linearGradient id="halfStar">
+              <stop offset="50%" stopColor="currentColor"/>
+              <stop offset="50%" stopColor="#e0e0e0"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#halfStar)" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      )
+    }
+    
+    // Empty stars
+    const emptyStars = 5 - Math.ceil(rating)
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(
+        <svg key={`empty-${i}`} className={styles.starEmpty} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      )
+    }
+    
+    return stars
+  }
+
+  if (isLoading) {
+    return (
+      <div className={`${styles.ratingContainer} ${className}`}>
+        <div className={styles.starsContainer}>
+          {[...Array(5)].map((_, i) => (
+            <svg key={i} className={styles.starSkeleton} viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          ))}
+        </div>
+        <span className={styles.loadingText}>Loading...</span>
+      </div>
+    )
+  }
+
+  if (error || !rating) {
+    return (
+      <div className={`${styles.ratingContainer} ${className}`}>
+        <div className={styles.starsContainer}>
+          {[...Array(5)].map((_, i) => (
+            <svg key={i} className={styles.starEmpty} viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          ))}
+        </div>
+        <span className={styles.errorText}>Rating unavailable</span>
+      </div>
+    )
+  }
+
+  return (
+    <div className={`${styles.ratingContainer} ${className}`}>
+      <div className={styles.starsContainer}>
+        {renderStars(rating)}
+      </div>
+      <div className={styles.ratingText}>
+        <span className={styles.ratingValue}>{rating}</span>
+        <span className={styles.reviewCount}>({reviewCount} reviews)</span>
+      </div>
+    </div>
+  )
+}
+
 export default function EthosSection() {
   const [germantownReviews, setGermantownReviews] = useState(null)
   const [manassasReviews, setManassasReviews] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState(null)
   const achievementsRef = useRef(null)
   const isInView = useInView(achievementsRef, { once: true, margin: '0px 0px -100px 0px' })
 
+  const locations = [
+    {
+      id: 'germantown',
+      name: 'Germantown, MD',
+      address: '20528 Boland Farm Rd, Suite 214',
+      city: 'Germantown, MD 20876',
+      phone: '(1-855-528-7348)',
+      hours: 'Mon-Fri: 8AM-5PM',
+      image: '/germantown.png',
+      alt: 'Germantown Clinic Exterior',
+      placeId: 'ChIJk_JrOhUstokRsZ_yFXoEOfk',
+      googleMapsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJk_JrOhUstokRsZ_yFXoEOfk',
+      directionsUrl: 'https://maps.google.com/?q=20528+Boland+Farm+Rd+Suite+214+Germantown+MD+20876'
+    },
+    {
+      id: 'manassas',
+      name: 'Manassas, VA',
+      address: '8100 Ashton Avenue, Suite 207B',
+      city: 'Manassas, VA 20109',
+      phone: '(1-855-528-7348)',
+      hours: 'Mon-Fri: 8AM-5PM',
+      image: '/manassas.png',
+      alt: 'Manassas Clinic Building',
+      placeId: 'ChIJ034G_AJdtokRKExjpkLlKC0',
+      googleMapsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJ034G_AJdtokRKExjpkLlKC0',
+      directionsUrl: 'https://maps.google.com/?q=8100+Ashton+Avenue+Suite+207B+Manassas+VA+20109'
+    }
+  ]
+
   useEffect(() => {
     const fetchReviews = async () => {
-      const placeIds = {
-        germantown: 'ChIJk_JrOhUstokRsZ_yFXoEOfk',
-        manassas: 'ChIJ034G_AJdtokRKExjpkLlKC0'
-      }
+      setIsLoading(true)
+      setError(null)
 
-      const fetchPlace = async (placeId) => {
-        const res = await fetch(`/api/google-reviews?placeId=${placeId}`)
-        const data = await res.json()
-        return data
+      const fetchPlace = async (placeId, retries = 2) => {
+        for (let attempt = 0; attempt <= retries; attempt++) {
+          try {
+            const res = await fetch(`/api/google-reviews?placeId=${placeId}`)
+            if (!res.ok) {
+              throw new Error(`HTTP error! status: ${res.status}`)
+            }
+            const data = await res.json()
+            
+            // Validate the response data
+            if (data.error) {
+              throw new Error(data.error)
+            }
+            
+            // Check if we have valid rating data
+            if (data.rating && data.user_ratings_total) {
+              return data
+            } else {
+              console.warn(`No rating data available for ${placeId}`)
+              return null
+            }
+          } catch (err) {
+            console.error(`Error fetching reviews for ${placeId} (attempt ${attempt + 1}):`, err)
+            if (attempt === retries) {
+              return null
+            }
+            // Wait before retrying (exponential backoff)
+            await new Promise(resolve => setTimeout(resolve, 1000 * Math.pow(2, attempt)))
+          }
+        }
+        return null
       }
 
       try {
-        const germantown = await fetchPlace(placeIds.germantown)
-        const manassas = await fetchPlace(placeIds.manassas)
+        const [germantown, manassas] = await Promise.all([
+          fetchPlace(locations[0].placeId),
+          fetchPlace(locations[1].placeId)
+        ])
+        
         setGermantownReviews(germantown)
         setManassasReviews(manassas)
+        
+        // Set error if both locations failed
+        if (!germantown && !manassas) {
+          setError('Unable to load reviews at this time')
+        }
       } catch (err) {
         console.error('Error fetching Google Reviews:', err)
+        setError('Unable to load reviews at this time')
+      } finally {
+        setIsLoading(false)
       }
     }
 
@@ -48,97 +202,166 @@ export default function EthosSection() {
     { src: '/achievements/award7.jpg', alt: 'Washingtonian 2015 Top Doctor Award' }
   ]
 
+  const getReviewsForLocation = (locationId) => {
+    if (locationId === 'germantown') return germantownReviews
+    if (locationId === 'manassas') return manassasReviews
+    return null
+  }
+
   return (
-    <section className={styles.section} aria-labelledby="ethos-title">
-      <h2 id="ethos-title" className={styles.heading}>
-        Trusted Allergy &amp; Asthma Care with a Proven Track Record
-      </h2>
+    <section id="ethos-section" className={styles.section} aria-labelledby="ethos-title">
+      <div className={styles.container}>
+        <h2 id="ethos-title" className={styles.heading}>
+          Trusted Allergy &amp; Asthma Care with a Proven Track Record
+        </h2>
 
-      {/* Achievements */}
-      <div className={styles.achievements} ref={achievementsRef}>
-        {achievementImages.map((img, i) => (
-          <motion.div
-            key={i}
-            initial={{ scale: 1 }}
-            animate={isInView ? { scale: [1, 1.2, 1] } : {}}
-            transition={{
-              delay: i * 0.2,
-              duration: 0.6,
-              ease: 'easeInOut'
-            }}
-          >
-            <Image src={img.src} alt={img.alt} width={125} height={125} priority />
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Paragraph */}
-      <p className={styles.paragraph}>
-        At Premier Allergy and Asthma Centers, we are dedicated to providing exceptional care with compassion and expertise. Our board-certified team offers cutting-edge treatments in a supportive environment, serving both pediatric and adult patients across Maryland and Virginia.
-      </p>
-
-      <h2 className={styles.locationHeader}>Our Locations</h2>
-
-      {/* Location Cards */}
-      <div className={styles.locationCards}>
-        <div className={styles.card}>
-          <Image
-            src="/germantown.png"
-            alt="Germantown Clinic Exterior"
-            width={600}
-            height={250}
-            className={styles.cardImage}
-            priority
-          />
-          <h3>Germantown, MD</h3>
-          <p>20528 Boland Farm Rd, Suite 214<br />Germantown, MD 20876</p>
-          {germantownReviews && (
-            <a
-              href="https://www.google.com/maps/place/?q=place_id:ChIJk_JrOhUstokRsZ_yFXoEOfk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.googleRatingLink}
-              aria-label={`Germantown Google rating: ${germantownReviews.rating} stars from ${germantownReviews.user_ratings_total} reviews`}
+        {/* Achievements */}
+        <div className={styles.achievements} ref={achievementsRef}>
+          {achievementImages.map((img, i) => (
+            <motion.div
+              key={i}
+              initial={{ scale: 1 }}
+              animate={isInView ? { scale: [1, 1.2, 1] } : {}}
+              transition={{
+                delay: i * 0.2,
+                duration: 0.6,
+                ease: 'easeInOut'
+              }}
             >
-              ⭐ {germantownReviews.rating} ({germantownReviews.user_ratings_total} reviews)
-            </a>
-          )}
+              <Image 
+                src={img.src} 
+                alt={img.alt} 
+                width={125} 
+                height={125} 
+                priority 
+                className={styles.achievementImage}
+              />
+            </motion.div>
+          ))}
         </div>
 
-        <div className={styles.card}>
-          <Image
-            src="/manassas.png"
-            alt="Manassas Clinic Building"
-            width={600}
-            height={250}
-            className={styles.cardImage}
-            priority
-          />
-          <h3>Manassas, VA</h3>
-          <p>8100 Ashton Avenue, Suite 207B<br />Manassas, VA 20109</p>
-          {manassasReviews && (
-            <a
-              href="https://www.google.com/maps/place/?q=place_id:ChIJ034G_AJdtokRKExjpkLlKC0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.googleRatingLink}
-              aria-label={`Manassas Google rating: ${manassasReviews.rating} stars from ${manassasReviews.user_ratings_total} reviews`}
-            >
-              ⭐ {manassasReviews.rating} ({manassasReviews.user_ratings_total} reviews)
-            </a>
-          )}
+        {/* Paragraph */}
+        <p className={styles.paragraph}>
+          At Premier Allergy and Asthma Centers, we are dedicated to providing exceptional care with compassion and expertise. Our board-certified team offers cutting-edge treatments in a supportive environment, serving both pediatric and adult patients across Maryland and Virginia.
+        </p>
+
+        <h2 className={styles.locationHeader}>Our Locations</h2>
+
+        {/* Location Cards */}
+        <div className={styles.locationCards}>
+          {locations.map((location) => {
+            const reviews = getReviewsForLocation(location.id)
+            
+            return (
+              <motion.article 
+                key={location.id}
+                className={styles.card}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className={styles.cardImageContainer}>
+                  <Image
+                    src={location.image}
+                    alt={location.alt}
+                    width={600}
+                    height={250}
+                    className={styles.cardImage}
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className={styles.cardOverlay}>
+                    <span className={styles.locationBadge}>{location.name}</span>
+                  </div>
+                </div>
+
+                <div className={styles.cardContent}>
+                  <h3 className={styles.locationName}>{location.name}</h3>
+                  
+                  <address className={styles.address}>
+                    <p className={styles.streetAddress}>{location.address}</p>
+                    <p className={styles.cityState}>{location.city}</p>
+                  </address>
+
+                  <div className={styles.contactInfo}>
+                    <a 
+                      href={`tel:${location.phone.replace(/\D/g, '')}`}
+                      className={styles.phoneLink}
+                      aria-label={`Call ${location.name} at ${location.phone}`}
+                    >
+                      <span aria-hidden="true">📞</span>
+                      {location.phone}
+                    </a>
+                    
+                    <p className={styles.hours}>
+                      <span aria-hidden="true">🕒</span>
+                      {location.hours}
+                    </p>
+                  </div>
+
+                  {/* Google Rating */}
+                  <div className={styles.ratingSection}>
+                    <a
+                      href={location.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.googleRatingLink}
+                      aria-label={`View ${location.name} on Google Maps`}
+                    >
+                      <StarRating
+                        rating={reviews?.rating}
+                        reviewCount={reviews?.user_ratings_total}
+                        isLoading={isLoading}
+                        error={error}
+                        className={styles.starRating}
+                      />
+                    </a>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className={styles.cardActions}>
+                    <a
+                      href={location.directionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.actionButton}
+                      aria-label={`Get directions to ${location.name}`}
+                    >
+                      <span aria-hidden="true">📍</span>
+                      Get Directions
+                    </a>
+                    
+                    <a
+                      href="/contact"
+                      className={`${styles.actionButton} ${styles.primaryButton}`}
+                      aria-label={`Schedule appointment at ${location.name}`}
+                    >
+                      <span aria-hidden="true">📅</span>
+                      Schedule Visit
+                    </a>
+                  </div>
+                </div>
+              </motion.article>
+            )
+          })}
+        </div>
+
+        {/* Reviews */}
+        <div className={styles.reviews}>
+          <h3 className={styles.reviewsTitle}>What Our Patients Say</h3>
+          <div className={styles.testimonials}>
+            <blockquote className={styles.testimonial}>
+              <p>&quot;Truly the best allergist I&apos;ve ever been to. Dr. Bocek is incredibly thorough and kind.&quot;</p>
+              <cite>- Sarah M., Germantown</cite>
+            </blockquote>
+            <blockquote className={styles.testimonial}>
+              <p>&quot;Amazing staff and spotless facilities. I finally have relief from my asthma!&quot;</p>
+              <cite>- Michael R., Manassas</cite>
+            </blockquote>
+          </div>
         </div>
       </div>
-
-      {/* Reviews */}
-      <div className={styles.reviews}>
-        <h3>What Our Patients Say</h3>
-        <p>&quot;Truly the best allergist I&apos;ve ever been to. Dr. Bocek is incredibly thorough and kind.&quot;</p>
-        <p>&quot;Amazing staff and spotless facilities. I finally have relief from my asthma!&quot;</p>
-      </div>
-
-      {/* CTA */}
-      {/* <CTAComponent /> */}
     </section>
   )
 }

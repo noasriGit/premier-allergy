@@ -1,29 +1,155 @@
-
+'use client'
 
 import styles from './InfoSection.module.css'
+import { motion } from 'framer-motion'
 
 export default function InfoSection() {
+  const infoSections = [
+    {
+      id: 'welcome',
+      title: 'Welcome to Premier Allergy & Asthma Centers',
+      content: 'Our centers of excellence provide comprehensive diagnosis and treatment of pediatric and adult asthma and allergic disorders. We combine the newest advances in medicine with personalized care to improve your quality of life.',
+      icon: '🏥'
+    },
+    {
+      id: 'expertise',
+      title: 'Expert Care Team',
+      content: 'Led by Dr. Petr Bocek, MD PhD FAAAAI, our friendly and dedicated staff is here to help educate you and your children. We truly care and treat every patient like family.',
+      icon: '👨‍⚕️'
+    },
+    {
+      id: 'approach',
+      title: 'Our Patient-Centered Approach',
+      content: 'We take the time to provide all the information you need to understand your condition and feel comfortable with your personalized treatment plan. Every care plan is tailored to your specific health needs.',
+      icon: '💙'
+    },
+    {
+      id: 'locations',
+      title: 'Serving Maryland & Virginia',
+      content: 'We provide comprehensive allergy and asthma testing, diagnosis, and treatment for patients throughout the region.',
+      icon: '📍'
+    }
+  ]
+
+  const serviceAreas = {
+    maryland: {
+      title: 'Maryland Service Areas',
+      areas: [
+        'Germantown',
+        'Gaithersburg', 
+        'Montgomery Village',
+        'Rockville',
+        'Clarksburg',
+        'Montgomery County'
+      ]
+    },
+    virginia: {
+      title: 'Virginia Service Areas',
+      areas: [
+        'Manassas',
+        'Manassas Park',
+        'Gainesville',
+        'Centreville',
+        'Haymarket',
+        'Bristow',
+        'Prince William County',
+        'Loudoun County',
+        'Fairfax County'
+      ]
+    }
+  }
+
   return (
     <section className={styles.section} aria-labelledby="info-heading">
-      <div className={styles.cards}>
-        <article className={styles.cardTitle}>
-      <h2 id="info-heading" className={styles.heading}>
-      Board-Certified Allergy & Asthma Specialists Serving Maryland & Virginia Families
-      </h2>
-      </article>
-
-      
-        <article className={styles.card}>
-          <p>
-            Welcome to our centers of excellence for diagnosis and treatment of pediatric and adult asthma and allergic and immunologic disorders. At Premier Allergy and Asthma Centers we provide our patients with the newest advances in medicine and medical research to better diagnose, treat and manage your disorders and to improve your quality of life. Our physician Dr. Petr Bocek, MD PhD FAAAAI together with our friendly, dedicated staff is here to help and educate you and your children. At Premier Allergy and Asthma Centers we truly care and treat you like family. We take the time to give you all the information you need to better understand your condition and to feel comfortable with the treatment plan we recommend for you or your child based on the specific and individual health care needs. Come to experience the quality of care you have been looking for.
+      <div className={styles.container}>
+        <motion.div
+          className={styles.header}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 id="info-heading" className={styles.heading}>
+            Board-Certified Allergy & Asthma Specialists
+          </h2>
+          <p className={styles.subtitle}>
+            Serving Maryland & Virginia Families with Excellence in Care
           </p>
-        </article>
+        </motion.div>
 
-        <article className={styles.card}>
-          <p>
-            At our allergy and asthma clinics we provide allergy and asthma testing, diagnosis and treatment for adult and pediatric patients living in Germantown, Gaithersburg, Montgomery Village, Rockville, Clarksburg and surrounding areas of Montgomery County, Maryland as well as Manassas, Manassas Park, Gainsville, Centerville, Haymarket, Bristow and surrounding areas of Prince William, Loudoun and Fairfax Counties, Virginia.
+        <div className={styles.contentGrid}>
+          {/* Main Information Cards */}
+          <div className={styles.infoCards}>
+            {infoSections.map((section, index) => (
+              <motion.article
+                key={section.id}
+                className={styles.infoCard}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className={styles.cardHeader}>
+                  <span className={styles.cardIcon} aria-hidden="true">
+                    {section.icon}
+                  </span>
+                  <h3 className={styles.cardTitle}>{section.title}</h3>
+                </div>
+                <p className={styles.cardContent}>{section.content}</p>
+              </motion.article>
+            ))}
+          </div>
+
+          {/* Service Areas */}
+          <motion.div
+            className={styles.serviceAreas}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <h3 className={styles.areasTitle}>Our Service Areas</h3>
+            
+            <div className={styles.areasGrid}>
+              <div className={styles.areaCard}>
+                <h4 className={styles.areaCardTitle}>
+                  <span className={styles.areaIcon} aria-hidden="true">🏛️</span>
+                  {serviceAreas.maryland.title}
+                </h4>
+                <ul className={styles.areaList}>
+                  {serviceAreas.maryland.areas.map((area, index) => (
+                    <li key={index} className={styles.areaItem}>{area}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className={styles.areaCard}>
+                <h4 className={styles.areaCardTitle}>
+                  <span className={styles.areaIcon} aria-hidden="true">🏛️</span>
+                  {serviceAreas.virginia.title}
+                </h4>
+                <ul className={styles.areaList}>
+                  {serviceAreas.virginia.areas.map((area, index) => (
+                    <li key={index} className={styles.areaItem}>{area}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Call to Action */}
+        <motion.div
+          className={styles.ctaSection}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className={styles.ctaText}>
+            Experience the quality of care you've been looking for. Schedule your consultation today.
           </p>
-        </article>
+        </motion.div>
       </div>
     </section>
   )

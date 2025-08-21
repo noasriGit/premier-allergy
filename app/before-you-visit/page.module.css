@@ -1,0 +1,390 @@
+.container {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 160px 20px 80px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Welcome Section */
+.welcomeSection {
+  padding: 80px 20px;
+  background: white;
+}
+
+.welcomeContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcomeContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 30px;
+}
+
+.welcomeText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* Preparation Section */
+.preparationSection {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.preparationContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.preparationContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.stepCard {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-2px);
+}
+
+.stepNumber {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.stepContent h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.stepContent p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+.contactInfo {
+  background: #f1f5f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.contactInfo p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.contactInfo a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contactInfo a:hover {
+  text-decoration: underline;
+}
+
+/* Important Information Section */
+.importantSection {
+  padding: 80px 20px;
+  background: white;
+}
+
+.importantContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.importantContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.infoCard {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+}
+
+.infoCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.infoCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+/* Links Section */
+.linksSection {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.linksContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.linksContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.linkCard {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.linkCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.linkCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.linkCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ctaContent p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: white;
+  color: var(--primary-color);
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: white;
+  padding: 15px 30px;
+  border: 2px solid white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.ctaButtonSecondary:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .welcomeContent h2,
+  .preparationContent h2,
+  .importantContent h2,
+  .linksContent h2,
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+
+  .stepCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .stepNumber {
+    align-self: center;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButton,
+  .ctaButtonSecondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 100px 15px 60px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .welcomeSection,
+  .preparationSection,
+  .importantSection,
+  .linksSection,
+  .ctaSection {
+    padding: 60px 15px;
+  }
+
+  .stepCard {
+    padding: 30px 20px;
+  }
+
+  .infoCard,
+  .linkCard {
+    padding: 25px 20px;
+  }
+}

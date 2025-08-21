@@ -31,8 +31,7 @@ export default function Footer() {
       </footer>
     );
   }
-  
-  // Styles
+    // Styles
   const footerStyle = {
     backgroundColor: '#f0f0f0',
     padding: '2rem 1rem 1rem',

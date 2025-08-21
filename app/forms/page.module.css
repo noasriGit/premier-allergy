@@ -1,0 +1,341 @@
+.container {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 160px 20px 80px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Content Wrapper */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* EHR Section */
+.ehrSection {
+  padding: 80px 20px;
+  background: white;
+}
+
+.ehrSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.ehrInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.ehrCard {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ehrCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ehrCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.ehrCard p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+/* Notice Section */
+.noticeSection {
+  padding: 60px 20px;
+  background: #f8fafc;
+}
+
+.noticeBox {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.noticeBox h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #856404;
+  margin-bottom: 20px;
+}
+
+.noticeBox p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #856404;
+  margin-bottom: 15px;
+}
+
+.noticeBox p:last-child {
+  margin-bottom: 0;
+}
+
+/* Forms Section */
+.formsSection {
+  padding: 80px 20px;
+  background: white;
+}
+
+.formsSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formsIntro {
+  font-size: 1.25rem;
+  color: #475569;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.formsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 50px;
+}
+
+.formCategory {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+}
+
+.formCategory h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.formList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formItem {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.formItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.formInfo {
+  flex: 1;
+}
+
+.formInfo h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.formInfo p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.downloadButton {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.downloadButton:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(9, 94, 163, 0.3);
+}
+
+/* Contact Section */
+.contactSection {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.contactSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.contactCard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+}
+
+.contactCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.contactCard p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .ehrSection h2,
+  .formsSection h2,
+  .contactSection h2 {
+    font-size: 2rem;
+  }
+
+  .ehrInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .formsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .downloadButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contactInfo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 140px 15px 60px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .ehrSection,
+  .noticeSection,
+  .formsSection,
+  .contactSection {
+    padding: 60px 15px;
+  }
+
+  .ehrCard,
+  .formCategory,
+  .contactCard {
+    padding: 25px 20px;
+  }
+
+  .formItem {
+    padding: 20px;
+  }
+
+  .downloadButton {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}

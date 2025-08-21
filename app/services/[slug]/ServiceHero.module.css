@@ -1,0 +1,155 @@
+/* ServiceHero.module.css */
+
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 20px; /* Reduced to minimize white space between navbar and hero */
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(9, 94, 163, 0.8) 0%,
+    rgba(7, 74, 130, 0.9) 100%
+  );
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  color: white;
+}
+
+.heroText {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  padding-top: 15%;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .hero {
+    height: 70vh;
+    min-height: 500px;
+    margin-top: 20px; /* Consistent spacing on tablet */
+  }
+
+  .heroContent {
+    padding: 0 3rem;
+  }
+
+  .heroTitle {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .heroDescription {
+    font-size: 1.4rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .hero {
+    height: 80vh;
+    min-height: 600px;
+    margin-top: 20px; /* Consistent spacing on desktop */
+  }
+
+  .heroContent {
+    padding: 0 4rem;
+  }
+
+  .heroTitle {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .heroDescription {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .hero {
+    margin-top: 20px; /* Consistent spacing on mobile */
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .heroOverlay {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .heroTitle,
+  .heroDescription {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Print styles */
+@media print {
+  .hero {
+    height: auto;
+    min-height: auto;
+    background: white;
+    color: black;
+    margin-top: 0;
+  }
+  
+  .heroOverlay {
+    background: none;
+  }
+  
+  .heroTitle,
+  .heroDescription {
+    color: black;
+    text-shadow: none;
+  }
+}

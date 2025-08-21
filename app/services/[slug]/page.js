@@ -1,61 +1,60 @@
-import { services } from './data'
+import { servicesData } from './data'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
+import ServiceNavbar from './ServiceNavbar'
+import ServiceHero from './ServiceHero'
+import ServiceSection from './ServiceSection'
+import ServiceFAQ from './ServiceFAQ'
+import ServicePageClient from './ServicePageClient'
 
 export async function generateStaticParams() {
-  return services.map(service => ({ slug: service.slug }))
+  return Object.keys(servicesData).map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }) {
-  const service = services.find(s => s.slug === params.slug)
+  const service = servicesData[params.slug]
   return {
     title: `${service.title} | Premier Allergy and Asthma Centers`,
-    description: `Learn about ${service.title.toLowerCase()} including symptoms, diagnosis, treatment, and prevention.`,
+    description: `Learn about ${service.title.toLowerCase()} including symptoms, diagnosis, treatment, and prevention. Expert care from board-certified allergists.`,
+    keywords: `${service.title}, allergy treatment, asthma management, allergist, ${params.slug}`,
+    openGraph: {
+      title: `${service.title} | Premier Allergy and Asthma Centers`,
+      description: `Expert ${service.title.toLowerCase()} treatment and management. Board-certified allergists serving Maryland and Virginia.`,
+      images: [service.heroImage],
+    },
   }
 }
 
 export default function ServicePage({ params }) {
-  const service = services.find(s => s.slug === params.slug)
-  if (!service) return <div>Service not found</div>
+  const service = servicesData[params.slug]
+
+  if (!service) {
+    return (
+      <div className={styles.errorContainer}>
+        <h1>Service Not Found</h1>
+        <p>The requested service could not be found.</p>
+        <Link href="/services" className={styles.backLink}>
+          ← Back to Services
+        </Link>
+      </div>
+    )
+  }
+
+  // Define available sections for this service
+  const availableSections = [
+    { id: 'info', title: 'Overview', icon: '📋' },
+    ...(service.symptoms ? [{ id: 'symptoms', title: 'Symptoms', icon: '⚠️' }] : []),
+    ...(service.diagnosis ? [{ id: 'diagnosis', title: 'Diagnosis', icon: '🔍' }] : []),
+    ...(service.treatment ? [{ id: 'treatment', title: 'Treatment', icon: '💊' }] : []),
+    ...(service.prevention ? [{ id: 'prevention', title: 'Prevention', icon: '🛡️' }] : []),
+    ...(service.faq ? [{ id: 'faq', title: 'FAQ', icon: '❓' }] : []),
+  ]
 
   return (
-    <div className={styles.container}>
-      {/* Sticky Navbar */}
-      <nav className={styles.navbar}>
-        {['info', 'symptoms', 'diagnosis', 'treatment', 'prevention', 'faq'].map(id => (
-          <a key={id} href={`#${id}`} className={styles.navLink}>
-            {id.charAt(0).toUpperCase() + id.slice(1)}
-          </a>
-        ))}
-      </nav>
-
-      {/* Hero */}
-      <section className={styles.hero}>
-        <Image src={service.heroImage} alt={service.title} fill priority className={styles.heroImage} />
-        <h1 className={styles.heroTitle}>{service.title}</h1>
-      </section>
-
-      {/* Info Section */}
-      <section id="info" className={styles.splitSection}>
-        <div className={styles.text}>
-          <h2>{service.info.heading}</h2>
-          <p>{service.info.text}</p>
-        </div>
-        <Image src={service.info.image} alt="Info" width={400} height={300} className={styles.image} />
-      </section>
-
-      {/* Repeatable Sections */}
-      {['symptoms', 'diagnosis', 'treatment', 'prevention', 'faq'].map(key => (
-        <section key={key} id={key} className={styles.section}>
-          <h2>{key.charAt(0).toUpperCase() + key.slice(1)}</h2>
-          <ul>
-            {service[key].map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </section>
-      ))}
-    </div>
+    <ServicePageClient 
+      service={service}
+      availableSections={availableSections}
+    />
   )
 }

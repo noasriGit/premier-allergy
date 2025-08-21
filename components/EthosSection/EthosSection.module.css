@@ -1,131 +1,587 @@
+/* EthosSection.module.css - Mobile First Approach */
+
 .section {
-    background: #f7f7f7;
-    padding: 2rem 1rem;
-    text-align: center;
-    align-content: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.achievements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.achievementImage {
+  transform: rotate(-5deg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.achievementImage:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.locationHeader {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1.5rem 0;
+  color: #2c3e50;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 auto 2rem;
+  color: #495057;
+  max-width: 800px;
+}
+
+/* Location Cards - Mobile First */
+.locationCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cardImageContainer {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.locationBadge {
+  background: rgba(9, 94, 163, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.locationName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+}
+
+.address {
+  font-style: normal;
+  margin: 0 0 1rem 0;
+}
+
+.streetAddress {
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+  color: #495057;
+}
+
+.cityState {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.contactInfo {
+  margin: 0 0 1rem 0;
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #095ea3;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.phoneLink:hover {
+  color: #074a82;
+  text-decoration: underline;
+}
+
+.hours {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Sleek Star Rating Component */
+.ratingSection {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #6bb742;
+}
+
+.googleRatingLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.googleRatingLink:hover {
+  transform: translateY(-1px);
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.googleRatingLink:hover .ratingContainer {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.starsContainer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.starFull {
+  width: 18px;
+  height: 18px;
+  color: #fbbc04;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.starHalf {
+  width: 18px;
+  height: 18px;
+  color: #fbbc04;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.starEmpty {
+  width: 18px;
+  height: 18px;
+  color: #e0e0e0;
+}
+
+.starSkeleton {
+  width: 18px;
+  height: 18px;
+  color: #e0e0e0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.ratingText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.ratingValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1;
+}
+
+.reviewCount {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.loadingText {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.errorText {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Action Buttons */
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  min-height: 44px;
+}
+
+.actionButton {
+  background: #f8f9fa;
+  color: #495057;
+  border-color: #dee2e6;
+}
+
+.actionButton:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton {
+  background: #095ea3;
+  color: white;
+  border-color: #095ea3;
+}
+
+.primaryButton:hover {
+  background: #074a82;
+  border-color: #074a82;
+}
+
+/* Reviews Section */
+.reviews {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reviewsTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  color: #2c3e50;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonial {
+  margin: 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #6bb742;
+  position: relative;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #495057;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.testimonial cite {
+  font-style: normal;
+  font-weight: 600;
+  color: #095ea3;
+  font-size: 0.9rem;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .section {
+    padding: 4rem 2rem;
   }
-  
+
   .heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
+    font-size: 2rem;
   }
-  
-  .achievements {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: -50px;
-    margin-bottom: 1.5rem;
-    flex-wrap: nowrap;
-    overflow-x: none;
+
+  .locationHeader {
+    font-size: 1.75rem;
   }
-  
-  .achievements img {
-    transform: rotate(-5deg);
-    margin-right: -30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  .locationHeader{
-      padding: 2rem;
-  }
-  .paragraph {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin: 0 auto 2rem;
-    padding: 0 1rem;
-    color: #333;
-    max-width: 100%;
-    margin-top: 3rem;
-  }
-  
+
   .locationCards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-   
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
   }
-  
+
   .card {
-    background: #fff;
-    padding-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    
+    flex: 1;
+    max-width: 400px;
   }
-  
-  .googleRating {
-    font-weight: 600;
-    margin-top: 0.5rem;
-    color: #095ea3;
+
+  .achievements {
+    gap: 1rem;
   }
-  
+
+  .achievementImage {
+    transform: none;
+    margin: 0;
+  }
+
+  .paragraph {
+    max-width: 70%;
+  }
+
+  .cardActions {
+    flex-direction: row;
+  }
+
+  .actionButton {
+    flex: 1;
+  }
+
+  .testimonials {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .testimonial {
+    flex: 1;
+  }
+
+  .starFull,
+  .starHalf,
+  .starEmpty,
+  .starSkeleton {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .section {
+    padding: 5rem 3rem;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .locationHeader {
+    font-size: 2rem;
+  }
+
+  .locationCards {
+    gap: 3rem;
+  }
+
+  .card {
+    max-width: 450px;
+  }
+
+  .cardContent {
+    padding: 2rem;
+  }
+
+  .locationName {
+    font-size: 1.5rem;
+  }
+
   .reviews {
-    margin-bottom: 2rem;
+    padding: 3rem;
+  }
+
+  .reviewsTitle {
+    font-size: 1.75rem;
+  }
+
+  .starFull,
+  .starHalf,
+  .starEmpty,
+  .starSkeleton {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ratingValue {
+    font-size: 1.2rem;
+  }
+
+  .reviewCount {
+    font-size: 0.85rem;
+  }
+}
+
+/* Focus styles for accessibility */
+.actionButton:focus,
+.googleRatingLink:focus,
+.phoneLink:focus {
+  outline: 2px solid #6bb742;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #000;
   }
   
-  .reviews h3 {
-    font-size: 1.25rem;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
+  .actionButton {
+    border: 2px solid #000;
   }
   
-  .reviews p {
-    font-style: italic;
-    font-size: 0.95rem;
-    color: #555;
+  .testimonial {
+    border-left: 4px solid #000;
   }
-  .cardImage {
-    width: 100%;
-    height: auto;
-    
-    border-radius: 8px;
-    margin-bottom: 1rem;
+
+  .starEmpty {
+    color: #ccc;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .cardImage,
+  .achievementImage,
+  .actionButton,
+  .googleRatingLink,
+  .ratingContainer {
+    transition: none;
   }
   
-  .googleRatingLink {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #0072c6;
-    text-decoration: none;
-    font-weight: 500;
+  .card:hover {
+    transform: none;
+  }
+  
+  .card:hover .cardImage {
+    transform: none;
+  }
+  
+  .achievementImage:hover {
+    transform: none;
+  }
+  
+  .actionButton:hover {
+    transform: none;
   }
   
   .googleRatingLink:hover {
-    text-decoration: underline;
+    transform: none;
+  }
+
+  .googleRatingLink:hover .ratingContainer {
+    transform: none;
   }
   
-  /* Tablet and Up */
-  @media (min-width: 768px) {
-    .heading {
-      font-size: 2rem;
-    }
-  
-    .locationCards {
-      flex-direction: row;
-      justify-content:center;
-      gap: 7rem;
-    }
-  
-    .card {
-      width: 30%;
-      height: 35%;
-    }
-  
-    .achievements {
-      justify-content: center;
-      gap: 1rem;
-    }
-  
-    .achievements img {
-      transform: none;
-      margin: 0;
-    }
-    .paragraph{
-        padding-top: 2rem;
-        max-width: 60%;
-    }
+  .starSkeleton {
+    animation: none;
   }
+}
+
+/* Print styles */
+@media print {
+  .section {
+    background: white;
+    padding: 1rem;
+  }
+  
+  .card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .cardActions {
+    display: none;
+  }
+  
+  .reviews {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .starFull,
+  .starHalf {
+    color: #000;
+  }
+
+  .starEmpty {
+    color: #ccc;
+  }
+}
   

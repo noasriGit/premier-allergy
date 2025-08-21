@@ -10,19 +10,25 @@ const services = [
     href: '/services',
     img: '/services1.jpg',
     title: 'Allergy Treatments',
-    desc: 'Allergies represent the most common acute and chronic disorders affecting about 20% of population both children and adults worldwide.',
+    description: 'Comprehensive allergy diagnosis and treatment for all types of allergies',
+    features: ['Skin Testing', 'Blood Testing', 'Environmental Allergies', 'Food Allergies'],
+    alt: 'Professional allergy testing and treatment services',
   },
   {
     href: '/services/asthma',
     img: '/services2.jpg',
     title: 'Asthma Management',
-    desc: 'Asthma is a common chronic disease affecting tens of millions of Americans and a major public health problem in the US and worldwide.',
+    description: 'Expert asthma care and management for children and adults',
+    features: ['Asthma Testing', 'Treatment Plans', 'Medication Management', 'Lifestyle Guidance'],
+    alt: 'Asthma management and treatment services',
   },
   {
     href: '/services/immunotherapy',
     img: '/services3.jpg',
     title: 'Immunotherapy',
-    desc: 'Allergen immunotherapy is one of the specific areas where an intervention guided by a board-certified allergist can lead to long-term remission of your allergy.',
+    description: 'Long-term allergy treatment through immunotherapy solutions',
+    features: ['Allergy Shots', 'Sublingual Therapy', 'Custom Treatment Plans', 'Long-term Relief'],
+    alt: 'Immunotherapy treatment for long-term allergy relief',
   },
 ]
 
@@ -31,39 +37,101 @@ export default function ServicesSection() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const obs = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true)
-          obs.disconnect()
+          observer.disconnect()
         }
       },
-      { threshold: 0.3 }
+      { 
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+      }
     )
-    if (ref.current) obs.observe(ref.current)
-    return () => obs.disconnect()
+    
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+    
+    return () => observer.disconnect()
   }, [])
 
   return (
-    <section ref={ref} className={styles.section} aria-labelledby="services-title">
-      <h2 id="services-title">Our Services</h2>
-      <div className={`${styles.cards} ${visible ? styles.visible : ''}`}>
-        {services.map((s, i) => (
-          <article key={s.href} className={styles.card}>
-            <Image
-              src={s.img}
-              alt={s.title}
-              width={400}
-              height={250}
-              className={styles.image}
-            />
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-            <Link href={s.href} className={styles.button}>
-              Learn More
-            </Link>
-          </article>
-        ))}
+    <section 
+      ref={ref} 
+      className={styles.section} 
+      aria-labelledby="services-title"
+    >
+      <div className={styles.container}>
+        <header className={styles.sectionHeader}>
+          <h2 id="services-title" className={styles.title}>
+            Our Services
+          </h2>
+          <p className={styles.subtitle}>
+            Comprehensive allergy and asthma care from board-certified specialists
+          </p>
+        </header>
+
+        <div className={`${styles.cards} ${visible ? styles.visible : ''}`}>
+          {services.map((service, index) => (
+            <article 
+              key={service.href} 
+              className={styles.card}
+              aria-labelledby={`service-${index}-title`}
+            >
+              <div className={styles.imageContainer}>
+                <Image
+                  src={service.img}
+                  alt={service.alt}
+                  width={400}
+                  height={250}
+                  className={styles.image}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className={styles.imageOverlay}>
+                  <Link href={service.href} className={styles.learnMore}>
+                    Learn More
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </div>
+              
+              <div className={styles.cardContent}>
+                <h3 id={`service-${index}-title`} className={styles.cardTitle}>
+                  {service.title}
+                </h3>
+                <p className={styles.cardDescription}>
+                  {service.description}
+                </p>
+                
+                <ul className={styles.featuresList}>
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className={styles.feature}>
+                      <span aria-hidden="true">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link href={service.href} className={styles.button}>
+                  View Details
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className={styles.ctaSection}>
+          <p className={styles.ctaText}>
+            Ready to start your journey to better health?
+          </p>
+          <Link href="/services" className={styles.ctaButton}>
+            View All Services
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </div>
     </section>
   )

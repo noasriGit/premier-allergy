@@ -7,25 +7,44 @@ import styles from './Header.module.css'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState(null)
 
-  const handleToggleServices = () => setServicesOpen((prev) => !prev)
+  const handleToggleDropdown = (dropdownLabel) => {
+    setOpenDropdown(openDropdown === dropdownLabel ? null : dropdownLabel)
+  }
 
   const navLinks = [
-    { href: '/about', label: 'About' },
+    { href: '/', label: 'Home' },
     {
       label: 'Services',
       dropdown: [
         { href: '/services/asthma', label: 'Asthma Management' },
-        { href: '/services/allergy-testing', label: 'Allergy Testing' },
+        { href: '/services/nasal-allergies', label: 'Nasal Allergies' },
+        { href: '/services/ocular-allergies', label: 'Ocular Allergies' },
+        { href: '/services/sinus-disease', label: 'Sinus Disease' },
+        { href: '/services/eczema-skin-allergies', label: 'Eczema & Skin Allergies' },
+        { href: '/services/contact-implant-allergies', label: 'Contact & Implant Allergies' },
+        { href: '/services/hives-angioedema', label: 'Hives & Angioedema' },
+        { href: '/services/food-allergies', label: 'Food Allergies' },
+        { href: '/services/drug-medication-allergies', label: 'Drug & Medication Allergies' },
+        { href: '/services/novel-biologic-therapies', label: 'Novel Biologic Therapies' },
+        { href: '/services/eosinophilic-esophagitis', label: 'Eosinophilic Esophagitis' },
+        { href: '/services/immune-disorders-diagnostics', label: 'Immune Disorders Diagnostics' },
         { href: '/services/immunotherapy', label: 'Immunotherapy' },
       ],
     },
-    { href: '/locations', label: 'Locations' },
-    { href: '/forms', label: 'Forms' },
-    { href: '/insurance', label: 'Insurance' },
-    { href: '/reviews', label: 'Reviews' },
-    { href: '/contact', label: 'Contact' },
+    {
+      label: 'Before You Visit',
+      dropdown: [
+        { href: '/before-you-visit', label: 'First Visit Guide' },
+        { href: '/forms', label: 'Patient Forms' },
+        { href: '/insurance', label: 'Insurance Information' },
+
+      ],
+    },
+    { href: '/meet-our-doctor', label: 'Meet Our Doctor' },
+    { href: '/#ethos-section', label: 'Locations' },
+    { href: '/services/immunotherapy', label: 'Immunotherapy' },
     { href: '/portal', label: 'Patient Portal' },
   ]
 
@@ -48,8 +67,8 @@ export default function Header() {
 
         {/* Contact Info */}
         <div className={styles.contact}>
-          <a href="tel:1234567890" className={styles.phone}>
-            (123) 456-7890
+          <a href="tel: 1-855-528-7348" className={styles.phone}>
+            (1-855-528-7348)
           </a>
           <span className={styles.cta}>Call and make an appointment</span>
         </div>
@@ -73,16 +92,16 @@ export default function Header() {
               <li key={link.label} className={styles.navItem}>
                 <button
                   className={styles.navLink}
-                  onClick={handleToggleServices}
+                  onClick={() => handleToggleDropdown(link.label)}
                   aria-haspopup="true"
-                  aria-expanded={servicesOpen}
+                  aria-expanded={openDropdown === link.label}
                 >
                   {link.label}
                   <span
-                    className={`${styles.arrow} ${servicesOpen ? styles.arrowUp : styles.arrowDown}`}
+                    className={`${styles.arrow} ${openDropdown === link.label ? styles.arrowUp : styles.arrowDown}`}
                   />
                 </button>
-                <ul className={`${styles.dropdownMenu} ${servicesOpen ? styles.showDropdown : ''}`}>
+                <ul className={`${styles.dropdownMenu} ${openDropdown === link.label ? styles.showDropdown : ''}`}>
                   {link.dropdown.map((sub) => (
                     <li key={sub.href}>
                       <Link href={sub.href} className={styles.dropdownLink}>
@@ -111,17 +130,17 @@ export default function Header() {
               link.dropdown ? (
                 <li key={link.label} className={styles.mobileNavItem}>
                   <button
-                    onClick={handleToggleServices}
+                    onClick={() => handleToggleDropdown(link.label)}
                     className={styles.mobileLink}
                     aria-haspopup="true"
-                    aria-expanded={servicesOpen}
+                    aria-expanded={openDropdown === link.label}
                   >
                     {link.label}
                     <span
-                      className={`${styles.arrow} ${servicesOpen ? styles.arrowUp : styles.arrowDown}`}
+                      className={`${styles.arrow} ${openDropdown === link.label ? styles.arrowUp : styles.arrowDown}`}
                     />
                   </button>
-                  {servicesOpen && (
+                  {openDropdown === link.label && (
                     <ul className={styles.mobileDropdown}>
                       {link.dropdown.map((sub) => (
                         <li key={sub.href}>

@@ -1,72 +1,349 @@
+/* PatientResourcesSection.module.css - Clean & Professional Design */
+
 .section {
-    background-color: #f7f7f7;
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-bottom: 3rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Card Grid - Mobile First */
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cardImageContainer {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resourceIcon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.cardContent {
+  padding: 2rem;
+  text-align: left;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #095ea3 0%, #074a82 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.cardButton:hover {
+  background: linear-gradient(135deg, #074a82 0%, #053a6b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(9, 94, 163, 0.3);
+}
+
+.cardButton:focus {
+  outline: 2px solid #6bb742;
+  outline-offset: 2px;
+}
+
+.arrowIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.cardButton:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ctaText {
+  font-size: 1rem;
+  color: #495057;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #6bb742 0%, #5a9e38 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(135deg, #5a9e38 0%, #4a8a2e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 183, 66, 0.3);
+}
+
+.ctaButton:focus {
+  outline: 2px solid #6bb742;
+  outline-offset: 2px;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .section {
+    padding: 5rem 2rem;
   }
-  
+
   .heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-    color: #222;
+    font-size: 2.5rem;
   }
-  
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
   .cardGrid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
-  
+
+  .cardContent {
+    padding: 2.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.35rem;
+  }
+
+  .cardDescription {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .section {
+    padding: 6rem 3rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .cardContent {
+    padding: 3rem;
+  }
+
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+
+  .cardDescription {
+    font-size: 1.05rem;
+  }
+
+  .ctaSection {
+    padding: 3rem;
+  }
+
+  .ctaText {
+    font-size: 1.1rem;
+  }
+}
+
+/* Focus styles for accessibility */
+.card:focus-within {
+  outline: 2px solid #6bb742;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
   .card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    padding-bottom: 1rem;
-    margin: 0;
-    
+    border: 2px solid #000;
   }
   
-  .cardImage {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
+  .cardButton,
+  .ctaButton {
+    border: 2px solid #000;
   }
   
-  .cardButton {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #005fa3;
-    color: #fff;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+  .imageOverlay {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .cardImage,
+  .cardButton,
+  .ctaButton,
+  .arrowIcon {
+    transition: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .card:hover .cardImage {
+    transform: none;
   }
   
   .cardButton:hover {
-    background-color: #00457c;
+    transform: none;
   }
   
-  /* Tablet and up */
-  @media (min-width: 768px) {
-    .heading {
-      font-size: 2rem;
-    }
-  
-    .cardGrid {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .card {
-      width: 32%;
-    }
+  .cardButton:hover .arrowIcon {
+    transform: none;
   }
+  
+  .ctaButton:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .section {
+    background: white;
+    padding: 1rem;
+  }
+  
+  .card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .cardButton,
+  .ctaButton {
+    background: #000;
+    color: white;
+    border: 1px solid #000;
+  }
+  
+  .imageOverlay {
+    background: white;
+    border: 1px solid #ccc;
+  }
+}
   
