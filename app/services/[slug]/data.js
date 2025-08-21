@@ -19,7 +19,7 @@ export const servicesData = {
         'Fatigue and reduced energy levels',
         'Anxiety or panic during breathing difficulties'
       ],
-      additionalInfo: 'Symptoms often worsen during asthma attacks, which can be triggered by respiratory infections, exercise, cold air, or exposure to allergens. It\'s important to recognize these warning signs and have an action plan in place.'
+      additionalInfo: 'Symptoms often worsen during asthma attacks, which can be triggered by respiratory infections, exercise, cold air, or exposure to allergens. It&apos;s important to recognize these warning signs and have an action plan in place.'
     },
     diagnosis: {
       description: 'Diagnosing asthma requires a comprehensive evaluation that combines medical history, physical examination, and specialized tests. Our board-certified allergists use the latest diagnostic tools to accurately identify asthma and determine its severity.',
@@ -40,7 +40,7 @@ export const servicesData = {
       treatmentOptions: [
         'Inhaled corticosteroids for long-term inflammation control and symptom prevention',
         'Quick-relief bronchodilators (albuterol) for immediate symptom relief during flare-ups',
-        'Long-acting bronchodilators for persistent symptoms when corticosteroids alone aren\'t sufficient',
+        'Long-acting bronchodilators for persistent symptoms when corticosteroids alone aren&apos;t sufficient',
         'Combination inhalers that contain both anti-inflammatory and bronchodilator medications',
         'Leukotriene modifiers for additional inflammation control',
         'Biologic therapies for severe, uncontrolled asthma',
@@ -70,19 +70,19 @@ export const servicesData = {
       },
       {
         question: 'What should I do during an asthma attack?',
-        answer: 'Use your quick-relief inhaler immediately and follow your asthma action plan. If symptoms don\'t improve quickly or you\'re having severe difficulty breathing, seek emergency medical care immediately.'
+        answer: 'Use your quick-relief inhaler immediately and follow your asthma action plan. If symptoms don&apos;t improve quickly or you&apos;re having severe difficulty breathing, seek emergency medical care immediately.'
       },
       {
         question: 'Is asthma dangerous?',
-        answer: 'Yes, uncontrolled asthma can be life-threatening. That\'s why ongoing management and regular checkups are essential. With proper treatment, most people with asthma can lead normal, active lives.'
+        answer: 'Yes, uncontrolled asthma can be life-threatening. That&apos;s why ongoing management and regular checkups are essential. With proper treatment, most people with asthma can lead normal, active lives.'
       },
       {
         question: 'Can exercise trigger asthma?',
-        answer: 'Yes, exercise can trigger asthma symptoms in some people, but this doesn\'t mean you should avoid exercise. With proper treatment and warm-up routines, most people with asthma can exercise safely and benefit from physical activity.'
+        answer: 'Yes, exercise can trigger asthma symptoms in some people, but this doesn&apos;t mean you should avoid exercise. With proper treatment and warm-up routines, most people with asthma can exercise safely and benefit from physical activity.'
       },
       {
         question: 'How often should I see my allergist for asthma management?',
-        answer: 'Most people with asthma should see their allergist every 3-6 months for routine checkups. More frequent visits may be needed if your asthma is not well-controlled or if you\'re experiencing frequent symptoms.'
+        answer: 'Most people with asthma should see their allergist every 3-6 months for routine checkups. More frequent visits may be needed if your asthma is not well-controlled or if you&apos;re experiencing frequent symptoms.'
       }
     ]
   },

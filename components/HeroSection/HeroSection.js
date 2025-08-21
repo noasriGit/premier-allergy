@@ -10,7 +10,7 @@ import styles from './HeroSection.module.css'
 const slides = [
   {
     image: '/hero1.jpg',
-    heading: 'Maryland and Virginia\'s Premier Clinics for Allergy Testing and Asthma Management',
+    heading: 'Maryland and Virginia&apos;s Premier Clinics for Allergy Testing and Asthma Management',
     buttonLink: '/contact',
   },
   {
