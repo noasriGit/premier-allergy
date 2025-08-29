@@ -22,7 +22,7 @@ export default function PatientResourcesSection() {
       description: 'Access your medical records, test results, and appointment history',
       image: '/resources/portal.png',
       alt: 'Patient Portal Icon',
-      href: '/portal',
+      href: 'https://allergyandasthmaclinicalcenters.imscare.com/abs/login',
       icon: '🏥'
     },
     {
@@ -78,18 +78,33 @@ export default function PatientResourcesSection() {
                 <h3 className={styles.cardTitle}>{resource.title}</h3>
                 <p className={styles.cardDescription}>{resource.description}</p>
                 
-                <Link href={resource.href} className={styles.cardButton}>
-                  <span>Access {resource.title}</span>
-                  <svg 
-                    className={styles.arrowIcon} 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                                 {resource.href.startsWith('http') ? (
+                   <a href={resource.href} className={styles.cardButton} target="_blank" rel="noopener noreferrer">
+                     <span>Access {resource.title}</span>
+                     <svg 
+                       className={styles.arrowIcon} 
+                       viewBox="0 0 24 24" 
+                       fill="none" 
+                       stroke="currentColor"
+                       aria-hidden="true"
+                     >
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                     </svg>
+                   </a>
+                 ) : (
+                   <Link href={resource.href} className={styles.cardButton}>
+                     <span>Access {resource.title}</span>
+                     <svg 
+                       className={styles.arrowIcon} 
+                       viewBox="0 0 24 24" 
+                       fill="none" 
+                       stroke="currentColor"
+                       aria-hidden="true"
+                     >
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                     </svg>
+                   </Link>
+                 )}
               </div>
             </motion.div>
           ))}
@@ -99,9 +114,9 @@ export default function PatientResourcesSection() {
           <p className={styles.ctaText}>
             Need help? Our team is here to assist you with any questions.
           </p>
-          <Link href="/contact" className={styles.ctaButton}>
+          <a href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" className={styles.ctaButton} target="_blank" rel="noopener noreferrer">
             Contact Us
-          </Link>
+          </a>
         </div>
       </div>
     </section>

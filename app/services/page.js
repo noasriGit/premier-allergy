@@ -13,91 +13,91 @@ const services = [
   {
     slug: 'asthma',
     title: 'Asthma Management',
-    image: '/services/asthma.jpg',
+    image: '/images/asthma.jpg',
     description: 'Comprehensive asthma diagnosis, monitoring, and treatment for adults and children with personalized care plans.',
     category: 'Respiratory'
   },
   {
     slug: 'nasal-allergies',
     title: 'Nasal Allergies',
-    image: '/services/nasal-allergies.jpg',
+    image: '/images/sneezing.jpg',
     description: 'Expert treatment for allergic rhinitis, seasonal and perennial allergies with advanced diagnostic testing.',
     category: 'Allergies'
   },
   {
     slug: 'ocular-allergies',
     title: 'Ocular Allergies',
-    image: '/services/ocular-allergies.jpg',
+    image: '/images/eyedrops.jpg',
     description: 'Specialized care for allergic conjunctivitis and eye-related allergy symptoms affecting vision and comfort.',
     category: 'Allergies'
   },
   {
     slug: 'sinus-disease',
     title: 'Sinus Disease',
-    image: '/services/sinus-disease.jpg',
+    image: '/images/sinus.jpg',
     description: 'Comprehensive treatment for acute and chronic sinusitis, fungal sinusitis, and structural abnormalities.',
     category: 'Respiratory'
   },
   {
     slug: 'eczema-skin-allergies',
     title: 'Eczema & Skin Allergies',
-    image: '/services/eczema-skin-allergies.jpg',
+    image: '/images/itching.jpg',
     description: 'Relief for eczema, hives, and other allergic skin disorders through personalized treatment approaches.',
     category: 'Dermatological'
   },
   {
     slug: 'contact-implant-allergies',
     title: 'Contact & Implant Allergies',
-    image: '/services/contact-implant-allergies.jpg',
+    image: '/images/implant-allergies.jpg',
     description: 'Specialized testing and treatment for allergies to medical devices, implants, and contact materials.',
     category: 'Specialized'
   },
   {
     slug: 'hives-angioedema',
     title: 'Hives & Angioedema',
-    image: '/services/hives-angioedema.jpg',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
     description: 'Expert care for acute and chronic urticaria, angioedema, and related inflammatory skin conditions.',
     category: 'Dermatological'
   },
   {
     slug: 'food-allergies',
     title: 'Food Allergies',
-    image: '/services/food-allergies.jpg',
+    image: '/images/foodAllergy.jpg',
     description: 'Comprehensive food allergy testing, diagnosis, and management including emergency preparedness.',
     category: 'Allergies'
   },
   {
     slug: 'drug-medication-allergies',
     title: 'Drug & Medication Allergies',
-    image: '/services/drug-medication-allergies.jpg',
+    image: '/images/medicine.jpg',
     description: 'Specialized testing and management for medication allergies with safe alternative recommendations.',
     category: 'Specialized'
   },
   {
     slug: 'novel-biologic-therapies',
     title: 'Novel Biologic Therapies',
-    image: '/services/novel-biologic-therapies.jpg',
+    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&h=400&fit=crop',
     description: 'Cutting-edge biologic treatments for severe allergic and inflammatory conditions resistant to conventional therapy.',
     category: 'Advanced'
   },
   {
     slug: 'eosinophilic-esophagitis',
     title: 'Eosinophilic Esophagitis',
-    image: '/services/eosinophilic-esophagitis.jpg',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop',
     description: 'Specialized care for EoE with dietary management, medication therapy, and endoscopic monitoring.',
     category: 'Gastrointestinal'
   },
   {
     slug: 'immune-disorders-diagnostics',
     title: 'Immune Disorders Diagnostics',
-    image: '/services/immune-disorders-diagnostics.jpg',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&h=400&fit=crop',
     description: 'Comprehensive evaluation and treatment for primary and secondary immune system disorders.',
     category: 'Specialized'
   },
   {
     slug: 'immunotherapy',
     title: 'Immunotherapy',
-    image: '/services/immunotherapy.jpg',
+    image: '/images/pediatric.jpg',
     description: 'Allergy shots and sublingual immunotherapy designed to treat root causes, not just symptoms.',
     category: 'Treatment'
   }

@@ -45,7 +45,8 @@ export default function Header() {
     { href: '/meet-our-doctor', label: 'Meet Our Doctor' },
     { href: '/#ethos-section', label: 'Locations' },
     { href: '/services/immunotherapy', label: 'Immunotherapy' },
-    { href: '/portal', label: 'Patient Portal' },
+    { href: 'https://allergyandasthmaclinicalcenters.imscare.com/abs/login', label: 'Patient Portal' },
+    { href: 'https://portal.allergyandasthmaclinicalcenters.com/general/index.php', label: 'Online Payment', emphasized: true },
   ]
 
   return (
@@ -113,7 +114,10 @@ export default function Header() {
               </li>
             ) : (
               <li key={link.href} className={styles.navItem}>
-                <Link href={link.href} className={styles.navLink}>
+                <Link 
+                  href={link.href} 
+                  className={`${styles.navLink} ${link.emphasized ? styles.emphasizedLink : ''}`}
+                >
                   {link.label}
                 </Link>
               </li>
@@ -154,7 +158,11 @@ export default function Header() {
                 </li>
               ) : (
                 <li key={link.href} className={styles.mobileNavItem}>
-                  <Link href={link.href} className={styles.mobileLink} onClick={() => setMenuOpen(false)}>
+                  <Link 
+                    href={link.href} 
+                    className={`${styles.mobileLink} ${link.emphasized ? styles.emphasizedMobileLink : ''}`} 
+                    onClick={() => setMenuOpen(false)}
+                  >
                     {link.label}
                   </Link>
                 </li>

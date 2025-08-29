@@ -375,6 +375,32 @@
   transform: translateY(-2px);
 }
 
+.tertiaryButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tertiaryButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.tertiaryButton:hover .buttonArrow {
+  transform: translateX(5px);
+}
+
 /* Stats Grid */
 .statsGrid {
   display: grid;
@@ -664,7 +690,7 @@
     width: 100%;
   }
   
-  .primaryButton, .secondaryButton {
+  .primaryButton, .secondaryButton, .tertiaryButton {
     width: 100%;
     text-align: center;
     justify-content: center;

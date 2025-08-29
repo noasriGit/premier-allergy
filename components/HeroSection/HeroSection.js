@@ -127,17 +127,24 @@ export default function HeroSection() {
             that bring lasting relief to patients of all ages.
           </p>
 
-          <div className={styles.ctaSection}>
-            <Link href="/contact" className={styles.primaryButton}>
-              <span>Schedule Your Consultation</span>
-              <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
-                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
+                     <div className={styles.ctaSection}>
+             <a href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" className={styles.primaryButton} target="_blank" rel="noopener noreferrer">
+               <span>Book An Appointment</span>
+               <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
+                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+               </svg>
+             </a>
             
             <Link href="/services" className={styles.secondaryButton}>
               View Our Services
             </Link>
+            
+            <a href="https://portal.allergyandasthmaclinicalcenters.com/general/index.php" className={styles.tertiaryButton} target="_blank" rel="noopener noreferrer">
+              <span>Online Payment</span>
+              <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
+                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+               </svg>
+            </a>
           </div>
 
           <div className={styles.statsGrid}>

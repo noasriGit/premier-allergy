@@ -333,9 +333,11 @@ export default function EthosSection() {
                     </a>
                     
                     <a
-                      href="/contact"
+                      href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login"
                       className={`${styles.actionButton} ${styles.primaryButton}`}
                       aria-label={`Schedule appointment at ${location.name}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <span aria-hidden="true">📅</span>
                       Schedule Visit
