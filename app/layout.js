@@ -27,7 +27,13 @@ export const metadata = {
     'allergy treatment',
     'asthma care',
     'skin testing',
-    'allergy shots'
+    'allergy shots',
+    'Dr. Petr Bocek',
+    'board certified allergist',
+    'Germantown',
+    'Manassas',
+    'allergy clinic',
+    'asthma specialist'
   ],
   authors: [{ name: 'Premier Allergy and Asthma Centers' }],
   creator: 'Premier Allergy and Asthma Centers',
@@ -37,14 +43,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://premierallergy.com'),
+  metadataBase: new URL('https://www.allergyandasthmaclinicalcenters.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://premierallergy.com',
+    url: 'https://www.allergyandasthmaclinicalcenters.com',
     siteName: 'Premier Allergy and Asthma Centers',
     title: 'Premier Allergy and Asthma Centers | Expert Care in Maryland & Virginia',
     description: 'Expert allergy and asthma care from board-certified specialists in Maryland and Virginia. Comprehensive testing, treatment, and immunotherapy services for all ages.',
@@ -62,6 +68,8 @@ export const metadata = {
     title: 'Premier Allergy and Asthma Centers | Expert Care in Maryland & Virginia',
     description: 'Expert allergy and asthma care from board-certified specialists in Maryland and Virginia.',
     images: ['/logo.png'],
+    creator: '@premierallergy',
+    site: '@premierallergy',
   },
   robots: {
     index: true,
@@ -75,7 +83,9 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
   },
 }
 
@@ -85,20 +95,33 @@ const structuredData = {
   '@type': 'MedicalOrganization',
   name: 'Premier Allergy and Asthma Centers',
   description: 'Expert allergy and asthma care from board-certified specialists in Maryland and Virginia',
-  url: 'https://premierallergy.com',
-  logo: 'https://premierallergy.com/logo.png',
-  image: 'https://premierallergy.com/logo.png',
-  telephone: '+1-123-456-7890',
-  email: 'info@premierallergy.com',
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'US',
-    addressRegion: ['MD', 'VA'],
-  },
+  url: 'https://www.allergyandasthmaclinicalcenters.com',
+  logo: 'https://www.allergyandasthmaclinicalcenters.com/logo.png',
+  image: 'https://www.allergyandasthmaclinicalcenters.com/logo.png',
+  telephone: '+1-855-528-7348',
+  email: 'info@allergyandasthmaclinicalcenters.com',
+  address: [
+    {
+      '@type': 'PostalAddress',
+      streetAddress: '8100 Ashton Avenue, Suite 207B',
+      addressLocality: 'Manassas',
+      addressRegion: 'VA',
+      postalCode: '20109',
+      addressCountry: 'US',
+    },
+    {
+      '@type': 'PostalAddress',
+      streetAddress: '20528 Boland Farm Rd, Suite 214',
+      addressLocality: 'Germantown',
+      addressRegion: 'MD',
+      postalCode: '20876',
+      addressCountry: 'US',
+    }
+  ],
   sameAs: [
-    'https://facebook.com/premierallergy',
+    'https://facebook.com/allergyandasthmaclinicalcenters',
     'https://twitter.com/premierallergy',
-    'https://linkedin.com/company/premierallergy'
+    'https://linkedin.com/company/premier-allergy-asthma-centers'
   ],
   medicalSpecialty: ['Allergy and Immunology', 'Asthma Management'],
   availableService: [
@@ -116,6 +139,16 @@ const structuredData = {
       '@type': 'MedicalService',
       name: 'Immunotherapy',
       description: 'Long-term allergy treatment through immunotherapy'
+    },
+    {
+      '@type': 'MedicalService',
+      name: 'Nasal Allergies',
+      description: 'Treatment for allergic rhinitis and seasonal allergies'
+    },
+    {
+      '@type': 'MedicalService',
+      name: 'Food Allergies',
+      description: 'Diagnosis and management of food allergies'
     }
   ],
   areaServed: [
@@ -127,6 +160,42 @@ const structuredData = {
       '@type': 'State', 
       name: 'Virginia'
     }
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Allergy and Asthma Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'MedicalService',
+          name: 'Allergy Testing'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'MedicalService',
+          name: 'Asthma Management'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'MedicalService',
+          name: 'Immunotherapy'
+        }
+      }
+    ]
+  },
+  openingHours: [
+    'Mo-Fr 08:00-17:00',
+    'Sa 09:00-12:00'
+  ],
+  paymentAccepted: [
+    'Cash',
+    'Credit Card',
+    'Insurance'
   ]
 }
 

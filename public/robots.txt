@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.premierallergy.com
+Host: https://www.allergyandasthmaclinicalcenters.com
 
 # Sitemaps
-Sitemap: https://www.premierallergy.com/sitemap.xml
+Sitemap: https://www.allergyandasthmaclinicalcenters.com/sitemap.xml
