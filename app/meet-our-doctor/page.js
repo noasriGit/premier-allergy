@@ -203,7 +203,11 @@ export default function MeetOurDoctorPage() {
             symptoms and develop a personalized treatment plan.
           </p>
           <div className={styles.ctaButtons}>
-            <a href="/contact" className={styles.ctaButton}>
+            <a 
+              href="/contact" 
+              className={styles.ctaButton}
+              onClick={() => gtag_report_conversion('/contact')}
+            >
               Schedule Appointment
             </a>
             <Link href="/services" className={styles.ctaButtonSecondary}>

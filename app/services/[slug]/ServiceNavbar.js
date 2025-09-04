@@ -54,7 +54,11 @@ export default function ServiceNavbar({ sections, activeSection, onSectionClick,
 
         {/* Desktop CTA Button */}
         <div className={styles.navActions}>
-          <a href="/contact" className={styles.ctaButton}>
+          <a 
+            href="/contact" 
+            className={styles.ctaButton}
+            onClick={() => gtag_report_conversion('/contact')}
+          >
             Schedule Visit
           </a>
         </div>
@@ -121,7 +125,11 @@ export default function ServiceNavbar({ sections, activeSection, onSectionClick,
               </div>
 
               <div className={styles.mobileMenuFooter}>
-                <a href="/contact" className={styles.mobileCtaButton}>
+                <a 
+                  href="/contact" 
+                  className={styles.mobileCtaButton}
+                  onClick={() => gtag_report_conversion('/contact')}
+                >
                   Schedule Visit
                 </a>
               </div>

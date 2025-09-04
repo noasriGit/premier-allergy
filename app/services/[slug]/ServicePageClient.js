@@ -181,7 +181,11 @@ export default function ServicePageClient({ service, availableSections }) {
               Don&apos;t let {service.title.toLowerCase()} control your life. Our expert team is here to help you find the right treatment plan.
             </p>
             <div className={styles.ctaButtons}>
-              <Link href="/contact" className={styles.ctaButtonPrimary}>
+              <Link 
+                href="/contact" 
+                className={styles.ctaButtonPrimary}
+                onClick={() => gtag_report_conversion('/contact')}
+              >
                 Schedule Consultation
               </Link>
               <Link href="/services" className={styles.ctaButtonSecondary}>

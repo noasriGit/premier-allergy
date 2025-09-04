@@ -64,7 +64,12 @@ export default function HeroSection() {
       <div className={styles.ctaBar}>
         <div className={styles.ctaText}>
           <p className={styles.ctaCall}>
-            Call to book an appointment now: <a href="tel:1234567890">(123) 456-7890</a>
+            Call to book an appointment now: <a 
+              href="tel:1234567890" 
+              onClick={() => gtag_report_conversion('tel:1234567890')}
+            >
+              (123) 456-7890
+            </a>
           </p>
           <p className={styles.ctaLocations}>
             We have two convenient locations in Maryland and Virginia.
@@ -128,7 +133,13 @@ export default function HeroSection() {
           </p>
 
                      <div className={styles.ctaSection}>
-             <a href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" className={styles.primaryButton} target="_blank" rel="noopener noreferrer">
+             <a 
+               href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" 
+               className={styles.primaryButton} 
+               target="_blank" 
+               rel="noopener noreferrer"
+               onClick={() => gtag_report_conversion('https://allergyandasthmaclinicalcenters.imscare.com/abs/login')}
+             >
                <span>Book An Appointment</span>
                <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

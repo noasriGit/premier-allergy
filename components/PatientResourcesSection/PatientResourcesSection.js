@@ -114,7 +114,13 @@ export default function PatientResourcesSection() {
           <p className={styles.ctaText}>
             Need help? Our team is here to assist you with any questions.
           </p>
-          <a href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" className={styles.ctaButton} target="_blank" rel="noopener noreferrer">
+          <a 
+            href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" 
+            className={styles.ctaButton} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => gtag_report_conversion('https://allergyandasthmaclinicalcenters.imscare.com/abs/login')}
+          >
             Contact Us
           </a>
         </div>

@@ -338,6 +338,7 @@ export default function EthosSection() {
                       aria-label={`Schedule appointment at ${location.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => gtag_report_conversion('https://allergyandasthmaclinicalcenters.imscare.com/abs/login')}
                     >
                       <span aria-hidden="true">📅</span>
                       Schedule Visit

@@ -2,11 +2,11 @@ import styles from './page.module.css'
 
 export const metadata = {
   title: 'Patient Forms | Premier Allergy & Asthma',
-  description: 'Download patient forms for Premier Allergy and Asthma Centers. Complete forms online through our EHR patient portal or download printable forms for Maryland and Northern Virginia locations.',
-  keywords: 'patient forms, allergy forms, asthma forms, registration forms, consent forms, EHR portal, Premier Allergy',
+  description: 'Download new patient registration forms for Premier Allergy and Asthma Centers. Complete forms online through our EHR patient portal or download printable forms for Maryland and Northern Virginia locations.',
+  keywords: 'patient forms, new patient forms, adult forms, pediatric forms, registration forms, EHR portal, Premier Allergy',
   openGraph: {
     title: 'Patient Forms | Premier Allergy & Asthma',
-    description: 'Download patient forms for Premier Allergy and Asthma Centers.',
+    description: 'Download new patient registration forms for Premier Allergy and Asthma Centers.',
     type: 'website',
   },
 }
@@ -77,120 +77,38 @@ export default function FormsPage() {
         <div className={styles.content}>
           <h2>Download Patient Forms</h2>
           <p className={styles.formsIntro}>
-            All forms are available for Maryland and Northern Virginia locations
+            Complete new patient registration forms for Maryland and Northern Virginia locations
           </p>
 
           <div className={styles.formsGrid}>
-            {/* Registration Packets */}
-            <div className={styles.formCategory}>
-              <h3>📋 Registration Packets</h3>
-              <div className={styles.formList}>
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>New Patient Registration Packet (Adult)</h4>
-                    <p>Includes: Adult registration form, financial and office policies, skin testing consent form</p>
-                  </div>
-                  <a href="/forms/adult-registration-packet.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
-
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>New Patient Registration Packet (Pediatric)</h4>
-                    <p>Includes: Pediatric registration form, financial and office policies, skin testing consent form</p>
-                  </div>
-                  <a href="/forms/pediatric-registration-packet.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
+            <div className={styles.formItem}>
+              <div className={styles.formInfo}>
+                <h4>📋 Adult New Patient Forms</h4>
+                <p>Complete registration packet for adult patients including registration form, financial policies, and consent forms</p>
               </div>
+              <a 
+                href="/forms/ADULT NEW PATIENT FORMS.pdf" 
+                className={styles.downloadButton}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📥 Download PDF
+              </a>
             </div>
 
-            {/* Individual Forms */}
-            <div className={styles.formCategory}>
-              <h3>📄 Individual Forms</h3>
-              <div className={styles.formList}>
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>Adult Patient Registration Form</h4>
-                    <p>Complete registration information for adult patients</p>
-                  </div>
-                  <a href="/forms/adult-registration-form.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
-
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>Pediatric Patient Registration Form</h4>
-                    <p>Complete registration information for pediatric patients</p>
-                  </div>
-                  <a href="/forms/pediatric-registration-form.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
-
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>AACC Financial, Payment and General Office Policies</h4>
-                    <p>Important information about billing, payments, and office policies</p>
-                  </div>
-                  <a href="/forms/financial-policies.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
-
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>AACC Allergy Skin Testing/Consent Form</h4>
-                    <p>Consent form for allergy skin testing procedures</p>
-                  </div>
-                  <a href="/forms/skin-testing-consent.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
-
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>AACC Immune System Testing Consent Form</h4>
-                    <p>Consent form for immune system testing procedures</p>
-                  </div>
-                  <a href="/forms/immune-testing-consent.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
-
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>AACC Immunotherapy Consent Form</h4>
-                    <p>Consent form for immunotherapy treatment</p>
-                  </div>
-                  <a href="/forms/immunotherapy-consent.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
-
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>AACC Medical History Form</h4>
-                    <p>Comprehensive medical history questionnaire</p>
-                  </div>
-                  <a href="/forms/medical-history.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
-
-                <div className={styles.formItem}>
-                  <div className={styles.formInfo}>
-                    <h4>HIPAA/Privacy Policy</h4>
-                    <p>Information about patient privacy and data protection</p>
-                  </div>
-                  <a href="/forms/hipaa-privacy-policy.pdf" className={styles.downloadButton}>
-                    📥 Download PDF
-                  </a>
-                </div>
+            <div className={styles.formItem}>
+              <div className={styles.formInfo}>
+                <h4>📋 Pediatric New Patient Forms</h4>
+                <p>Complete registration packet for pediatric patients including registration form, financial policies, and consent forms</p>
               </div>
+              <a 
+                href="/forms/PEDIATRIC NEW PATIENT FORMS.pdf" 
+                className={styles.downloadButton}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📥 Download PDF
+              </a>
             </div>
           </div>
         </div>

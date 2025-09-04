@@ -137,7 +137,11 @@ export default function ServicesPage() {
             toward better allergy and asthma management.
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="/contact" className={styles.ctaButton}>
+            <Link 
+              href="/contact" 
+              className={styles.ctaButton}
+              onClick={() => gtag_report_conversion('/contact')}
+            >
               Schedule Consultation
             </Link>
             <Link href="/locations" className={styles.ctaButtonSecondary}>

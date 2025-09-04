@@ -13,6 +13,11 @@ export default function Header() {
     setOpenDropdown(openDropdown === dropdownLabel ? null : dropdownLabel)
   }
 
+  const closeAllMenus = () => {
+    setMenuOpen(false)
+    setOpenDropdown(null)
+  }
+
   const navLinks = [
     { href: '/', label: 'Home' },
     {
@@ -54,7 +59,7 @@ export default function Header() {
       <div className={styles.container}>
         {/* Logo */}
         <div className={styles.logo}>
-          <Link href="/">
+          <Link href="/" onClick={closeAllMenus}>
             <Image
               src="/logo.png"
               alt="Premier Allergy and Asthma logo"
@@ -105,7 +110,11 @@ export default function Header() {
                 <ul className={`${styles.dropdownMenu} ${openDropdown === link.label ? styles.showDropdown : ''}`}>
                   {link.dropdown.map((sub) => (
                     <li key={sub.href}>
-                      <Link href={sub.href} className={styles.dropdownLink}>
+                      <Link 
+                        href={sub.href} 
+                        className={styles.dropdownLink}
+                        onClick={closeAllMenus}
+                      >
                         {sub.label}
                       </Link>
                     </li>
@@ -114,12 +123,30 @@ export default function Header() {
               </li>
             ) : (
               <li key={link.href} className={styles.navItem}>
-                <Link 
-                  href={link.href} 
-                  className={`${styles.navLink} ${link.emphasized ? styles.emphasizedLink : ''}`}
-                >
-                  {link.label}
-                </Link>
+                {link.href.startsWith('http') ? (
+                  <a 
+                    href={link.href} 
+                    className={`${styles.navLink} ${link.emphasized ? styles.emphasizedLink : ''}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      closeAllMenus();
+                      if (link.href.includes('imscare.com')) {
+                        gtag_report_conversion(link.href);
+                      }
+                    }}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link 
+                    href={link.href} 
+                    className={`${styles.navLink} ${link.emphasized ? styles.emphasizedLink : ''}`}
+                    onClick={closeAllMenus}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             )
           )}
@@ -148,7 +175,11 @@ export default function Header() {
                     <ul className={styles.mobileDropdown}>
                       {link.dropdown.map((sub) => (
                         <li key={sub.href}>
-                          <Link href={sub.href} className={styles.mobileSubLink}>
+                          <Link 
+                            href={sub.href} 
+                            className={styles.mobileSubLink}
+                            onClick={closeAllMenus}
+                          >
                             {sub.label}
                           </Link>
                         </li>
@@ -158,13 +189,30 @@ export default function Header() {
                 </li>
               ) : (
                 <li key={link.href} className={styles.mobileNavItem}>
-                  <Link 
-                    href={link.href} 
-                    className={`${styles.mobileLink} ${link.emphasized ? styles.emphasizedMobileLink : ''}`} 
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
+                  {link.href.startsWith('http') ? (
+                    <a 
+                      href={link.href} 
+                      className={`${styles.mobileLink} ${link.emphasized ? styles.emphasizedMobileLink : ''}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        closeAllMenus();
+                        if (link.href.includes('imscare.com')) {
+                          gtag_report_conversion(link.href);
+                        }
+                      }}
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link 
+                      href={link.href} 
+                      className={`${styles.mobileLink} ${link.emphasized ? styles.emphasizedMobileLink : ''}`} 
+                      onClick={closeAllMenus}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               )
             )}
