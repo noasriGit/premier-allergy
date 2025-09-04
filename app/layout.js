@@ -96,7 +96,13 @@ const structuredData = {
   name: 'Premier Allergy and Asthma Centers',
   description: 'Expert allergy and asthma care from board-certified specialists in Maryland and Virginia',
   url: 'https://www.allergyandasthmaclinicalcenters.com',
-  logo: 'https://www.allergyandasthmaclinicalcenters.com/logo.png',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://www.allergyandasthmaclinicalcenters.com/logo.png',
+    width: 260,
+    height: 60,
+    caption: 'Premier Allergy and Asthma Centers Logo'
+  },
   image: 'https://www.allergyandasthmaclinicalcenters.com/logo.png',
   telephone: '+1-855-528-7348',
   email: 'info@allergyandasthmaclinicalcenters.com',
@@ -215,6 +221,15 @@ export default function RootLayout({ children }) {
             `
           }}
         />
+        
+        {/* Logo and Brand Meta Tags */}
+        <meta property="og:image" content="https://www.allergyandasthmaclinicalcenters.com/logo.png" />
+        <meta property="og:image:width" content="260" />
+        <meta property="og:image:height" content="60" />
+        <meta property="og:image:alt" content="Premier Allergy and Asthma Centers Logo" />
+        <meta name="twitter:image" content="https://www.allergyandasthmaclinicalcenters.com/logo.png" />
+        <meta name="twitter:image:alt" content="Premier Allergy and Asthma Centers Logo" />
+        
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#095ea3" />
         <meta name="msapplication-TileColor" content="#095ea3" />
