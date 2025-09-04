@@ -184,7 +184,6 @@ export default function ServicePageClient({ service, availableSections }) {
               <Link 
                 href="/contact" 
                 className={styles.ctaButtonPrimary}
-                onClick={() => gtag_report_conversion('/contact')}
               >
                 Schedule Consultation
               </Link>

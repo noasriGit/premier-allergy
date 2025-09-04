@@ -65,8 +65,7 @@ export default function HeroSection() {
         <div className={styles.ctaText}>
           <p className={styles.ctaCall}>
             Call to book an appointment now: <a 
-              href="tel:1234567890" 
-              onClick={() => gtag_report_conversion('tel:1234567890')}
+              href="tel:1234567890"
             >
               (123) 456-7890
             </a>

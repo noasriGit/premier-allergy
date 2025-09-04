@@ -206,7 +206,6 @@ export default function MeetOurDoctorPage() {
             <a 
               href="/contact" 
               className={styles.ctaButton}
-              onClick={() => gtag_report_conversion('/contact')}
             >
               Schedule Appointment
             </a>

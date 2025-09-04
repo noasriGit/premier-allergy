@@ -57,7 +57,6 @@ export default function ServiceNavbar({ sections, activeSection, onSectionClick,
           <a 
             href="/contact" 
             className={styles.ctaButton}
-            onClick={() => gtag_report_conversion('/contact')}
           >
             Schedule Visit
           </a>
@@ -128,7 +127,6 @@ export default function ServiceNavbar({ sections, activeSection, onSectionClick,
                 <a 
                   href="/contact" 
                   className={styles.mobileCtaButton}
-                  onClick={() => gtag_report_conversion('/contact')}
                 >
                   Schedule Visit
                 </a>
