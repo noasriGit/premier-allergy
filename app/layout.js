@@ -203,6 +203,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={ebGaramond.className}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-435370936"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-435370936');
+            `
+          }}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#095ea3" />
         <meta name="msapplication-TileColor" content="#095ea3" />
