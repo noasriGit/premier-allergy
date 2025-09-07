@@ -127,6 +127,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/locations.html',
+        destination: '/#ethos-section',
+        permanent: true,
+      },
+      {
         source: '/treatment-program',
         destination: '/',
         permanent: true,
