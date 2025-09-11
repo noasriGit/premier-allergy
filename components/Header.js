@@ -77,6 +77,9 @@ export default function Header() {
             (1-855-528-7348)
           </a>
           <span className={styles.cta}>Call and make an appointment</span>
+          <a href="tel: 1-855-528-7348" className={styles.callNowButton}>
+            Call Now
+          </a>
         </div>
 
         {/* Hamburger Icon */}
