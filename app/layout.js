@@ -234,6 +234,15 @@ export default function RootLayout({ children }) {
                 });
                 return false;
               }
+              
+              // Event snippet for phone call conversion tracking
+              function gtag_report_phone_conversion() {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-435370936/5vM-CIHF7ZgbELj3zM8B',
+                    'value': 1.0,
+                    'currency': 'USD'
+                });
+              }
             `
           }}
         />

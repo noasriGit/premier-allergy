@@ -248,6 +248,26 @@
       transform: translateY(-1px);
       box-shadow: var(--shadow-md);
       text-decoration: none;
+      color: white;
+    }
+    
+    .callNowButton:active {
+      background-color: var(--primary-dark);
+      color: white;
+      text-decoration: none;
+      transform: translateY(0);
+    }
+    
+    .callNowButton:visited {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .callNowButton:focus {
+      color: white;
+      text-decoration: none;
+      outline: 2px solid white;
+      outline-offset: 2px;
     }
   }
   .arrow {
