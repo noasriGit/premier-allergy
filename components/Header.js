@@ -7,6 +7,22 @@ import styles from './Header.module.css'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  
+  // Conversion tracking function
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-435370936/5vM-CIHF7ZgbELj3zM8B',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
   const [openDropdown, setOpenDropdown] = useState(null)
 
   const handleToggleDropdown = (dropdownLabel) => {
@@ -77,7 +93,14 @@ export default function Header() {
             (1-855-528-7348)
           </a>
           <span className={styles.cta}>Call and make an appointment</span>
-          <a href="tel: 1-855-528-7348" className={styles.callNowButton}>
+          <a 
+            href="tel: 1-855-528-7348" 
+            className={styles.callNowButton}
+            onClick={(e) => {
+              e.preventDefault();
+              gtag_report_conversion('tel: 1-855-528-7348');
+            }}
+          >
             Call Now
           </a>
         </div>
