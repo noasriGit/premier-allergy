@@ -108,7 +108,9 @@ export default function EthosSection() {
       address: '20528 Boland Farm Rd, Suite 214',
       city: 'Germantown, MD 20876',
       phone: '(1-855-528-7348)',
-      hours: 'Mon-Fri: 8AM-5PM',
+      hours: 'Tuesday: <strong>12:00 pm to 6:00 pm</strong> | Thursday: <strong>10:00 am to 6:00 pm</strong>',
+      immunotherapyHours: 'Tuesday: <strong>12:00 pm to 5:45 pm</strong> | Thursday: <strong>10:00 am to 5:45 pm</strong>',
+      description: 'Our Germantown office is conveniently located in the Germantown Medical Center on Boland Farm Road. From Rt. 118 Germantown Road take Observation Drive towards Boland Farm Road where you make a left. The Medical Center will be on your right. ',
       image: '/germantown.png',
       alt: 'Germantown Clinic Exterior',
       placeId: 'ChIJk_JrOhUstokRsZ_yFXoEOfk',
@@ -121,7 +123,9 @@ export default function EthosSection() {
       address: '8100 Ashton Avenue, Suite 207B',
       city: 'Manassas, VA 20109',
       phone: '(1-855-528-7348)',
-      hours: 'Mon-Fri: 8AM-5PM',
+      hours: 'Monday: <strong>12:00 pm to 6:00 pm</strong> | Friday: <strong>10:00 am to 6:00 pm</strong>',
+      immunotherapyHours: 'Monday: <strong>12:00 pm to 5:45 pm</strong> | Friday: <strong>10:00 am to 5:45 pm</strong>',
+      description: 'Our Manassas office is conveniently located in a new medical office building right off Rt. 234 Sudley Rd. on the intersection of Sudley Manor Dr. and Ashton Ave., about 1.5 miles south of I-66 EXIT 47A. Plenty of free surface parking.',
       image: '/manassas.png',
       alt: 'Manassas Clinic Building',
       placeId: 'ChIJ034G_AJdtokRKExjpkLlKC0',
@@ -284,6 +288,13 @@ export default function EthosSection() {
                     <p className={styles.cityState}>{location.city}</p>
                   </address>
 
+                  {/* Location Description */}
+                  {location.description && (
+                    <div className={styles.locationDescription}>
+                      <p>{location.description}</p>
+                    </div>
+                  )}
+
                   <div className={styles.contactInfo}>
                     <a 
                       href={`tel:${location.phone.replace(/\D/g, '')}`}
@@ -295,9 +306,16 @@ export default function EthosSection() {
                     </a>
                     
                     <p className={styles.hours}>
-                      <span aria-hidden="true">🕒</span>
-                      {location.hours}
+                      <strong>Clinic hours:</strong><br />
+                      <span dangerouslySetInnerHTML={{ __html: location.hours }} />
                     </p>
+                    
+                    {location.immunotherapyHours && (
+                      <p className={styles.immunotherapyHours}>
+                        <strong>Immunotherapy walk-in hours (allergy shots):</strong><br />
+                        <span dangerouslySetInnerHTML={{ __html: location.immunotherapyHours }} />
+                      </p>
+                    )}
                   </div>
 
                   {/* Google Rating */}

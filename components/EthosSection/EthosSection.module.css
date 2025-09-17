@@ -161,12 +161,45 @@
 }
 
 .hours {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  margin: 0 0 0.75rem 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.hours strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #495057;
+}
+
+.immunotherapyHours {
   margin: 0;
   color: #6c757d;
   font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.immunotherapyHours strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #495057;
+}
+
+.locationDescription {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #095ea3;
+}
+
+.locationDescription p {
+  margin: 0;
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
 }
 
 /* Sleek Star Rating Component */
