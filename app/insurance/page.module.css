@@ -74,6 +74,11 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 5px 20px rgba(9, 94, 163, 0.2);
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .insuranceCard:hover {
@@ -85,6 +90,14 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
+  color: white;
+}
+
+.insuranceCard p {
+  color: white;
+  font-size: 0.9rem;
+  margin: 8px 0 0 0;
+  opacity: 0.9;
 }
 
 .infoBox {

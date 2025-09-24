@@ -69,7 +69,7 @@ export default function ServicePageClient({ service, availableSections }) {
       <ServiceHero 
         title={service.title}
         heroImage={service.heroImage}
-        description={service.info.text}
+        description={service.heroDescription || service.info.text}
       />
 
       {/* Main Content */}

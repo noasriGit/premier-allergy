@@ -158,8 +158,8 @@
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-  padding-top: 120px; /* Space for fixed header */
-  margin-top: 80px; /* Additional margin for header clearance */
+  padding-top: 80px; /* Space for fixed header */
+  margin-top: 60px; /* Additional margin for header clearance */
 }
 
 /* Animated Background */
@@ -187,34 +187,7 @@
   z-index: 2;
 }
 
-.floatingShapes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.shape {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  width: var(--size);
-  height: var(--size);
-  animation: float var(--duration) ease-in-out infinite;
-  animation-delay: var(--delay);
-}
-
-.shape:nth-child(1) { top: 10%; left: 10%; }
-.shape:nth-child(2) { top: 20%; right: 15%; }
-.shape:nth-child(3) { top: 60%; left: 5%; }
-.shape:nth-child(4) { top: 80%; right: 10%; }
-.shape:nth-child(5) { bottom: 20%; left: 20%; }
-.shape:nth-child(6) { bottom: 10%; right: 5%; }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
-  50% { transform: translateY(-30px) rotate(180deg); opacity: 0.6; }
-}
+/* Removed floating shapes */
 
 /* Main Content */
 .content {
@@ -442,7 +415,7 @@
 /* Visual Section */
 .visualSection {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   opacity: 0;
   animation: slideInRight 1s ease-out 1s forwards;
@@ -451,7 +424,8 @@
 .heroImage {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
+  margin-bottom: 1rem;
 }
 
 .imageContainer {
@@ -480,53 +454,43 @@
   );
 }
 
-/* Floating Elements */
-.floatingElements {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Stats in Visual Section - Original Styling */
+.visualSection .statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
   width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.element {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 1rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  animation: floatElement 6s ease-in-out infinite;
-  animation-delay: var(--delay);
   opacity: 0;
-  animation-fill-mode: forwards;
+  animation: slideInUp 1s ease-out 2.5s forwards;
 }
 
-.element:nth-child(1) { top: 10%; left: -20%; }
-.element:nth-child(2) { top: 50%; right: -20%; }
-.element:nth-child(3) { bottom: 20%; left: -15%; }
-
-@keyframes floatElement {
-  0% { opacity: 0; transform: translateY(20px); }
-  20% { opacity: 1; transform: translateY(0); }
-  80% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-20px); }
-}
-
-.elementIcon {
-  font-size: 1.5rem;
-}
-
-.elementText {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-primary);
+.visualSection .stat {
   text-align: center;
-  white-space: nowrap;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.visualSection .stat:hover {
+  transform: translateY(-5px);
+}
+
+.visualSection .statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.visualSection .statLabel {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 /* Trust Section */
@@ -633,8 +597,8 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 100px;
-    margin-top: 60px;
+    padding-top: 80px;
+    margin-top: 50px;
   }
   
   .heading {
@@ -672,8 +636,18 @@
     gap: 1rem;
   }
   
-  .element {
-    display: none; /* Hide floating elements on mobile */
+  .visualSection .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .visualSection .stat {
+    padding: 1rem;
+  }
+  
+  .visualSection .statNumber {
+    font-size: 2rem;
   }
 }
 
@@ -723,8 +697,6 @@
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .hero,
-  .shape,
-  .element,
   .scrollArrow {
     animation: none;
   }

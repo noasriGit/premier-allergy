@@ -32,52 +32,63 @@ const ServiceSection = forwardRef(({ id, title, icon, items, type = 'list' }, re
         </div>
 
         <div className={styles.sectionContent}>
-          {/* Description paragraph */}
+          {/* Main description paragraph - now the primary content */}
           <motion.div
-            className={styles.descriptionContainer}
+            className={styles.mainDescriptionContainer}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <p className={styles.descriptionText}>{description}</p>
+            <p 
+              className={styles.mainDescriptionText}
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
           </motion.div>
 
-          {/* Bullet points */}
-          <motion.div
-            className={styles.bulletPointsContainer}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <ul className={styles.itemList}>
-              {bulletPoints.map((item, index) => (
-                <motion.li
-                  key={index}
-                  className={styles.listItem}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <span className={styles.itemIcon}>•</span>
-                  <span className={styles.itemText}>{item}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Additional info paragraph */}
+          {/* Additional info paragraph - secondary content */}
           {additionalInfo && (
             <motion.div
               className={styles.additionalInfoContainer}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <p 
+                className={styles.additionalInfoText}
+                dangerouslySetInnerHTML={{ __html: additionalInfo }}
+              />
+            </motion.div>
+          )}
+
+          {/* Bullet points - now secondary, more subtle presentation */}
+          {bulletPoints && bulletPoints.length > 0 && (
+            <motion.div
+              className={styles.bulletPointsContainer}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <p className={styles.additionalInfoText}>{additionalInfo}</p>
+              <div className={styles.bulletPointsWrapper}>
+                <h3 className={styles.bulletPointsTitle}>Key Points:</h3>
+                <ul className={styles.itemList}>
+                  {bulletPoints.map((item, index) => (
+                    <motion.li
+                      key={index}
+                      className={styles.listItem}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      <span className={styles.itemIcon}>•</span>
+                      <span className={styles.itemText}>{item}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           )}
         </div>

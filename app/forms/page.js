@@ -43,7 +43,7 @@ export default function FormsPage() {
               <h3>📄 Alternative: Download & Fax</h3>
               <p>
                 If you are unable to complete forms online, you can fax us 
-                <strong> (855-329-2873) </strong>the completed interactive forms you find on this page 
+                <strong> (855) 329-2873 </strong>the completed interactive forms you find on this page 
                 below or bring the completed forms with you to your appointment.
               </p>
             </div>
@@ -126,12 +126,12 @@ export default function FormsPage() {
             
             <div className={styles.contactCard}>
               <h3>📠 Fax Forms</h3>
-              <p>Fax completed forms to: <strong>(855) 329-2873</strong></p>
+              <p>Fax completed forms to: <strong>855-FAX CURE (329-2873)</strong></p>
             </div>
             
             <div className={styles.contactCard}>
               <h3>📞 Questions?</h3>
-              <p>Call us at <strong>(703) 249-8500</strong> for assistance</p>
+              <p>Call us at <strong>855-5CURE4U (528-7348)</strong> for assistance</p>
             </div>
           </div>
         </div>

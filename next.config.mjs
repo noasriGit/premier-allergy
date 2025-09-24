@@ -76,19 +76,9 @@ const nextConfig = {
         destination: '/services/eosinophilic-esophagitis',
         permanent: true,
       },
-                     {
-         source: '/immune-disorders-diagnostics',
-         destination: '/services/immune-disorders-diagnostics',
-         permanent: true,
-       },
-       {
-         source: '/immunotherapy',
-         destination: '/services/immunotherapy',
-         permanent: true,
-       },
       {
         source: '/consent-form',
-        destination: '/services/immunotherapy#consent',
+        destination: '/immunotherapy#consent',
         permanent: true,
       },
 
@@ -144,22 +134,7 @@ const nextConfig = {
 
       // Patient Education
       {
-        source: '/common-allergens',
-        destination: '/services',
-        permanent: true,
-      },
-      {
-        source: '/common-symptoms',
-        destination: '/services',
-        permanent: true,
-      },
-      {
         source: '/statistics',
-        destination: '/services',
-        permanent: true,
-      },
-      {
-        source: '/for-moms',
         destination: '/services',
         permanent: true,
       },

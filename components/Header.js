@@ -14,6 +14,14 @@ export default function Header() {
     setOpenDropdown(openDropdown === dropdownLabel ? null : dropdownLabel)
   }
 
+  const handleMouseEnter = (dropdownLabel) => {
+    setOpenDropdown(dropdownLabel)
+  }
+
+  const handleMouseLeave = () => {
+    setOpenDropdown(null)
+  }
+
   const closeAllMenus = () => {
     setMenuOpen(false)
     setOpenDropdown(null)
@@ -35,8 +43,7 @@ export default function Header() {
         { href: '/services/drug-medication-allergies', label: 'Drug & Medication Allergies' },
         { href: '/services/novel-biologic-therapies', label: 'Novel Biologic Therapies' },
         { href: '/services/eosinophilic-esophagitis', label: 'Eosinophilic Esophagitis' },
-        { href: '/services/immune-disorders-diagnostics', label: 'Immune Disorders Diagnostics' },
-        { href: '/services/immunotherapy', label: 'Immunotherapy' },
+        { href: '/immunotherapy', label: 'Immunotherapy' },
       ],
     },
     {
@@ -45,12 +52,23 @@ export default function Header() {
         { href: '/before-you-visit', label: 'First Visit Guide' },
         { href: '/forms', label: 'Patient Forms' },
         { href: '/insurance', label: 'Insurance Information' },
-
+        { href: '/prescription-medications', label: 'Prescription Medications' },
       ],
     },
+    {
+      label: 'Patient Education',
+      dropdown: [
+        { href: '/common-allergens', label: 'Common Allergens' },
+        { href: '/common-symptoms', label: 'Common Symptoms' },
+        { href: '/for-moms', label: 'For Moms' },
+        { href: '/epinephrine-administration', label: 'Epinephrine Administration' },
+        { href: '/links-resources', label: 'Links & Resources' },
+      ],
+    },
+    { href: '/allergy-skin-testing', label: 'Allergy Skin Testing' },
     { href: '/meet-our-doctor', label: 'Meet Our Doctor' },
     { href: '/#ethos-section', label: 'Locations' },
-    { href: '/services/immunotherapy', label: 'Immunotherapy' },
+    { href: '/immunotherapy', label: 'Immunotherapy' },
     { href: 'https://allergyandasthmaclinicalcenters.imscare.com/abs/login', label: 'Patient Portal' },
     { href: 'https://portal.allergyandasthmaclinicalcenters.com/general/index.php', label: 'Online Payment', emphasized: true },
   ]
@@ -74,12 +92,12 @@ export default function Header() {
 
         {/* Contact Info */}
         <div className={styles.contact}>
-          <a href="tel: 1-855-528-7348" className={styles.phone}>
+          <a href="tel:18555287348" className={styles.phone}>
             (1-855-528-7348)
           </a>
           <span className={styles.cta}>Call and make an appointment</span>
           <a 
-            href="tel: 1-855-528-7348" 
+            href="tel:18555287348" 
             className={styles.callNowButton}
             onClick={() => {
               gtag_report_phone_conversion();
@@ -105,7 +123,12 @@ export default function Header() {
         <ul className={styles.navList}>
           {navLinks.map((link) =>
             link.dropdown ? (
-              <li key={link.label} className={styles.navItem}>
+              <li 
+                key={link.label} 
+                className={styles.navItem}
+                onMouseEnter={() => handleMouseEnter(link.label)}
+                onMouseLeave={handleMouseLeave}
+              >
                 <button
                   className={styles.navLink}
                   onClick={() => handleToggleDropdown(link.label)}

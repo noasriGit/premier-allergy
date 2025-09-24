@@ -15,10 +15,10 @@
 .heroContent {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .heroTitle {
@@ -45,6 +45,159 @@
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   object-fit: cover;
+}
+
+/* Team Section */
+.teamSection {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.teamContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.teamContent h3 {
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.teamMemberCard {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.teamMemberImage {
+  flex-shrink: 0;
+}
+
+.teamMemberPhoto {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  height: 200px;
+}
+
+.teamMemberInfo {
+  flex: 1;
+}
+
+.teamMemberInfo h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.teamMemberInfo p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.teamMember {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.teamMember h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.teamMember p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.doctorCard {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.doctorImage {
+  float: left;
+  margin: 0 30px 20px 0;
+  shape-outside: circle(50%);
+  shape-margin: 15px;
+}
+
+.doctorPhoto {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  height: 200px;
+  shape-outside: circle(50%);
+}
+
+.doctorInfo {
+  width: 100%;
+}
+
+.doctorInfo h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.doctorInfo p {
+  margin-bottom: 20px;
+}
+
+.doctorBio {
+  margin-top: 30px;
+}
+
+.doctorBio p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.doctorBio a {
+  color: #095ea3;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.doctorBio a:hover {
+  color: #0d47a1;
+  background-color: rgba(9, 94, 163, 0.1);
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 2px 4px;
 }
 
 /* Profile Section */
@@ -355,8 +508,6 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .heroContent {
-    grid-template-columns: 1fr;
-    gap: 40px;
     text-align: center;
   }
 
@@ -371,6 +522,36 @@
   .profileContent {
     max-width: 100%;
     padding: 0 20px;
+  }
+
+  .doctorCard {
+    text-align: center;
+  }
+
+  .doctorImage {
+    float: none;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+  .doctorPhoto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .teamMemberCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .teamMemberImage {
+    align-self: center;
+  }
+
+  .teamMemberPhoto {
+    width: 150px;
+    height: 150px;
   }
 
   .profileInfo {

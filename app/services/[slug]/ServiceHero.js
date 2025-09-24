@@ -26,12 +26,14 @@ export default function ServiceHero({ title, heroImage, description }) {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className={styles.heroTitle}>{title}</h1>
-          <p className={styles.heroDescription}>
-            {description.length > 200 
-              ? `${description.substring(0, 200)}...` 
-              : description
-            }
-          </p>
+          <p 
+            className={styles.heroDescription}
+            dangerouslySetInnerHTML={{
+              __html: description.length > 200 
+                ? `${description.substring(0, 200)}...` 
+                : description
+            }}
+          />
         </motion.div>
       </div>
     </section>

@@ -13,11 +13,20 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const service = servicesData[params.slug]
+  const { slug } = await params
+  const service = servicesData[slug]
+  
+  if (!service) {
+    return {
+      title: 'Service Not Found | Premier Allergy and Asthma Centers',
+      description: 'The requested service could not be found.',
+    }
+  }
+  
   return {
     title: `${service.title} | Premier Allergy and Asthma Centers`,
     description: `Learn about ${service.title.toLowerCase()} including symptoms, diagnosis, treatment, and prevention. Expert care from board-certified allergists.`,
-    keywords: `${service.title}, allergy treatment, asthma management, allergist, ${params.slug}`,
+    keywords: `${service.title}, allergy treatment, asthma management, allergist, ${slug}`,
     openGraph: {
       title: `${service.title} | Premier Allergy and Asthma Centers`,
       description: `Expert ${service.title.toLowerCase()} treatment and management. Board-certified allergists serving Maryland and Virginia.`,
@@ -26,8 +35,9 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default function ServicePage({ params }) {
-  const service = servicesData[params.slug]
+export default async function ServicePage({ params }) {
+  const { slug } = await params
+  const service = servicesData[slug]
 
   if (!service) {
     return (

@@ -1,0 +1,402 @@
+.container {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 160px 20px 80px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Content Wrapper */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main Content Section */
+.contentSection {
+  padding: 80px 20px;
+  background: white;
+}
+
+.contentSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.mainText {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+/* Process Section */
+.processSection {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.processSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.processText {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* Medications Section */
+.medicationsSection {
+  padding: 80px 20px;
+  background: white;
+}
+
+.medicationsSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #dc2626;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.warningText {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #dc2626;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.medicationTable {
+  margin-bottom: 2rem;
+}
+
+.medicationTable h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.medicationTableContent {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.medicationTableContent thead {
+  background: #095ea3;
+  color: white;
+}
+
+.medicationTableContent th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.medicationTableContent td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 1rem;
+}
+
+.medicationTableContent tr:hover {
+  background-color: #f8fafc;
+}
+
+.medicationTableContent tr:last-child td {
+  border-bottom: none;
+}
+
+.warningBox {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.warningBox p {
+  color: #dc2626;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.warningBox a {
+  color: #dc2626;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.warningBox a:hover {
+  text-decoration: underline;
+}
+
+/* Nasal Sprays Section */
+.nasalSpraysSection {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.nasalSpraysSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #dc2626;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Other Medications Section */
+.otherMedicationsSection {
+  padding: 80px 20px;
+  background: white;
+}
+
+.otherMedicationsSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.medicationCard {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #095ea3;
+}
+
+.medicationCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.medicationCard p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* Safe Medications Section */
+.safeMedicationsSection {
+  padding: 80px 20px;
+  background: #f0f7ff;
+}
+
+.safeMedicationsSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.safeCard {
+  background: #e9f7ef;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #6bb742;
+}
+
+.safeCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.safeCard p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* Contact Section */
+.contactSection {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.contactSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactSection p {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contactItem {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 250px;
+}
+
+.contactItem h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.contactItem p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.contactItem p:last-child {
+  margin-bottom: 0;
+}
+
+.contactItem a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contactItem a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .contentSection h2,
+  .processSection h2,
+  .medicationsSection h2,
+  .nasalSpraysSection h2,
+  .otherMedicationsSection h2,
+  .safeMedicationsSection h2,
+  .contactSection h2 {
+    font-size: 2rem;
+  }
+
+  .mainText,
+  .processText,
+  .warningText {
+    font-size: 1.1rem;
+  }
+
+  .medicationTableContent th,
+  .medicationTableContent td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactItem {
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 140px 15px 60px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .contentSection,
+  .processSection,
+  .medicationsSection,
+  .nasalSpraysSection,
+  .otherMedicationsSection,
+  .safeMedicationsSection,
+  .contactSection {
+    padding: 60px 15px;
+  }
+
+  .medicationCard,
+  .safeCard {
+    padding: 1.5rem;
+  }
+
+  .contactItem {
+    padding: 25px 20px;
+  }
+}
+

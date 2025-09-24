@@ -2,416 +2,321 @@ export const servicesData = {
   'asthma': {
     title: 'Asthma Management',
     heroImage: '/images/asthma.jpg',
+    heroDescription: 'In our <a href="/">allergy and asthma</a> centers our specialists offer state of the art asthma evaluation, diagnosis, and treatment to both adult and pediatric asthma patients.',
     info: {
-      heading: 'Understanding Asthma',
-      text: 'Asthma is a chronic lung condition that causes inflammation and narrowing of the airways, making it difficult to breathe. It can be triggered by allergens, exercise, cold air, or respiratory infections. Proper asthma management helps control symptoms and prevent flare-ups.',
+      heading: 'Asthma Treatment Clinic - Maryland and Virginia',
+      text: 'In our allergy and asthma centers our specialists offer state of the art asthma evaluation, diagnosis, and treatment to both adult and pediatric asthma patients. We are proud to serve Montgomery County, Maryland and Prince William, Loudon and Fairfax Counties in Virginia. Our asthma specialists will not only carry out careful evaluation and diagnosis of asthma, but they will also offer treatment and propose a course of asthma management, review with you the causes of your asthma, discuss signs and symptoms of an asthma attack and suggest an asthma action plan.',
       image: '/images/asthma2.jpg'
     },
     symptoms: {
-      description: 'Asthma symptoms can vary in intensity and frequency from person to person. Some individuals experience mild, occasional symptoms, while others may have severe, persistent breathing difficulties. Understanding these symptoms is crucial for early detection and effective management.',
+      description: 'Asthma is a chronic disease of the lungs and the airways. Hallmarks of asthma are chronic inflammation and narrowing of the small airways leading to episodic wheezing, chest tightness, and shortness of breath. Initially these symptoms are reversible, but as the inflammation progresses the narrowing due to the airway walls thickening becomes permanent resulting in chronic shortness of breath.',
       commonSymptoms: [
-        'Shortness of breath, especially during physical activity or at night',
-        'Wheezing or whistling sounds when breathing out',
-        'Chest tightness or pressure that feels like a band around your chest',
-        'Persistent coughing, particularly at night or early morning',
-        'Difficulty sleeping due to breathing problems or coughing',
-        'Rapid breathing or difficulty catching your breath',
-        'Fatigue and reduced energy levels',
-        'Anxiety or panic during breathing difficulties'
+        'Episodic wheezing and chest tightness',
+        'Shortness of breath and difficulty breathing',
+        'Chronic inflammation and airway narrowing'
       ],
-      additionalInfo: 'Symptoms often worsen during asthma attacks, which can be triggered by respiratory infections, exercise, cold air, or exposure to allergens. It&apos;s important to recognize these warning signs and have an action plan in place.'
+      additionalInfo: 'Asthma affects over 22 million Americans and about one third of the sufferers are children. Allergens, Irritants, pollutants, respiratory infections, and exercise can all trigger asthma symptoms. The recognition of such triggers, early diagnosis, and treatment of asthma can be life changing, allowing patients to lead normal, symptom-free lives, even to include competing in sports on the highest levels.'
     },
     diagnosis: {
-      description: 'Diagnosing asthma requires a comprehensive evaluation that combines medical history, physical examination, and specialized tests. Our board-certified allergists use the latest diagnostic tools to accurately identify asthma and determine its severity.',
+      description: 'Premier Allergy and Asthma Centers provide expert diagnosis, care and management of asthma based on years of experience using the latest advances in modern medicine. This multifaceted approach involves pulmonary function testing, detection of allergen triggers, and analysis of complicating factors resulting in an individualized prevention and management plan for each patient.',
       diagnosticMethods: [
-        'Comprehensive medical history review including family history and symptom patterns',
-        'Physical examination focusing on respiratory function and lung sounds',
-        'Spirometry testing to measure lung function and airway obstruction',
-        'Peak flow monitoring to assess breathing capacity over time',
-        'Allergy testing to identify potential triggers that may worsen asthma',
-        'Bronchodilator response testing to confirm reversible airway obstruction',
-        'Methacholine challenge testing for borderline cases',
-        'Exhaled nitric oxide testing to measure airway inflammation'
+        'Pulmonary function testing and breathing capacity assessment',
+        'Detection of allergen triggers and complicating factors',
+        'Individualized prevention and management plan development'
       ],
-      additionalInfo: 'We may also recommend additional tests such as chest X-rays, blood tests, or specialized breathing tests depending on your specific symptoms and medical history. This thorough approach ensures an accurate diagnosis and personalized treatment plan.'
+      additionalInfo: 'Your individually tailored treatment plan may include medications, daily and/or rescue inhalers, self-monitoring by daily breathing measurements at home (peak flow meter), as well as allergen immunotherapy where appropriate.'
     },
     treatment: {
-      description: 'Asthma treatment focuses on controlling inflammation, preventing symptoms, and maintaining normal lung function. Our treatment plans are personalized based on your asthma severity, triggers, and lifestyle needs.',
+      description: 'We are always in step with the latest advances in allergy and asthma treatment. Thus, we provide routinely all the newest biologic asthma therapeutics, namely Xolair (Omalizumab), Nucala (Mepolizumab), Cinquair (Reslizumab), Dupixent (Dupilumab) and Fasenra (Benralizumab), as well as any new treatment options as soon as they are approved by the FDA and become available.',
       treatmentOptions: [
-        'Inhaled corticosteroids for long-term inflammation control and symptom prevention',
-        'Quick-relief bronchodilators (albuterol) for immediate symptom relief during flare-ups',
-        'Long-acting bronchodilators for persistent symptoms when corticosteroids alone aren&apos;t sufficient',
-        'Combination inhalers that contain both anti-inflammatory and bronchodilator medications',
-        'Leukotriene modifiers for additional inflammation control',
-        'Biologic therapies for severe, uncontrolled asthma',
-        'Trigger avoidance strategies and environmental control measures',
-        'Regular monitoring and adjustment of treatment plans based on symptom control'
+        'Latest biologic asthma therapeutics including Xolair, Nucala, and Dupixent',
+        'Individualized medication and inhaler treatment plans',
+        'Allergen immunotherapy and advanced treatment options'
       ],
-      additionalInfo: 'We work closely with you to develop a comprehensive asthma action plan that includes medication schedules, trigger avoidance strategies, and emergency protocols. Regular follow-up visits help us monitor your progress and adjust treatment as needed.'
+      additionalInfo: 'With the help of Premier Allergy and Asthma Centers experts you will be the master of your asthma and leading normal life.'
     },
     prevention: {
-      description: 'While asthma cannot be completely prevented, especially if you have a genetic predisposition, there are many strategies that can significantly reduce the frequency and severity of asthma attacks and improve your overall quality of life.',
+      description: 'Prevention strategies focus on identifying and avoiding asthma triggers while maintaining optimal lung function through proper medication use and lifestyle modifications.',
       preventionStrategies: [
-        'Identify and avoid personal asthma triggers through allergy testing and symptom tracking',
-        'Take prescribed medications exactly as directed, even when feeling well',
-        'Develop and follow a personalized asthma action plan with your healthcare provider',
-        'Monitor breathing patterns and peak flow readings regularly to detect early warning signs',
-        'Maintain good indoor air quality with HEPA filters and regular cleaning',
-        'Get annual flu and pneumonia vaccinations to prevent respiratory infections',
-        'Exercise regularly with proper warm-up and cool-down routines',
-        'Manage stress and maintain a healthy lifestyle'
+        'Identify and avoid personal asthma triggers',
+        'Maintain proper medication adherence',
+        'Develop personalized asthma action plans'
       ],
-      additionalInfo: 'Lifestyle modifications such as regular exercise, maintaining a healthy weight, and managing stress can also help improve asthma control. We provide education and support to help you implement these strategies effectively.'
+      additionalInfo: 'Regular monitoring and follow-up care ensure that prevention strategies remain effective and are adjusted as needed to maintain long-term asthma control and quality of life.'
     },
     faq: [
       {
-        question: 'Can asthma go away on its own?',
-        answer: 'Asthma is typically a lifelong condition, but symptoms can improve or worsen over time. Some children may outgrow asthma, while others may develop it in adulthood. Proper treatment can help control it effectively.'
+        question: 'What are the most common asthma triggers?',
+        answer: 'Common asthma triggers include allergens like pollen, dust mites, and pet dander, respiratory infections, exercise, cold air, air pollution, and strong emotions. Identifying and avoiding your personal triggers is key to managing asthma effectively.'
+      },
+      {
+        question: 'How is asthma diagnosed?',
+        answer: 'Asthma diagnosis involves a comprehensive evaluation including medical history, physical examination, lung function tests like spirometry, and sometimes allergy testing. Our specialists use the latest diagnostic tools to accurately identify asthma and its severity.'
+      },
+      {
+        question: 'What are biologic medications for asthma?',
+        answer: 'Biologic medications like Xolair, Nucala, Dupixent, and Fasenra are advanced treatments for severe asthma. These medications target specific inflammatory pathways and can provide significant relief for patients with difficult-to-control asthma.'
+      },
+      {
+        question: 'Can children outgrow asthma?',
+        answer: 'Some children may outgrow asthma symptoms, but the underlying airway inflammation often persists. Early diagnosis and proper treatment can help children lead normal, active lives and may reduce the severity of symptoms over time.'
       },
       {
         question: 'What should I do during an asthma attack?',
-        answer: 'Use your quick-relief inhaler immediately and follow your asthma action plan. If symptoms don&apos;t improve quickly or you&apos;re having severe difficulty breathing, seek emergency medical care immediately.'
-      },
-      {
-        question: 'Is asthma dangerous?',
-        answer: 'Yes, uncontrolled asthma can be life-threatening. That&apos;s why ongoing management and regular checkups are essential. With proper treatment, most people with asthma can lead normal, active lives.'
-      },
-      {
-        question: 'Can exercise trigger asthma?',
-        answer: 'Yes, exercise can trigger asthma symptoms in some people, but this doesn&apos;t mean you should avoid exercise. With proper treatment and warm-up routines, most people with asthma can exercise safely and benefit from physical activity.'
-      },
-      {
-        question: 'How often should I see my allergist for asthma management?',
-        answer: 'Most people with asthma should see their allergist every 3-6 months for routine checkups. More frequent visits may be needed if your asthma is not well-controlled or if you&apos;re experiencing frequent symptoms.'
+        answer: 'During an asthma attack, use your quick-relief inhaler immediately and follow your asthma action plan. If symptoms don\'t improve quickly or you\'re having severe difficulty breathing, seek emergency medical care immediately.'
       }
     ]
   },
   'nasal-allergies': {
     title: 'Nasal Allergies',
     heroImage: '/images/sneezing.jpg',
+    heroDescription: 'Premier Allergy and Asthma Centers provide comprehensive nasal allergy relief and treatment for all patients suffering from <a href="/">nasal congestion</a>, post nasal drip and other seasonal allergy symptoms.',
     info: {
-      heading: 'Understanding Nasal Allergies',
-      text: 'Nasal allergies, also known as allergic rhinitis, affect millions of people worldwide. These allergies occur when your immune system overreacts to harmless substances in the air, causing inflammation in the nasal passages and surrounding tissues.',
+      heading: 'Nasal Allergy Diagnosis and Treatments',
+      text: 'Premier Allergy and Asthma Centers provide comprehensive nasal allergy relief and treatment for all patients suffering from nasal congestion, post nasal drip and other seasonal allergy symptoms. We serve patients in Clarksburg, Urbana, Germantown, Gaithersburg, Montgomery Village, Rockville in Montgomery County, MD as well as in Manassas, Manassas Park, Chantilly, Gainesville, Woodbridge and Centerville and surrounding areas of Northern Virginia.',
       image: '/images/pollen.jpg'
     },
     symptoms: {
-      description: 'Nasal allergy symptoms can range from mild to severe and often mimic the common cold. These symptoms typically occur immediately after exposure to allergens and can persist for hours or days.',
+      description: 'Inflammation of nasal passages (rhinitis) is a common respiratory disease affecting 20-40% of Americans. Rhinitis has been found to adversely affect more than just the nose, throat, sinuses and eyes. It has been associated with sleeping problems, ear conditions/hearing loss, and even learning difficulties. Acute rhinitis is frequently caused by pathogens while the seasonal and perennial (year-round) rhinitis is commonly caused by allergies.',
       commonSymptoms: [
-        'Sneezing, especially in rapid succession',
-        'Runny or stuffy nose with clear, watery discharge',
-        'Itchy nose, throat, and roof of mouth',
-        'Postnasal drip causing throat irritation',
-        'Nasal congestion making breathing difficult',
-        'Red, watery, and itchy eyes',
-        'Ear pressure and fullness',
-        'Fatigue and difficulty concentrating',
-        'Sleep disturbances due to congestion'
+        'Nasal congestion, post nasal drip, and sneezing',
+        'Sleep disturbances and learning difficulties',
+        'Ear conditions and reduced quality of life'
       ],
-      additionalInfo: 'Symptoms may be seasonal (spring/fall) or year-round depending on the specific allergens triggering your reaction. Indoor allergens like dust mites, pet dander, and mold can cause perennial symptoms.'
+      additionalInfo: 'Chronic rhinitis symptoms may be also present while no allergies are detected. The condition is due to a spontaneous inflammation of the nasal passages and is termed non-allergic rhinitis – up to 50% of cases of perennial rhinitis symptoms. This makes comprehensive evaluation by a specialist essential for proper diagnosis and treatment.'
     },
     diagnosis: {
-      description: 'Accurate diagnosis of nasal allergies involves a comprehensive evaluation including medical history, physical examination, and specialized allergy testing to identify specific triggers.',
+      description: 'Overall, nasal allergies require comprehensive diagnosis and treatment by a specialist using the most current treatment techniques such as those offered by PAAC. The diagnosis is performed utilizing painless skin testing and/or blood test and treatment plan is developed which, when appropriate, may include highly efficient allergen immunotherapy (allergy shots - AIT).',
       diagnosticMethods: [
-        'Detailed medical history and symptom analysis',
-        'Physical examination of nasal passages and throat',
-        'Skin prick testing for common allergens',
-        'Blood tests (RAST/ImmunoCAP) for allergen-specific IgE',
-        'Nasal endoscopy to examine internal structures',
-        'Nasal cytology to identify inflammatory cells',
-        'Challenge testing for specific allergens',
-        'Environmental assessment and exposure history'
+        'Painless skin testing and blood tests for allergen identification',
+        'Comprehensive medical history and physical examination',
+        'Evaluation of allergic vs non-allergic rhinitis factors'
       ],
-      additionalInfo: 'Our comprehensive diagnostic approach helps identify both the specific allergens causing your symptoms and any underlying conditions that may be contributing to your nasal allergy symptoms.'
+      additionalInfo: 'Our comprehensive diagnostic approach at Premier Allergy and Asthma Centers utilizes the most advanced testing methods to accurately identify the specific causes of your nasal allergy symptoms, whether they are allergic or non-allergic in nature. This thorough evaluation is essential for developing an effective, personalized treatment plan.'
     },
     treatment: {
-      description: 'Treatment for nasal allergies focuses on avoiding triggers, managing symptoms, and in some cases, desensitizing the immune system through immunotherapy.',
+      description: 'The AIT as conducted in PAAC leads to a long-term remission of allergy symptoms and potentially permanent relief. In Premier Allergy and Asthma Centers it is carried out conveniently on a walk-in basis. Our treatment approach combines the most effective medications with advanced immunotherapy techniques to provide both immediate symptom relief and long-term allergy control.',
       treatmentOptions: [
-        'Allergen avoidance strategies and environmental control',
-        'Nasal saline rinses and irrigation',
-        'Intranasal corticosteroids for inflammation control',
-        'Antihistamines (oral and nasal) for symptom relief',
-        'Decongestants for temporary congestion relief',
-        'Leukotriene modifiers for inflammatory response',
-        'Allergen immunotherapy (subcutaneous or sublingual)',
-        'Surgical options for structural issues (if applicable)'
+        'Allergen immunotherapy (AIT) with walk-in convenience for long-term relief',
+        'Advanced medications and nasal treatments for symptom control',
+        'Environmental control and personalized treatment plans'
       ],
-      additionalInfo: 'Treatment plans are personalized based on your specific allergens, symptom severity, and lifestyle factors. We work with you to develop a comprehensive approach that provides long-term relief.'
+      additionalInfo: 'Our comprehensive treatment approach at Premier Allergy and Asthma Centers focuses on providing both immediate symptom relief and long-term allergy control through advanced immunotherapy techniques. The convenience of walk-in immunotherapy treatments ensures that patients can maintain their treatment schedules without disruption to their daily lives.'
     },
     prevention: {
-      description: 'Preventing nasal allergy symptoms involves a combination of environmental control, lifestyle modifications, and proactive treatment strategies.',
+      description: 'Preventing nasal allergy symptoms requires a comprehensive approach that combines environmental controls, lifestyle modifications, and proactive medical management. Effective prevention strategies focus on reducing allergen exposure while maintaining optimal nasal health and immune function. By implementing evidence-based prevention techniques, many patients can significantly reduce the frequency and severity of nasal allergy symptoms.',
       preventionStrategies: [
-        'Use HEPA air filters in home and workplace',
-        'Regular cleaning to reduce dust and allergen accumulation',
-        'Keep windows closed during high pollen seasons',
-        'Use allergen-proof bedding and pillow covers',
-        'Shower and change clothes after outdoor activities',
-        'Monitor pollen and allergen counts in your area',
-        'Consider immunotherapy for long-term prevention',
-        'Maintain regular follow-up with your allergist'
+        'Environmental controls and allergen reduction',
+        'Regular immunotherapy maintenance and nasal hygiene',
+        'Lifestyle modifications and proactive medical management'
       ],
-      additionalInfo: 'Prevention is most effective when started before allergy season begins. We can help you develop a personalized prevention plan based on your specific triggers and lifestyle.'
+      additionalInfo: 'The most effective prevention strategies are those that are implemented consistently and tailored to each patient\'s specific allergens and lifestyle. At Premier Allergy and Asthma Centers, we work with patients to develop comprehensive prevention plans that address both immediate symptom control and long-term allergy management through our advanced immunotherapy programs.'
     },
     faq: [
       {
-        question: 'What is the difference between seasonal and perennial nasal allergies?',
-        answer: 'Seasonal allergies occur during specific times of the year (typically spring and fall) and are usually caused by outdoor allergens like pollen. Perennial allergies occur year-round and are typically caused by indoor allergens like dust mites, pet dander, and mold.'
+        question: 'What is the difference between allergic and non-allergic rhinitis?',
+        answer: 'Allergic rhinitis is caused by an immune system reaction to specific allergens like pollen, dust mites, or pet dander. Non-allergic rhinitis, which affects up to 50% of people with chronic nasal symptoms, occurs due to spontaneous inflammation of nasal passages without identifiable allergens. Both conditions can cause similar symptoms but require different treatment approaches.'
       },
       {
-        question: 'Can nasal allergies develop later in life?',
-        answer: 'Yes, nasal allergies can develop at any age, including adulthood. Changes in environment, immune system function, or exposure to new allergens can trigger the development of allergies later in life.'
+        question: 'How effective is immunotherapy for nasal allergies?',
+        answer: 'Allergen immunotherapy (AIT) conducted at Premier Allergy and Asthma Centers leads to long-term remission of allergy symptoms and potentially permanent relief. The treatment is highly effective when properly administered and maintained, with many patients experiencing significant improvement within the first year of treatment.'
       },
       {
-        question: 'How long does immunotherapy take to work?',
-        answer: 'Immunotherapy typically takes 3-6 months to show initial improvement, with maximum benefits usually achieved after 1-2 years of treatment. Some patients may continue to see improvement for up to 3-5 years.'
+        question: 'Can nasal allergies affect children\'s learning and development?',
+        answer: 'Yes, nasal allergies have been associated with learning difficulties, sleep problems, and ear conditions that can impact a child\'s development. Chronic nasal congestion and poor sleep quality can significantly affect concentration and academic performance, making early diagnosis and treatment crucial for children.'
       },
       {
-        question: 'Are nasal allergies hereditary?',
-        answer: 'Yes, there is a genetic component to nasal allergies. If one or both parents have allergies, their children are more likely to develop allergies as well. However, the specific allergens may differ between family members.'
+        question: 'What makes Premier Allergy and Asthma Centers different for nasal allergy treatment?',
+        answer: 'We provide comprehensive nasal allergy diagnosis and treatment using the most current techniques, including painless skin testing and advanced immunotherapy. Our walk-in immunotherapy program offers convenient treatment scheduling, and our specialists serve patients throughout Maryland and Northern Virginia with personalized care plans.'
       },
       {
-        question: 'Can nasal allergies lead to other health problems?',
-        answer: 'Untreated nasal allergies can lead to complications such as sinus infections, ear infections, sleep disturbances, and worsening of asthma symptoms. Early diagnosis and treatment can help prevent these complications.'
+        question: 'How long do I need to continue immunotherapy treatment?',
+        answer: 'Immunotherapy treatment typically lasts 3-5 years for optimal long-term benefits. The AIT program at Premier Allergy and Asthma Centers is designed to provide lasting relief, with many patients experiencing permanent improvement in their nasal allergy symptoms after completing the full course of treatment.'
       }
     ]
   },
   'ocular-allergies': {
     title: 'Ocular Allergies',
     heroImage: '/images/eyedrops.jpg',
+    heroDescription: 'Premier Allergy and Asthma Centers provide eye allergy relief and treatment for all patients suffering from itchy eyes, watery eyes, eyes swelling allergic conjunctivitis and other ocular allergies symptoms.',
     info: {
-      heading: 'Understanding Ocular Allergies',
-      text: 'Ocular allergies, also known as allergic conjunctivitis, affect the eyes and surrounding tissues. These allergies can cause significant discomfort and impact daily activities, especially for those who work on computers or spend time outdoors.',
+      heading: 'Ocular Allergies Clinic Located in Maryland and Northern Virginia',
+      text: 'Premier Allergy and Asthma Centers provide eye allergy relief and treatment for all patients suffering from itchy eyes, watery eyes, eyes swelling allergic conjunctivitis and other ocular allergies symptoms in Clarksburg, Urbana, Germantown, Gaithersburg, Montgomery Village, Rockville in Montgomery County, MD as well as in Manassas, Manassas Park, Chantilly, Gainesville, Woodbridge and Centerville and surrounding areas of Northern Virginia.',
       image: '/images/computer.jpg'
     },
     symptoms: {
-      description: 'Ocular allergy symptoms can range from mild irritation to severe discomfort that affects vision and daily activities. Symptoms typically affect both eyes and may be accompanied by nasal allergy symptoms.',
+      description: 'Also called allergic conjunctivitis, eye allergy occurs when something you are allergic to irritates the conjunctiva. This is the delicate membrane covering the eye and the inside of the eyelid. In this case, allergic reactions result in symptoms such as eyes that water, itch, hurt, become red or swollen, sensitive to light, blurry vision and eyes crusting in the morning.',
       commonSymptoms: [
-        'Red, bloodshot eyes with visible blood vessels',
-        'Intense itching and burning sensation',
-        'Watery eyes with excessive tearing',
-        'Swollen eyelids and surrounding tissues',
-        'Gritty or sandy feeling in the eyes',
-        'Sensitivity to light (photophobia)',
-        'Blurred vision due to excessive tearing',
-        'Stringy, white or clear eye discharge',
-        'Dark circles under the eyes (allergic shiners)'
+        'Itchy, watery, red, and swollen eyes',
+        'Sensitivity to light and blurry vision',
+        'Eye crusting in the morning and discomfort'
       ],
-      additionalInfo: 'Symptoms may be seasonal or year-round depending on the specific allergens. Contact lens wearers may experience increased discomfort and may need to temporarily discontinue lens use during flare-ups.'
+      additionalInfo: 'The most common causes of allergic conjunctivitis are seasonal allergens such as pollen. People with seasonal allergic rhinitis (hay fever) notice their symptoms worsen when they go outdoors on days with high pollen counts. Indoor allergens such as dust mites and pet dander can also cause eye allergies year-round.'
     },
     diagnosis: {
-      description: 'Diagnosis of ocular allergies involves a comprehensive eye examination combined with allergy testing to identify specific triggers and rule out other eye conditions.',
+      description: 'There is also number of conditions which can present with red, itchy or tender, swollen eyes but may not be caused by allergies and some of them, such as infections, can threaten your eyesight. Thus, it is critical to be examined and diagnosed by our Board Certified Allergist who can differentiate these conditions and prescribe appropriate therapy.',
       diagnosticMethods: [
-        'Comprehensive eye examination and visual acuity testing',
-        'Slit-lamp examination of the eye surface',
-        'Evaluation of tear film and tear production',
-        'Skin prick testing for common allergens',
-        'Blood tests for allergen-specific IgE antibodies',
-        'Conjunctival provocation testing',
-        'Evaluation of eyelid and surrounding tissue inflammation',
-        'Assessment of contact lens tolerance and fit'
+        'Comprehensive examination by Board Certified Allergist',
+        'Allergy testing to identify specific triggers',
+        'Differentiation from other eye conditions and infections'
       ],
-      additionalInfo: 'Our diagnostic approach helps distinguish ocular allergies from other eye conditions such as dry eye syndrome, bacterial conjunctivitis, or other inflammatory eye diseases.'
+      additionalInfo: 'Unlike conditions such as pink eye, <a href="/services/sinus-disease">allergic conjunctivitis</a> is not contagious. If your symptoms are related to an eye allergy, chances are you will have problems in both eyes. Our Board Certified Allergist can accurately distinguish between allergic and non-allergic eye conditions to ensure proper treatment.'
     },
     treatment: {
-      description: 'Treatment for ocular allergies focuses on relieving symptoms, reducing inflammation, and preventing future flare-ups through a combination of medications and lifestyle modifications.',
+      description: 'If you wear contact lenses you will benefit greatly from switching to daily disposable lenses. Topical eye antihistamines can provide immediate relief. However, their use may be limited if you use contact lenses. Steroid nasal sprays may be useful for eye symptoms related to nasal allergies, indirectly, in milder cases. Over-the-counter oral antihistamines can help as well but may lead to dry eye problems.',
       treatmentOptions: [
-        'Cold compresses to reduce inflammation and itching',
-        'Artificial tears to flush allergens and soothe irritation',
-        'Topical antihistamine eye drops for immediate relief',
-        'Mast cell stabilizer eye drops for long-term prevention',
-        'Combination antihistamine/mast cell stabilizer drops',
-        'Topical corticosteroids for severe inflammation (short-term)',
-        'Oral antihistamines for systemic relief',
-        'Allergen immunotherapy for long-term management'
+        'Daily disposable contact lenses for contact lens wearers',
+        'Topical eye antihistamines and oral antihistamines',
+        'Allergen immunotherapy for long-term relief and elimination'
       ],
-      additionalInfo: 'Treatment plans are customized based on symptom severity, frequency of flare-ups, and lifestyle factors. We work with you to develop a comprehensive approach that provides both immediate relief and long-term control.'
+      additionalInfo: 'Allergen immunotherapy in our PAAC offices works very well to relieve and eliminate eye allergy symptoms and our Allergist will be happy to discuss this option with you. This comprehensive approach provides both immediate symptom relief and long-term allergy control.'
     },
     prevention: {
-      description: 'Preventing ocular allergy symptoms involves avoiding triggers, protecting the eyes, and maintaining good eye hygiene practices.',
+      description: 'Preventing ocular allergy symptoms requires a comprehensive approach that combines environmental controls, proper eye care, and proactive medical management. Effective prevention focuses on reducing allergen exposure while maintaining optimal eye health and comfort.',
       preventionStrategies: [
-        'Wear sunglasses or protective eyewear outdoors',
-        'Keep windows closed during high pollen seasons',
-        'Use air purifiers with HEPA filters indoors',
-        'Avoid rubbing eyes, which can worsen symptoms',
-        'Wash hands frequently and avoid touching eyes',
-        'Use hypoallergenic eye care products',
-        'Consider daily disposable contact lenses',
-        'Maintain regular eye examinations and allergy follow-ups'
+        'Environmental controls and allergen avoidance',
+        'Proper eye hygiene and contact lens care',
+        'Regular follow-up with Board Certified Allergist'
       ],
-      additionalInfo: 'Prevention strategies are most effective when implemented consistently and started before allergy season begins. We can help you develop a personalized prevention plan.'
+      additionalInfo: 'Eye allergy symptoms can be very annoying, but with proper prevention strategies and treatment, most patients can achieve significant relief. Our Board Certified Allergist can help you develop a comprehensive prevention plan that addresses both immediate symptom control and long-term allergy management through our advanced immunotherapy programs.'
     },
     faq: [
       {
         question: 'Can I wear contact lenses if I have ocular allergies?',
-        answer: 'Many people with ocular allergies can wear contact lenses, but you may need to switch to daily disposable lenses or temporarily discontinue use during severe flare-ups. Your eye doctor can help determine the best approach for your specific situation.'
+        answer: 'If you wear contact lenses you will benefit greatly from switching to daily disposable lenses. However, topical eye antihistamines may be limited if you use contact lenses. Our Board Certified Allergist can help determine the best approach for your specific situation.'
       },
       {
-        question: 'How long do ocular allergy symptoms typically last?',
-        answer: 'Ocular allergy symptoms can last for hours to days depending on the allergen exposure and individual sensitivity. With proper treatment, symptoms can often be controlled within 24-48 hours.'
+        question: 'What is the difference between allergic conjunctivitis and pink eye?',
+        answer: 'Unlike conditions such as pink eye, allergic conjunctivitis is not contagious. If your symptoms are related to an eye allergy, chances are you will have problems in both eyes. Pink eye is typically caused by bacterial or viral infections and may affect one or both eyes.'
       },
       {
-        question: 'Are there any complications from untreated ocular allergies?',
-        answer: 'Untreated ocular allergies can lead to complications such as corneal abrasions from excessive rubbing, secondary infections, and chronic inflammation that may affect vision. Early treatment can help prevent these complications.'
+        question: 'How effective is immunotherapy for ocular allergies?',
+        answer: 'Allergen immunotherapy in our PAAC offices works very well to relieve and eliminate eye allergy symptoms. Our Allergist will be happy to discuss this option with you, as it provides long-term relief and can eliminate the need for ongoing medication.'
       },
       {
-        question: 'Can children develop ocular allergies?',
-        answer: 'Yes, children can develop ocular allergies, and they may be more prone to rubbing their eyes, which can worsen symptoms. Special care should be taken to prevent eye rubbing and ensure proper treatment.'
+        question: 'Can ocular allergies be caused by indoor allergens?',
+        answer: 'Yes, indoor allergens such as dust mites and pet dander can cause eye allergies year-round. You may notice your symptoms worsen during certain activities such as cleaning your house or grooming a pet.'
       },
       {
-        question: 'Do ocular allergies affect both eyes equally?',
-        answer: 'Ocular allergies typically affect both eyes, though one eye may be more severely affected than the other. If symptoms are significantly different between eyes, it may indicate a different condition requiring evaluation.'
+        question: 'What makes Premier Allergy and Asthma Centers different for ocular allergy treatment?',
+        answer: 'Our Board Certified Allergist can differentiate between allergic and non-allergic eye conditions, including infections that can threaten your eyesight. We provide comprehensive diagnosis and treatment, including advanced immunotherapy options for long-term relief.'
       }
     ]
   },
   'sinus-disease': {
     title: 'Sinus Disease',
     heroImage: '/images/sinus.jpg',
+    heroDescription: 'If you are suffering from sinus pressure, sinus headaches, frequent or chronic sinus infections and possibly other sinus disease symptoms, please make an appointment in one of our offices.',
     info: {
-      heading: 'Understanding Sinus Disease',
-      text: 'Sinus disease encompasses various conditions affecting the sinuses, including acute and chronic sinusitis, fungal sinusitis, and structural abnormalities. These conditions can significantly impact quality of life and may require specialized treatment approaches.',
+      heading: 'Sinusitis and Sinus Disease Clinic located in Maryland and northern Virginia',
+      text: 'If you are suffering from sinus pressure, sinus headaches, frequent or chronic sinus infections and possibly other sinus disease symptoms, please make an appointment in one of our offices which serve Clarksburg, Urbana, Germantown, Gaithersburg, Montgomery Village, Rockville in Montgomery County, MD as well as in Manassas, Manassas Park, Chantilly, Gainesville, Woodbridge and Centerville and surrounding areas of Northern Virginia. Our expert team in Premier Allergy and Asthma Centers will provide you with effective and comprehensive <a href="/">sinus disease</a> diagnosis, treatment and relief.',
       image: '/images/sinus.jpg'
     },
     symptoms: {
-      description: 'Sinus disease symptoms can vary widely depending on the specific condition, but often involve nasal congestion, facial pressure, and impaired breathing. Symptoms may be acute (short-term) or chronic (long-term).',
+      description: 'Inflammation of the paranasal sinuses, hollow areas of the skull in the cheekbones, forehead and behind the nose is called sinusitis. Sinusitis can be acute or chronic and can be caused by infectious agents, allergies or their combination. It is very common and affects 20-30 million Americans a year. The typical symptoms include facial pressure or in the forehead, a stuffy nose, nasal drainage, post-nasal drip, cough, head congestion, ear fullness and/or a headache.',
       commonSymptoms: [
-        'Facial pain, pressure, and fullness around sinuses',
-        'Nasal congestion and difficulty breathing through nose',
-        'Thick, discolored nasal discharge (yellow or green)',
-        'Postnasal drip causing throat irritation and cough',
-        'Reduced sense of smell and taste',
-        'Headache, especially in forehead and cheek areas',
-        'Fatigue and general feeling of illness',
-        'Ear pressure and fullness',
-        'Bad breath and dental pain'
+        'Facial pressure, stuffy nose, and nasal drainage',
+        'Post-nasal drip, cough, and head congestion',
+        'Toothache, fatigue, and occasionally fever'
       ],
-      additionalInfo: 'Chronic sinusitis is defined as symptoms lasting 12 weeks or longer, while acute sinusitis typically resolves within 4 weeks. The severity and combination of symptoms can help determine the underlying cause and appropriate treatment.'
+      additionalInfo: 'Symptoms may also include toothache, fatigue and, occasionally, a fever. Chronic sinusitis may manifest by unrelenting postnasal drainage, cough and/or frequent exacerbation of asthma symptoms.'
     },
     diagnosis: {
-      description: 'Diagnosis of sinus disease involves a comprehensive evaluation including medical history, physical examination, and imaging studies to identify the specific cause and extent of sinus involvement.',
+      description: 'Our specialists in the Premier Allergy and Asthma Centers are very well trained to evaluate sinus problems in relation to allergic diseases by performing allergy testing and precise imaging studies of the sinuses (sinus CT). We also offer the most sophisticated laboratory testing to diagnose immune disorders and immune deficiency which can cause chronic and recurrent infections or infections resistant to antibiotics.',
       diagnosticMethods: [
-        'Detailed medical history and symptom analysis',
-        'Physical examination of nasal passages and throat',
-        'Nasal endoscopy to visualize sinus openings',
-        'CT scan of sinuses to assess inflammation and anatomy',
-        'Allergy testing to identify potential triggers',
-        'Nasal culture to identify bacterial or fungal infection',
-        'Blood tests to assess immune function',
-        'Evaluation of underlying conditions (asthma, immune disorders)'
+        'Allergy testing and precise sinus CT imaging studies',
+        'Sophisticated laboratory testing for immune disorders',
+        'Evaluation of immunodeficiency and underlying conditions'
       ],
-      additionalInfo: 'Our comprehensive diagnostic approach helps identify the specific type of sinus disease, any underlying causes, and structural factors that may be contributing to your symptoms.'
+      additionalInfo: 'Frequent or chronic sinus infections (sinusitis), ear infections (otitis), nasal polyps or pneumonia(s) may sometimes be symptoms of a hidden immunodeficiency.'
     },
     treatment: {
-      description: 'Treatment for sinus disease depends on the specific diagnosis and may involve medications, lifestyle modifications, and in some cases, surgical intervention to restore proper sinus function.',
+      description: 'Our <a href="/immunotherapy">allergy and immunology</a> specialists will use all diagnostic and comprehensive therapeutic methods and approaches to alleviate and eliminate your sinus symptoms, frequent infections and if needed, properly address the underlying immune deficiency and disorders.',
       treatmentOptions: [
-        'Saline nasal irrigation and rinses',
-        'Intranasal corticosteroids to reduce inflammation',
-        'Antibiotics for bacterial infections',
-        'Antifungal medications for fungal sinusitis',
-        'Decongestants for temporary relief',
-        'Pain relievers for facial discomfort',
-        'Immunotherapy for allergy-related sinusitis',
-        'Surgical options (endoscopic sinus surgery)'
+        'Targeted medical therapy including antibiotics, antifungals, and anti-inflammatory medications',
+        'Immunotherapy for allergy-related sinusitis and immune deficiency treatment',
+        'Surgical intervention when structural abnormalities require correction'
       ],
-      additionalInfo: 'Treatment plans are personalized based on the specific type of sinus disease, severity of symptoms, and any underlying conditions. We work with you to develop a comprehensive approach for long-term relief.'
+      additionalInfo: 'Treatment approaches include targeted medical therapy, immunotherapy for allergic causes, and specialized interventions for immune deficiencies. Our multidisciplinary approach ensures optimal outcomes for both acute and chronic sinus conditions.'
     },
     prevention: {
-      description: 'Preventing sinus disease involves maintaining good nasal hygiene, managing underlying conditions, and avoiding known triggers that can lead to sinus inflammation and infection.',
+      description: 'Preventing sinus disease requires a comprehensive approach that addresses both immediate triggers and underlying immune function. Effective prevention focuses on maintaining optimal nasal health, managing allergies, and supporting immune system function.',
       preventionStrategies: [
-        'Regular saline nasal irrigation',
-        'Proper hand hygiene to prevent infections',
-        'Management of allergies and asthma',
-        'Avoidance of environmental irritants',
-        'Humidification of indoor air',
-        'Adequate hydration to maintain mucus flow',
-        'Regular exercise to improve immune function',
-        'Prompt treatment of upper respiratory infections'
+        'Allergy management, environmental controls, and nasal irrigation',
+        'Immune system support through proper nutrition and vaccination',
+        'Regular monitoring and specialized care for high-risk patients'
       ],
-      additionalInfo: 'Prevention strategies are most effective when implemented consistently and tailored to your specific risk factors and underlying conditions.'
+      additionalInfo: 'This includes environmental controls, proper nasal hygiene, and addressing any underlying immune deficiencies. Early intervention and consistent follow-up care are essential for preventing complications and maintaining long-term sinus health.'
     },
     faq: [
       {
-        question: 'What is the difference between acute and chronic sinusitis?',
-        answer: 'Acute sinusitis typically lasts less than 4 weeks and is often caused by viral or bacterial infections. Chronic sinusitis lasts 12 weeks or longer and may be caused by persistent inflammation, structural issues, or underlying conditions like allergies or immune disorders.'
+        question: 'What causes sinusitis and how common is it?',
+        answer: 'Sinusitis can be acute or chronic and can be caused by infectious agents, allergies or their combination. It is very common and affects 20-30 million Americans a year. Risk factors include allergies, structural abnormalities, immune deficiencies, and environmental factors.'
       },
       {
-        question: 'When is surgery recommended for sinus disease?',
-        answer: 'Surgery may be recommended when medical treatment fails to provide relief, there are structural abnormalities blocking sinus drainage, or there are complications like polyps or fungal infections. Surgery is typically considered after 3-6 months of medical treatment.'
+        question: 'What are the symptoms of chronic sinusitis?',
+        answer: 'Chronic sinusitis may manifest by unrelenting postnasal drainage, cough and/or frequent exacerbation of asthma symptoms. Symptoms may also include toothache, fatigue and, occasionally, a fever.'
       },
       {
-        question: 'Can sinus disease affect my sense of smell?',
-        answer: 'Yes, sinus disease can significantly impact your sense of smell due to inflammation and blockage of the olfactory area. This can also affect your sense of taste, as smell and taste are closely related.'
+        question: 'Can frequent sinus infections indicate an immune problem?',
+        answer: 'Yes, frequent or chronic sinus infections (sinusitis), ear infections (otitis), nasal polyps or pneumonia(s) may sometimes be symptoms of a hidden immunodeficiency. We offer sophisticated laboratory testing to diagnose immune disorders and immune deficiency which can cause chronic and recurrent infections.'
       },
       {
-        question: 'Are there any complications from untreated sinus disease?',
-        answer: 'Untreated sinus disease can lead to complications such as orbital cellulitis, meningitis, brain abscess, and chronic inflammation that may cause permanent damage to sinus tissues. Early treatment can help prevent these serious complications.'
+        question: 'What makes Premier Allergy and Asthma Centers different for sinus disease treatment?',
+        answer: 'Our allergy and immunology specialists use all diagnostic and comprehensive therapeutic methods and approaches to alleviate and eliminate your sinus symptoms, frequent infections and if needed, properly address the underlying immune deficiency and disorders.'
       },
       {
-        question: 'Can children develop sinus disease?',
-        answer: 'Yes, children can develop sinus disease, though their sinuses are not fully developed until adolescence. Children may have different symptoms and may require specialized evaluation and treatment approaches.'
+        question: 'What diagnostic methods do you use for sinus disease?',
+        answer: 'Our specialists perform allergy testing and precise imaging studies of the sinuses (sinus CT). We also offer the most sophisticated laboratory testing to diagnose immune disorders and immune deficiency which can cause chronic and recurrent infections or infections resistant to antibiotics.'
+      },
+      {
+        question: 'How long does sinus disease treatment typically take?',
+        answer: 'Treatment duration varies depending on the underlying cause and severity. Acute sinusitis typically resolves within 2-4 weeks with appropriate treatment, while chronic sinusitis may require 3-6 months of comprehensive therapy. Immune deficiency-related sinus problems may require longer-term management and monitoring to prevent recurrence.'
       }
     ]
   },
   'eczema-skin-allergies': {
     title: 'Eczema & Skin Allergies',
     heroImage: '/images/itching.jpg',
+    heroDescription: 'Our allergy experts specialize in evaluation and treatment of skin rashes and allergy symptoms such as eczema, atopic dermatitis, contact and irritant dermatitis.',
     info: {
-      heading: 'Understanding Eczema & Skin Allergies',
-      text: 'Eczema and skin allergies encompass various inflammatory skin conditions that can cause significant discomfort and impact quality of life. These conditions often have both genetic and environmental components and may be associated with other allergic conditions.',
+      heading: 'Eczema/Skin Allergies - Eczema Clinic in Maryland and Virginia',
+      text: 'Our allergy experts specialize in evaluation and treatment of skin rashes and allergy symptoms such as eczema, atopic dermatitis, contact and irritant dermatitis, as well as a variety of other skin allergy conditions. Our skin allergy doctors in Germantown, MD and Manassas, VA are here to help.',
       image: '/images/itching2.jpg'
     },
     symptoms: {
-      description: 'Eczema and skin allergy symptoms can vary widely in severity and presentation, from mild dryness to severe inflammation with significant impact on daily activities and sleep.',
+      description: 'These typically chronic inflammatory disorders of the skin most commonly appear as recurring skin rashes, redness, skin swelling, intense itching and dryness, crusting, flaking, blistering, and, in severe cases, cracking, oozing, or bleeding.',
       commonSymptoms: [
-        'Dry, scaly, and thickened skin patches',
-        'Intense itching that may worsen at night',
-        'Red, inflamed skin with visible rash',
-        'Small, raised bumps that may ooze or crust',
-        'Cracked, leathery skin in chronic cases',
-        'Sensitivity to certain fabrics and materials',
-        'Skin discoloration and hyperpigmentation',
-        'Sleep disturbances due to itching',
-        'Secondary skin infections from scratching'
+        'Recurring skin rashes and redness',
+        'Intense itching and dryness',
+        'Crusting, flaking, and blistering'
       ],
-      additionalInfo: 'Symptoms may flare up periodically and can be triggered by various factors including stress, environmental allergens, irritants, and changes in temperature or humidity.'
+      additionalInfo: 'Atopic dermatitis/eczema (AD) frequently starts in infancy, has a hereditary component, and runs in families. It is frequently associated with other allergic disorders such as food allergies, hay fever, and asthma. With their years of experience our allergy specialists are best suited to manage these complex disorders.'
     },
     diagnosis: {
-      description: 'Diagnosis of eczema and skin allergies involves a comprehensive evaluation including medical history, physical examination, and specialized testing to identify triggers and underlying causes.',
+      description: 'Contact dermatitis/eczema can be caused by an allergy or an irritant and occurs upon repeated exposure to the offending agent. Patients with allergic skin disorders require very detailed examination and allergy evaluation, to include both allergen and irritant agents exposure.',
       diagnosticMethods: [
-        'Detailed medical history and family history',
-        'Physical examination of affected skin areas',
+        'Detailed examination and allergy evaluation',
         'Patch testing for contact allergens',
-        'Skin prick testing for environmental allergens',
-        'Blood tests for allergen-specific IgE',
-        'Skin biopsy for atypical presentations',
-        'Evaluation of associated conditions (asthma, hay fever)',
-        'Assessment of environmental and occupational exposures'
+        'Identification of allergen and irritant agents'
       ],
-      additionalInfo: 'Our comprehensive diagnostic approach helps identify specific triggers, distinguish between different types of eczema, and develop targeted treatment strategies.'
+      additionalInfo: 'Unlike AD, contact dermatitis/eczema is curable provided the triggering agent can be identified and eliminated from the environment. We utilize all contemporary diagnostic tools, including patch testing, to quickly diagnose and treat allergic skin disorders.'
     },
     treatment: {
-      description: 'Treatment for eczema and skin allergies focuses on reducing inflammation, relieving symptoms, and preventing flare-ups through a combination of medications, lifestyle modifications, and trigger avoidance.',
+      description: 'Our expert team at Premier Allergy and Asthma Centers is uniquely qualified to diagnose and successfully manage all acute and chronic allergic skin disorders utilizing the latest advances in the treatment of these conditions.',
       treatmentOptions: [
-        'Emollients and moisturizers for skin barrier repair',
-        'Topical corticosteroids for inflammation control',
-        'Topical calcineurin inhibitors for sensitive areas',
-        'Antihistamines for itching relief',
-        'Wet wrap therapy for severe flare-ups',
-        'Phototherapy for moderate to severe cases',
-        'Systemic medications for severe refractory cases',
-        'Allergen immunotherapy for underlying allergies'
+        'Latest biologic therapeutics including Dupixent',
+        'Comprehensive management of acute and chronic disorders',
+        'Advanced treatment options for allergic skin conditions'
       ],
-      additionalInfo: 'Treatment plans are personalized based on the specific type of eczema, severity of symptoms, affected body areas, and individual response to different therapies.'
+      additionalInfo: 'We were one of the first allergy practices in the DC, MD, and VA area to provide the newest breakthrough biologic drug for the treatment of AD and eczema- Dupixent (Dupilumab) injections. We continuously adopt and offer our patients all the latest biologic therapeutics as soon as they become available.'
     },
     prevention: {
-      description: 'Preventing eczema and skin allergy flare-ups involves maintaining skin barrier function, avoiding known triggers, and implementing consistent skin care practices.',
+      description: 'Prevention strategies focus on maintaining skin barrier function, avoiding known triggers, and implementing consistent skin care practices.',
       preventionStrategies: [
         'Regular use of fragrance-free moisturizers',
         'Avoidance of known irritants and allergens',
-        'Gentle skin care with mild, non-irritating products',
-        'Maintenance of appropriate humidity levels',
-        'Stress management and relaxation techniques',
-        'Wearing soft, breathable fabrics',
-        'Regular follow-up with dermatologist/allergist',
-        'Prompt treatment of skin infections'
+        'Gentle skin care with mild, non-irritating products'
       ],
       additionalInfo: 'Prevention strategies are most effective when implemented consistently and tailored to your specific triggers and skin type.'
     },
@@ -425,8 +330,8 @@ export const servicesData = {
         answer: 'While eczema cannot be cured, it can be effectively managed with proper treatment and lifestyle modifications. Many people experience significant improvement or complete remission with appropriate care.'
       },
       {
-        question: 'Are there any foods that can trigger eczema?',
-        answer: 'Certain foods may trigger eczema flare-ups in some individuals, particularly in children. Common triggers include dairy, eggs, nuts, soy, and wheat. Food allergy testing can help identify specific triggers.'
+        question: 'What are biologic medications for eczema?',
+        answer: 'Biologic medications like Dupixent (Dupilumab) are advanced treatments for severe atopic dermatitis. These medications target specific inflammatory pathways and can provide significant relief for patients with difficult-to-control eczema.'
       },
       {
         question: 'Can stress affect eczema?',
@@ -529,65 +434,45 @@ export const servicesData = {
   'hives-angioedema': {
     title: 'Hives & Angioedema',
     heroImage: '/services/hives-angioedema.jpg',
+    heroDescription: 'Acute and chronic hives associated with skin itching can be quite bothersome but also, at times, result in debilitating and chronic condition.',
     info: {
-      heading: 'Understanding Hives & Angioedema',
-      text: 'Hives (urticaria) and angioedema are common allergic reactions that can cause significant discomfort and, in severe cases, life-threatening complications. These conditions can be acute or chronic and may have various triggers.',
+      heading: 'Hives and Angioedema Diagnosis and Treatments',
+      text: 'Acute and chronic hives associated with skin itching can be quite bothersome but also, at times, result in debilitating and chronic condition. In Premier Allergy and Asthma Centers in Germantown, MD and Manassas, VA we have doctors with unique expertise needed to properly evaluate your hives and angioedema symptoms and offer correct management and treatment.',
       image: '/services/hives-angioedema-info.jpg'
     },
     symptoms: {
-      description: 'Hives and angioedema symptoms can range from mild skin reactions to severe swelling that affects breathing and requires emergency treatment. Symptoms may develop rapidly and can be frightening for patients.',
+      description: 'Hives are probably the <a href="/">most common allergic</a> skin condition and is characterized by a skin rash notable for pale red, raised and intensely itchy bumps. Acute hives are frequently caused by allergic reactions; however, there are many non-allergic causes.',
       commonSymptoms: [
-        'Raised, red, itchy welts on the skin (hives)',
-        'Swelling of deeper tissues (angioedema)',
-        'Itching, burning, or stinging sensation',
-        'Swelling of lips, tongue, and throat',
-        'Difficulty breathing or swallowing',
-        'Abdominal pain and gastrointestinal symptoms',
-        'Joint pain and swelling',
-        'Fatigue and general malaise',
-        'Anxiety and emotional distress'
+        'Pale red, raised and intensely itchy bumps',
+        'Linear hives from stroking skin (dermographism)',
+        'Chronic urticaria lasting longer than six weeks'
       ],
-      additionalInfo: 'Symptoms may appear suddenly and can last from minutes to days. Chronic hives and angioedema may persist for weeks, months, or years, significantly impacting quality of life.'
+      additionalInfo: 'Number of cases of hives lasting few days (acute urticaria) are the result of exposure to an allergen (e.g. food, medication). Acute viral infections are another common cause of acute urticaria (viral exanthem). Less common causes of hives include friction, pressure, temperature extremes, exercise, water exposure and sunlight.'
     },
     diagnosis: {
-      description: 'Diagnosis of hives and angioedema involves a comprehensive evaluation to identify triggers, distinguish between acute and chronic forms, and rule out underlying conditions that may be contributing.',
+      description: 'Hives caused by stroking the skin (often linear in appearance) are due to a benign condition called dermographism and may have a form of quickly appearing red "blotches" on torso, face or upper arms. While acute hives can be frequently prevented by careful diagnosis and identification of triggering allergen, chronic urticaria can be debilitating disease.',
       diagnosticMethods: [
         'Detailed medical history and symptom timeline',
         'Physical examination of skin lesions and swelling',
-        'Allergy testing for common triggers',
-        'Blood tests for autoimmune conditions',
-        'Thyroid function testing',
-        'C1 esterase inhibitor testing for hereditary angioedema',
-        'Skin biopsy for chronic cases',
-        'Evaluation of medications and supplements'
+        'Allergy testing for common triggers'
       ],
-      additionalInfo: 'Our comprehensive diagnostic approach helps identify the specific cause of your hives and angioedema, whether it\'s allergic, autoimmune, or related to other underlying conditions.'
+      additionalInfo: 'Chronic urticaria (hives lasting longer than six weeks) is not due to an allergy. The majority of patients with chronic hives have idiopathic form (an unknown cause), also called chronic spontaneous urticaria (CSU). However, as many as 30-40% of those patients may, in fact, have an autoimmune disorder causing their hives.'
     },
     treatment: {
-      description: 'Treatment for hives and angioedema focuses on relieving symptoms, preventing future episodes, and addressing underlying causes when possible.',
+      description: 'Dr. Bocek has a special interest in diagnosis and management of chronic urticarial conditions and developed several expert treatment protocols for these disorders. Our treatments include the recent advancement and the most efficacious biologic therapy of Xolair (Omalizumab) or Dupixent (Dupilumab) injections which can resolve chronic hives and itching within days.',
       treatmentOptions: [
-        'Antihistamines for symptom relief and prevention',
-        'Corticosteroids for severe acute episodes',
-        'Epinephrine for life-threatening reactions',
-        'H2 blockers for additional symptom control',
-        'Leukotriene modifiers for chronic cases',
-        'Immunosuppressive medications for severe chronic cases',
-        'C1 esterase inhibitor replacement for hereditary angioedema',
-        'Trigger avoidance and lifestyle modifications'
+        'Xolair (Omalizumab) biologic therapy',
+        'Dupixent (Dupilumab) injections',
+        'Expert treatment protocols'
       ],
-      additionalInfo: 'Treatment plans are personalized based on the frequency and severity of episodes, identified triggers, and individual response to different medications.'
+      additionalInfo: 'The new oral medication for CSU - remibrutinib will be approved and available soon.'
     },
     prevention: {
-      description: 'Preventing hives and angioedema involves identifying and avoiding triggers, maintaining appropriate medications, and having an emergency plan for severe reactions.',
+      description: 'Prevention strategies focus on identifying and avoiding triggers, maintaining appropriate medications, and having an emergency plan for severe reactions.',
       preventionStrategies: [
         'Identify and avoid known triggers',
-        'Carry emergency medications (epinephrine if prescribed)',
-        'Wear medical alert jewelry',
-        'Maintain regular follow-up with allergist',
-        'Keep a symptom diary to identify patterns',
-        'Avoid medications known to cause reactions',
-        'Manage stress and maintain healthy lifestyle',
-        'Have an emergency action plan'
+        'Carry emergency medications',
+        'Maintain regular follow-up with allergist'
       ],
       additionalInfo: 'Prevention strategies are most effective when implemented consistently and tailored to your specific triggers and medical history.'
     },
@@ -601,12 +486,12 @@ export const servicesData = {
         answer: 'Yes, stress can trigger or worsen hives and angioedema in some individuals. Stress management techniques may help reduce the frequency and severity of episodes.'
       },
       {
-        question: 'Are hives and angioedema dangerous?',
-        answer: 'While most cases are not dangerous, severe angioedema affecting the throat can be life-threatening. Any difficulty breathing or swallowing requires immediate medical attention.'
+        question: 'What are biologic medications for chronic hives?',
+        answer: 'Biologic medications like Xolair (Omalizumab) and Dupixent (Dupilumab) are advanced treatments for chronic urticaria. These medications target specific inflammatory pathways and can provide significant relief for patients with difficult-to-control hives.'
       },
       {
-        question: 'Can children develop chronic hives?',
-        answer: 'Yes, children can develop chronic hives, though it is less common than in adults. Children may have different triggers and may require specialized evaluation and treatment.'
+        question: 'What is dermographism?',
+        answer: 'Dermographism is a benign condition where stroking the skin causes linear hives or red "blotches" to appear. It\'s a form of physical urticaria that can be managed with appropriate treatment.'
       },
       {
         question: 'Is there a cure for chronic hives?',
@@ -617,64 +502,45 @@ export const servicesData = {
   'food-allergies': {
     title: 'Food Allergies',
     heroImage: '/images/foodAllergy.jpg',
+    heroDescription: 'Food allergies affect millions of people with reactions ranging from discomfort to the life-threatening events.',
     info: {
-      heading: 'Understanding Food Allergies',
-      text: 'Food allergies occur when the immune system mistakenly identifies certain foods as harmful, triggering an allergic reaction. These reactions can range from mild to life-threatening and require careful management and avoidance strategies.',
+      heading: 'Food Allergy diagnosis and treatments',
+      text: '<a href="/">Food allergies</a> affect millions of people with reactions ranging from discomfort to the life-threatening events. Let us address your food allergy symptoms, perform food allergy testing and offer solutions in our clinics in in Germantown Montgomery County, MD as well as in Manassas, Manassas Park in Northern Virginia.',
       image: '/images/beeAllergy.jpg'
     },
     symptoms: {
-      description: 'Food allergy symptoms can develop within minutes to hours after eating the offending food and can affect multiple body systems. The severity can vary from mild to life-threatening anaphylaxis.',
+      description: 'The prevalence of food allergies has been rising steadily in past decades, and they represent a significant public health issue. Food allergies are caused by the development of hypersensitivity and reaction to a specific food protein which should be tolerated in health. These reactions can range from mild to severe.',
       commonSymptoms: [
-        'Skin reactions: hives, itching, eczema flare-ups',
-        'Digestive symptoms: nausea, vomiting, diarrhea, abdominal pain',
-        'Respiratory symptoms: wheezing, shortness of breath, throat tightness',
-        'Cardiovascular symptoms: rapid heartbeat, low blood pressure',
-        'Swelling of lips, tongue, throat, and face',
-        'Dizziness, lightheadedness, or fainting',
-        'Anxiety and sense of impending doom',
-        'Loss of consciousness in severe cases'
+        'Itching of the skin, hives, swelling of lips, tongue, or throat',
+        'Abdominal pain or bloating, vomiting',
+        'Respiratory symptoms such as wheezing and shortness of breath'
       ],
-      additionalInfo: 'Symptoms typically develop within minutes to 2 hours after exposure. The most severe reaction, anaphylaxis, can be life-threatening and requires immediate medical attention.'
+      additionalInfo: 'The symptoms usually develop rapidly within minutes to an hour upon eating the offending food and typically include itching of the skin, hives, swelling of the lips, tongue, or throat, abdominal pain or bloating, vomiting and sometimes respiratory symptoms such as wheezing and shortness of breath.'
     },
     diagnosis: {
-      description: 'Diagnosis of food allergies requires careful evaluation including medical history, specialized testing, and in some cases, supervised food challenges to confirm or rule out specific allergies.',
+      description: 'The most severe reaction is anaphylaxis which may rapidly develop into a multisystem failure and lead to death. There is a number of food reactions called intolerances which do not have allergic nature and thus, public perception is that food allergies are more common than they truly are.',
       diagnosticMethods: [
         'Detailed medical history and reaction timeline',
         'Skin prick testing for common food allergens',
-        'Blood tests (specific IgE) for food antibodies',
-        'Component-resolved diagnostics for detailed analysis',
-        'Supervised oral food challenges',
-        'Elimination diets and food diaries',
-        'Evaluation of cross-reactivity patterns',
-        'Assessment of risk factors and family history'
+        'Blood tests (specific IgE) for food antibodies'
       ],
-      additionalInfo: 'Our comprehensive diagnostic approach helps accurately identify food allergies, distinguish them from food intolerances, and develop safe management strategies.'
+      additionalInfo: 'The proper diagnosis of food allergies and their differentiation from food intolerances (including celiac disease – gluten enteropathy) is a task our PAAC experts routinely perform starting with a meticulous review of patient\'s history complemented by multiple diagnostic tools including skin and blood testing.'
     },
     treatment: {
-      description: 'Treatment for food allergies focuses on strict avoidance of allergenic foods, emergency preparedness, and in some cases, desensitization therapies for specific foods.',
+      description: 'A biologic medication Xolair (Omalizumab) has been approved for the management of food allergies and is of course in our therapeutic repertoire.',
       treatmentOptions: [
+        'Xolair (Omalizumab) biologic therapy',
         'Strict avoidance of allergenic foods',
-        'Epinephrine auto-injector prescription and training',
-        'Emergency action plan development',
-        'Oral immunotherapy for specific foods (when appropriate)',
-        'Sublingual immunotherapy for some allergens',
-        'Antihistamines for mild reactions',
-        'Education and support for patients and families',
-        'Regular follow-up and monitoring'
+        'Emergency action plan development'
       ],
       additionalInfo: 'Treatment plans are personalized based on the specific foods involved, severity of reactions, and individual factors including age and lifestyle.'
     },
     prevention: {
-      description: 'Preventing food allergy reactions involves strict avoidance, careful reading of food labels, communication with restaurants and food service providers, and emergency preparedness.',
+      description: 'Prevention strategies focus on strict avoidance, careful reading of food labels, communication with restaurants and food service providers, and emergency preparedness.',
       preventionStrategies: [
         'Read all food labels carefully',
         'Communicate allergies to restaurants and food service',
-        'Carry emergency medications at all times',
-        'Wear medical alert jewelry',
-        'Educate family, friends, and caregivers',
-        'Have an emergency action plan',
-        'Regular follow-up with allergist',
-        'Stay informed about food allergy research and treatments'
+        'Carry emergency medications at all times'
       ],
       additionalInfo: 'Prevention strategies are most effective when implemented consistently and involve everyone who prepares or serves food to the allergic individual.'
     },
@@ -692,8 +558,8 @@ export const servicesData = {
         answer: 'If you experience symptoms, use your epinephrine auto-injector if prescribed, and seek immediate medical attention. Even if symptoms seem mild initially, they can rapidly worsen.'
       },
       {
-        question: 'Can food allergies develop in adulthood?',
-        answer: 'Yes, food allergies can develop at any age, including adulthood. Adult-onset food allergies are becoming more common and may be related to changes in immune function or environmental factors.'
+        question: 'What is Xolair for food allergies?',
+        answer: 'Xolair (Omalizumab) is a biologic medication that has been approved for the management of food allergies. It can help reduce the risk of severe allergic reactions and may be used in combination with other treatments.'
       },
       {
         question: 'Is there a cure for food allergies?',
@@ -704,36 +570,27 @@ export const servicesData = {
   'drug-medication-allergies': {
     title: 'Drug & Medication Allergies',
     heroImage: '/images/medicine.jpg',
+    heroDescription: 'Only very small fractions of patients who believe they are allergic to antibiotics or who carry a label of being penicillin-allergic have truly significant and specific reaction to the given antibiotic.',
     info: {
-      heading: 'Understanding Drug & Medication Allergies',
-      text: 'Drug and medication allergies occur when the immune system reacts to medications, causing symptoms that can range from mild skin reactions to life-threatening anaphylaxis. These allergies can develop with any medication and may occur even after previous safe use.',
+      heading: 'Drug/Medication Allergies',
+      text: 'Only very small fractions of patients who believe they are allergic to antibiotics or who carry a label of being penicillin-allergic have truly significant and specific reaction to the given antibiotic. Our Board Certified allergy specialists are here to evaluate your drug reactions and to distinguish between true <a href="/">medication/drug</a> allergies and side effects or adverse effects of antibiotics or other drugs. We can also help you with your possible contrast dye allergic reactions whether you live in Montgomery County, MD, Northern Virginia or other parts of DC Metro area.',
       image: '/images/medicine.jpg'
     },
     symptoms: {
-      description: 'Drug allergy symptoms can develop within minutes to days after taking a medication and can affect multiple body systems. The timing and severity of symptoms can help distinguish true allergies from other adverse reactions.',
+      description: 'Administration of foreign substances into human body such as medications, drugs and vaccines can frequently lead to various adverse reactions with multitude of gastrointestinal, skin, musculoskeletal, neurologic and respiratory symptoms.',
       commonSymptoms: [
-        'Skin reactions: hives, rash, itching, swelling',
-        'Respiratory symptoms: wheezing, shortness of breath',
-        'Gastrointestinal symptoms: nausea, vomiting, diarrhea',
-        'Cardiovascular symptoms: rapid heartbeat, low blood pressure',
-        'Facial swelling, especially around eyes and lips',
-        'Fever and general feeling of illness',
-        'Joint pain and muscle aches',
-        'Anaphylaxis with loss of consciousness'
+        'Gastrointestinal, skin, musculoskeletal symptoms',
+        'Neurologic and respiratory symptoms',
+        'Various adverse reactions to medications'
       ],
-      additionalInfo: 'Symptoms may develop immediately (within minutes) or be delayed (days to weeks). Delayed reactions may include severe skin conditions like Stevens-Johnson syndrome or drug rash with eosinophilia and systemic symptoms (DRESS).'
+      additionalInfo: 'It is estimated that only 5-10% of these reactions are true <a href="/common-allergens">allergic reactions</a>. Whether allergic or not, such reactions can range from mild to life-threatening. It takes our experienced and well-trained experts to identify and diagnose reactions to medications, drugs and vaccines and guide the patients towards their prevention.'
     },
     diagnosis: {
-      description: 'Diagnosis of drug allergies requires careful evaluation including medical history, specialized testing, and in some cases, supervised drug challenges to confirm or rule out specific allergies.',
+      description: 'We will also be able to guide you which vaccines are safe for your egg or gelatin allergic children and nearly eliminate the risk of reaction to penicillin be penicillin skin testing.',
       diagnosticMethods: [
         'Detailed medical history and reaction timeline',
         'Skin testing for common drug allergens',
-        'Blood tests for drug-specific antibodies',
-        'Patch testing for delayed reactions',
-        'Supervised drug challenges',
-        'Evaluation of cross-reactivity patterns',
-        'Assessment of risk factors',
-        'Review of medication lists and timing'
+        'Blood tests for drug-specific antibodies'
       ],
       additionalInfo: 'Our comprehensive diagnostic approach helps accurately identify drug allergies, distinguish them from other adverse reactions, and develop safe medication alternatives.'
     },
@@ -742,26 +599,16 @@ export const servicesData = {
       treatmentOptions: [
         'Immediate discontinuation of allergenic medication',
         'Epinephrine for severe reactions',
-        'Antihistamines for mild skin reactions',
-        'Corticosteroids for severe inflammation',
-        'Alternative medication selection',
-        'Desensitization protocols for essential medications',
-        'Emergency action plan development',
-        'Education about cross-reactivity'
+        'Alternative medication selection'
       ],
       additionalInfo: 'Treatment plans are personalized based on the specific medication involved, severity of reaction, and whether the medication is essential for treatment of other conditions.'
     },
     prevention: {
-      description: 'Preventing drug allergy reactions involves careful medication selection, communication with healthcare providers, and emergency preparedness for individuals with known drug allergies.',
+      description: 'Prevention strategies focus on careful medication selection, communication with healthcare providers, and emergency preparedness for individuals with known drug allergies.',
       preventionStrategies: [
         'Inform all healthcare providers about drug allergies',
         'Wear medical alert jewelry',
-        'Carry a list of allergenic medications',
-        'Ask about alternative medications',
-        'Be aware of cross-reactivity patterns',
-        'Have emergency medications available',
-        'Regular follow-up with allergist',
-        'Stay informed about new medications and alternatives'
+        'Carry a list of allergenic medications'
       ],
       additionalInfo: 'Prevention strategies are most effective when implemented consistently and involve clear communication with all healthcare providers.'
     },
@@ -775,8 +622,8 @@ export const servicesData = {
         answer: 'Yes, drug allergies can develop at any time, even after taking a medication safely for years. This may be due to changes in immune function or cumulative exposure effects.'
       },
       {
-        question: 'What should I do if I have a reaction to a medication?',
-        answer: 'Stop taking the medication immediately, seek medical attention if symptoms are severe, and inform your healthcare provider. Document the reaction for future reference.'
+        question: 'What is penicillin skin testing?',
+        answer: 'Penicillin skin testing is a diagnostic procedure that can help determine if you are truly allergic to penicillin. This testing can help eliminate unnecessary antibiotic restrictions and provide safer treatment options.'
       },
       {
         question: 'Can drug allergies be cured?',
@@ -791,64 +638,45 @@ export const servicesData = {
   'novel-biologic-therapies': {
     title: 'Novel Biologic Therapies',
     heroImage: '/services/novel-biologic-therapies.jpg',
+    heroDescription: 'Biotherapeutics/Biologics are a rapidly advancing field of medications/therapeutic agents prepared using molecular biology and molecular genetics techniques.',
     info: {
-      heading: 'Understanding Novel Biologic Therapies',
-      text: 'Novel biologic therapies represent cutting-edge treatments for severe allergic and inflammatory conditions. These targeted therapies work by blocking specific molecules involved in allergic reactions, offering new hope for patients with difficult-to-treat conditions.',
+      heading: 'Novel Biologic Treatments – Biotherapeutics/Biologics',
+      text: 'Biotherapeutics/Biologics are a rapidly advancing field of medications/therapeutic agents prepared using molecular biology and molecular genetics techniques. These biologics are derived from living cells in the laboratory. They are specifically designed to target key molecules and immunological mechanisms that have been identified as attributing to immune and allergic disorders.',
       image: '/services/novel-biologic-therapies-info.jpg'
     },
     symptoms: {
-      description: 'Biologic therapies are used to treat severe allergic and inflammatory conditions that have not responded to conventional treatments. These conditions can significantly impact quality of life and daily functioning.',
+      description: 'The biologics target and interact with very specific inflammatory or regulatory molecules, usually proteins, and inhibit or hinder their actions. This subsequently leads to a reduction of frequency and severity of symptoms in specific allergic and immune diseases.',
       commonSymptoms: [
-        'Severe asthma not controlled by standard medications',
-        'Chronic hives and angioedema resistant to treatment',
-        'Severe atopic dermatitis affecting large body areas',
-        'Chronic sinusitis with nasal polyps',
-        'Eosinophilic disorders affecting multiple organs',
-        'Severe food allergies with frequent reactions',
-        'Chronic urticaria lasting months or years',
-        'Allergic bronchopulmonary aspergillosis'
+        'Moderate to severe asthma',
+        'Chronic urticaria/hives',
+        'Chronic sinus infections with polyps'
       ],
-      additionalInfo: 'Biologic therapies are typically considered when conventional treatments have failed or when patients experience significant side effects from standard medications.'
+      additionalInfo: 'Over the past five years the utilization of biologics has already led to a breakthrough in the management and treatment of several allergic and inflammatory conditions which used to be difficult to manage. The number of the disorders which can be successfully treated with ever increasing number of biologics is rising steadily.'
     },
     diagnosis: {
-      description: 'Diagnosis for biologic therapy candidacy involves comprehensive evaluation of disease severity, treatment history, and specific biomarkers to determine the most appropriate therapy.',
+      description: 'We now have several biological drugs to quickly manage and treat moderate to severe asthma, chronic urticaria/hives, chronic sinus infections with polyps, severe atopic dermatitis/eczema, eosinophilic esophagitis, prurigo nodularis, COPD and hypereosinophilic syndrome among others.',
       diagnosticMethods: [
         'Comprehensive medical history and treatment review',
         'Assessment of disease severity and impact on quality of life',
-        'Blood tests for specific biomarkers (IgE, eosinophils)',
-        'Lung function testing for respiratory conditions',
-        'Skin examination and severity scoring',
-        'Evaluation of previous treatment responses',
-        'Assessment of comorbidities and risk factors',
-        'Insurance and cost-benefit analysis'
+        'Blood tests for specific biomarkers (IgE, eosinophils)'
       ],
-      additionalInfo: 'Our comprehensive evaluation helps determine if biologic therapy is appropriate and which specific therapy would be most beneficial for your condition.'
+      additionalInfo: 'The FDA continues to grant approvals for the treatment of new diagnoses as more and more of clinical data becomes available.'
     },
     treatment: {
-      description: 'Biologic therapies are administered through injections or infusions and work by targeting specific molecules involved in allergic and inflammatory responses.',
+      description: 'The development and testing in clinical trials and manufacturing of the biologic therapeutics is lengthy, laborious, complex and very expensive. Thus, all insurance carriers administer a review process prior to the coverage of the biologic drug and prior authorization is required.',
       treatmentOptions: [
-        'Anti-IgE therapy (Omalizumab) for severe asthma and hives',
-        'Anti-IL-4/IL-13 therapy (Dupilumab) for atopic dermatitis and asthma',
-        'Anti-IL-5 therapy (Mepolizumab, Reslizumab) for eosinophilic conditions',
-        'Anti-IL-17 therapy for severe inflammatory conditions',
-        'Anti-TSLP therapy (Tezepelumab) for severe asthma',
-        'Anti-IL-33 therapy for inflammatory conditions',
-        'Combination therapy approaches',
-        'Regular monitoring and dose adjustment'
+        'Nucala (Mepolizumab) for moderate to severe asthma, COPD, sinusitis with nasal polyps',
+        'Xolair (Omalizumab) for both moderate to severe asthma, food allergies, sinusitis with nasal polyps and chronic hives/urticaria',
+        'Dupixent (Dupilumab) for atopic dermatitis/eczema, allergic asthma, chronic urticaria'
       ],
-      additionalInfo: 'Treatment plans are personalized based on your specific condition, severity, and response to therapy. Regular monitoring helps optimize treatment effectiveness and safety.'
+      additionalInfo: 'In Premier Allergy and Asthma Centers, we will submit on your behalf the prior authorization request together with all the necessary medical documentation and supporting documents. We will also help you to access the medication co-pay assistance program offered by the manufacturers.'
     },
     prevention: {
-      description: 'Preventing disease flares while on biologic therapy involves maintaining treatment compliance, avoiding triggers, and regular monitoring for optimal disease control.',
+      description: 'Prevention strategies focus on maintaining treatment compliance, avoiding triggers, and regular monitoring for optimal disease control.',
       preventionStrategies: [
         'Maintain regular treatment schedule',
         'Avoid known triggers and allergens',
-        'Regular follow-up with healthcare team',
-        'Monitor for side effects and report changes',
-        'Maintain healthy lifestyle and stress management',
-        'Keep emergency medications available',
-        'Stay informed about new treatment options',
-        'Participate in support groups and education programs'
+        'Regular follow-up with healthcare team'
       ],
       additionalInfo: 'Prevention strategies are most effective when combined with consistent biologic therapy and regular medical follow-up.'
     },
@@ -858,8 +686,8 @@ export const servicesData = {
         answer: 'Most biologic therapies show initial improvement within 4-12 weeks, with maximum benefits typically achieved after 3-6 months of treatment. Response times can vary between individuals and conditions.'
       },
       {
-        question: 'Are biologic therapies safe?',
-        answer: 'Biologic therapies are generally safe when prescribed and monitored by specialists. They can have side effects, but these are typically manageable and the benefits often outweigh the risks for appropriate candidates.'
+        question: 'What are the current biologic medications available?',
+        answer: 'Current biologics include Nucala (Mepolizumab) for asthma and COPD, Xolair (Omalizumab) for asthma and hives, Dupixent (Dupilumab) for eczema and asthma, and Tezspire (Tezepelumab) for severe asthma. New options are continuously being approved by the FDA.'
       },
       {
         question: 'How long do I need to stay on biologic therapy?',
@@ -878,65 +706,45 @@ export const servicesData = {
   'eosinophilic-esophagitis': {
     title: 'Eosinophilic Esophagitis',
     heroImage: '/services/eosinophilic-esophagitis.jpg',
+    heroDescription: 'The number of children and young adults being diagnosed with <a href="/">chronic allergic inflammation</a> of the esophagus ("swallowing tube") has been rising in recent years.',
     info: {
-      heading: 'Understanding Eosinophilic Esophagitis',
-      text: 'Eosinophilic esophagitis (EoE) is a chronic inflammatory condition of the esophagus characterized by an increased number of eosinophils. This condition can cause significant swallowing difficulties and may be triggered by food allergies or environmental factors.',
+      heading: 'Eosinophilic Esophagitis Treatments',
+      text: 'The number of children and young adults being diagnosed with chronic allergic inflammation of the esophagus ("swallowing tube") has been rising in recent years. It seems to be due to both increased awareness as well as the increase in prevalence of the disease. If you suffer from symptoms of heartburns, chest pains associated with food ingestion or feeling of food "getting stuck in your throat", you want to seek help of our gastrointestinal allergy experts to have evaluation for food allergies and to rule out eosinophilic esophagitis.',
       image: '/services/eosinophilic-esophagitis-info.jpg'
     },
     symptoms: {
-      description: 'EoE symptoms can vary by age and may include difficulty swallowing, food impaction, and chest pain. Symptoms often worsen over time if left untreated.',
+      description: 'Eosinophilic esophagitis (EE or EoE) and Eosinophilic Gastroenteritis are complex, chronic allergic inflammatory disorders involving esophagus and/or stomach. The hallmark of the inflammation is the presence of eosinophils, otherwise rare inflammatory white blood cells.',
       commonSymptoms: [
-        'Difficulty swallowing (dysphagia)',
-        'Food getting stuck in the esophagus',
-        'Chest pain or discomfort',
-        'Heartburn that doesn\'t respond to acid blockers',
-        'Nausea and vomiting',
-        'Abdominal pain',
-        'Poor appetite and weight loss',
-        'Failure to thrive in children',
-        'Regurgitation of undigested food'
+        'Chest pain, heartburn, difficulty swallowing',
+        'Vomiting, or even food getting stuck in the esophagus',
+        'Symptoms may vary significantly'
       ],
-      additionalInfo: 'Symptoms may be intermittent and can be triggered by specific foods. The condition can affect people of all ages, from infants to adults, with different symptom patterns.'
+      additionalInfo: 'Symptoms may vary significantly, but frequently include chest pain, heartburn, difficulty swallowing, vomiting, or even food getting stuck in the esophagus requiring emergency removal by endoscopy.'
     },
     diagnosis: {
-      description: 'Diagnosis of EoE requires endoscopy with biopsy to confirm the presence of eosinophils in the esophagus and rule out other conditions that can cause similar symptoms.',
+      description: 'The symptoms and even the inflammation in GI tract may be very similar to that found in acid reflux and/or food allergies. Patients with EE have higher prevalence of both environmental and food allergies and the latter may play a role in the development of the disease.',
       diagnosticMethods: [
         'Upper endoscopy with esophageal biopsies',
         'Histological examination for eosinophil count',
-        'Allergy testing for food and environmental triggers',
-        'pH monitoring to rule out acid reflux',
-        'Esophageal manometry for motility assessment',
-        'Barium swallow studies',
-        'Blood tests for eosinophil count',
-        'Evaluation of response to acid suppression'
+        'Allergy testing for food and environmental triggers'
       ],
-      additionalInfo: 'Our comprehensive diagnostic approach helps confirm the diagnosis, identify potential triggers, and develop an effective treatment plan.'
+      additionalInfo: 'Thus, comprehensive allergy evaluation by well-trained allergist is critical for the successful treatment of the disease. Dr. Bocek is an expert in the diagnosis of eosinophilic esophagitis and its treatment with a biologic drug Dupixent.'
     },
     treatment: {
       description: 'Treatment for EoE involves a combination of dietary modifications, medications, and in some cases, endoscopic procedures to manage symptoms and reduce inflammation.',
       treatmentOptions: [
+        'Dupixent (Dupilumab) biologic therapy',
         'Elimination diets (six-food elimination diet)',
-        'Topical corticosteroids (swallowed)',
-        'Proton pump inhibitors',
-        'Elemental diet for severe cases',
-        'Endoscopic dilation for strictures',
-        'Biologic therapies for refractory cases',
-        'Allergen immunotherapy for identified triggers',
-        'Regular monitoring and follow-up'
+        'Topical corticosteroids (swallowed)'
       ],
       additionalInfo: 'Treatment plans are personalized based on symptom severity, identified triggers, and individual response to different therapies.'
     },
     prevention: {
-      description: 'Preventing EoE flares involves avoiding identified food triggers, maintaining treatment compliance, and regular monitoring to detect early signs of inflammation.',
+      description: 'Prevention strategies focus on avoiding identified food triggers, maintaining treatment compliance, and regular monitoring to detect early signs of inflammation.',
       preventionStrategies: [
         'Strict adherence to elimination diets',
         'Regular follow-up with gastroenterologist and allergist',
-        'Monitoring for new food sensitivities',
-        'Maintaining treatment compliance',
-        'Avoiding known environmental triggers',
-        'Regular endoscopic monitoring',
-        'Education about the condition',
-        'Support groups and resources'
+        'Monitoring for new food sensitivities'
       ],
       additionalInfo: 'Prevention strategies are most effective when implemented consistently and tailored to your specific triggers and treatment response.'
     },
@@ -950,8 +758,8 @@ export const servicesData = {
         answer: 'While EoE cannot be cured, it can be effectively managed with proper treatment. Many patients achieve long-term remission with appropriate dietary modifications and medications.'
       },
       {
-        question: 'Is EoE related to food allergies?',
-        answer: 'Yes, EoE is often triggered by food allergies, but it is different from typical IgE-mediated food allergies. The reaction is delayed and involves eosinophilic inflammation rather than immediate allergic reactions.'
+        question: 'What is Dupixent for EoE?',
+        answer: 'Dupixent (Dupilumab) is a biologic medication that has been approved for the treatment of eosinophilic esophagitis. It works by blocking specific inflammatory pathways and can help reduce inflammation in the esophagus.'
       },
       {
         question: 'Can children outgrow EoE?',
@@ -960,181 +768,6 @@ export const servicesData = {
       {
         question: 'How often should I have follow-up endoscopies?',
         answer: 'The frequency of follow-up endoscopies depends on your treatment response and symptom control. Typically, patients have endoscopies every 6-12 months to monitor inflammation.'
-      }
-    ]
-  },
-  'immune-disorders-diagnostics': {
-    title: 'Immune Disorders Diagnostics',
-    heroImage: '/services/immune-disorders-diagnostics.jpg',
-    info: {
-      heading: 'Understanding Immune Disorders Diagnostics',
-      text: 'Immune disorders diagnostics involves comprehensive evaluation of the immune system to identify underlying conditions that may be causing recurrent infections, unusual allergic reactions, or other immune-related symptoms.',
-      image: '/services/immune-disorders-diagnostics-info.jpg'
-    },
-    symptoms: {
-      description: 'Immune disorders can present with a wide range of symptoms, from recurrent infections to unusual allergic reactions. Early diagnosis is crucial for effective treatment and prevention of complications.',
-      commonSymptoms: [
-        'Recurrent or severe infections',
-        'Unusual or severe allergic reactions',
-        'Autoimmune symptoms affecting multiple organs',
-        'Chronic inflammation without clear cause',
-        'Poor wound healing',
-        'Fatigue and general malaise',
-        'Unexplained fevers',
-        'Swollen lymph nodes',
-        'Growth and development issues in children'
-      ],
-      additionalInfo: 'Symptoms may be subtle initially and can progress over time. A comprehensive evaluation is often needed to identify the underlying immune disorder.'
-    },
-    diagnosis: {
-      description: 'Diagnosis of immune disorders requires a comprehensive evaluation including medical history, physical examination, and specialized laboratory testing to assess immune function.',
-      diagnosticMethods: [
-        'Comprehensive medical and family history',
-        'Physical examination for signs of immune dysfunction',
-        'Complete blood count with differential',
-        'Immunoglobulin levels and function testing',
-        'T-cell and B-cell function assessment',
-        'Complement system evaluation',
-        'Autoantibody testing',
-        'Genetic testing for inherited disorders'
-      ],
-      additionalInfo: 'Our comprehensive diagnostic approach helps identify the specific immune disorder and guides treatment decisions for optimal outcomes.'
-    },
-    treatment: {
-      description: 'Treatment for immune disorders depends on the specific diagnosis and may involve immunoglobulin replacement, immunosuppressive therapy, or other targeted treatments.',
-      treatmentOptions: [
-        'Immunoglobulin replacement therapy',
-        'Antibiotic prophylaxis for infections',
-        'Immunosuppressive medications',
-        'Biologic therapies for specific conditions',
-        'Stem cell transplantation for severe cases',
-        'Supportive care and infection prevention',
-        'Genetic counseling for inherited disorders',
-        'Regular monitoring and follow-up'
-      ],
-      additionalInfo: 'Treatment plans are personalized based on the specific immune disorder, severity of symptoms, and individual factors including age and overall health.'
-    },
-    prevention: {
-      description: 'Preventing complications of immune disorders involves infection prevention, regular monitoring, and maintaining overall health through appropriate lifestyle modifications.',
-      preventionStrategies: [
-        'Strict infection prevention measures',
-        'Regular vaccinations (when appropriate)',
-        'Good hygiene practices',
-        'Avoidance of known triggers',
-        'Regular medical follow-up',
-        'Healthy lifestyle and nutrition',
-        'Stress management',
-        'Education about the condition'
-      ],
-      additionalInfo: 'Prevention strategies are most effective when implemented consistently and tailored to your specific immune disorder and risk factors.'
-    },
-    faq: [
-      {
-        question: 'What causes immune disorders?',
-        answer: 'Immune disorders can be inherited (primary) or acquired (secondary). Primary disorders are caused by genetic mutations, while secondary disorders can result from infections, medications, or other medical conditions.'
-      },
-      {
-        question: 'Can immune disorders be cured?',
-        answer: 'While some immune disorders cannot be cured, many can be effectively managed with appropriate treatment. Early diagnosis and treatment can significantly improve outcomes and quality of life.'
-      },
-      {
-        question: 'Are immune disorders hereditary?',
-        answer: 'Some immune disorders are hereditary and run in families. Genetic testing may be recommended for family members of individuals with diagnosed immune disorders.'
-      },
-      {
-        question: 'How are immune disorders different from allergies?',
-        answer: 'Allergies are specific immune responses to harmless substances, while immune disorders involve broader dysfunction of the immune system that can affect multiple aspects of immune function.'
-      },
-      {
-        question: 'Can children have immune disorders?',
-        answer: 'Yes, children can have immune disorders, and many inherited immune disorders present in childhood. Early diagnosis and treatment are crucial for optimal outcomes.'
-      }
-    ]
-  },
-  'immunotherapy': {
-    title: 'Immunotherapy',
-    heroImage: '/images/pediatric.jpg',
-    info: {
-      heading: 'Understanding Immunotherapy',
-      text: 'Immunotherapy is a treatment that helps your immune system become less sensitive to allergens. It works by gradually exposing you to increasing amounts of allergens, helping your body build tolerance over time.',
-      image: '/services3.jpg'
-    },
-    symptoms: {
-      description: 'Immunotherapy is used to treat various allergic conditions that have not responded adequately to conventional treatments. It can be effective for seasonal and perennial allergies.',
-      commonSymptoms: [
-        'Severe seasonal allergies affecting daily life',
-        'Perennial allergies not controlled by medications',
-        'Allergic asthma triggered by environmental allergens',
-        'Insect sting allergies with risk of severe reactions',
-        'Allergic rhinitis with significant symptoms',
-        'Allergic conjunctivitis affecting vision',
-        'Atopic dermatitis with environmental triggers',
-        'Food allergies (in specific cases)'
-      ],
-      additionalInfo: 'Immunotherapy is typically considered when medications and avoidance strategies are not providing adequate relief or when patients want a long-term solution.'
-    },
-    diagnosis: {
-      description: 'Diagnosis for immunotherapy candidacy involves comprehensive allergy testing to identify specific allergens and assess the severity of allergic reactions.',
-      diagnosticMethods: [
-        'Comprehensive medical history and symptom analysis',
-        'Skin prick testing for environmental allergens',
-        'Blood tests for allergen-specific IgE',
-        'Component-resolved diagnostics for detailed analysis',
-        'Challenge testing for specific allergens',
-        'Assessment of treatment history and response',
-        'Evaluation of comorbidities and risk factors',
-        'Discussion of treatment goals and expectations'
-      ],
-      additionalInfo: 'Our comprehensive evaluation helps determine if immunotherapy is appropriate and which specific allergens should be included in your treatment plan.'
-    },
-    treatment: {
-      description: 'Immunotherapy can be administered through subcutaneous injections (allergy shots) or sublingual tablets/drops, with treatment typically lasting 3-5 years for optimal results.',
-      treatmentOptions: [
-        'Subcutaneous immunotherapy (allergy shots)',
-        'Sublingual immunotherapy (tablets/drops)',
-        'Cluster immunotherapy for faster desensitization',
-        'Rush immunotherapy for rapid desensitization',
-        'Maintenance therapy for long-term benefits',
-        'Combination with other allergy treatments',
-        'Regular monitoring and dose adjustment',
-        'Emergency preparedness and safety protocols'
-      ],
-      additionalInfo: 'Treatment plans are personalized based on your specific allergens, symptom severity, and lifestyle factors. Regular monitoring ensures optimal safety and effectiveness.'
-    },
-    prevention: {
-      description: 'Preventing allergic reactions during immunotherapy involves careful monitoring, avoiding known triggers, and maintaining regular treatment schedules.',
-      preventionStrategies: [
-        'Maintain regular treatment schedule',
-        'Avoid strenuous exercise before and after injections',
-        'Monitor for local and systemic reactions',
-        'Carry emergency medications as prescribed',
-        'Inform healthcare providers about immunotherapy',
-        'Regular follow-up with allergist',
-        'Avoid known triggers during treatment',
-        'Stay informed about treatment progress'
-      ],
-      additionalInfo: 'Prevention strategies are most effective when combined with consistent immunotherapy and regular medical follow-up.'
-    },
-    faq: [
-      {
-        question: 'How long does immunotherapy take to work?',
-        answer: 'Most patients begin to see improvement within 3-6 months of starting immunotherapy, with maximum benefits typically achieved after 1-2 years of treatment. Some patients may continue to see improvement for up to 3-5 years.'
-      },
-      {
-        question: 'Are there any side effects of immunotherapy?',
-        answer: 'Immunotherapy can cause local reactions at the injection site and, rarely, systemic reactions. These are typically mild and manageable. Your allergist will monitor you closely and adjust treatment as needed.'
-      },
-      {
-        question: 'How long do I need to stay on immunotherapy?',
-        answer: 'Immunotherapy typically lasts 3-5 years for optimal results. Some patients may need longer treatment, while others may be able to discontinue therapy after achieving good control.'
-      },
-      {
-        question: 'Can children receive immunotherapy?',
-        answer: 'Yes, children can receive immunotherapy, and it is often very effective. The minimum age varies by treatment type, but many children start treatment around age 5-6.'
-      },
-      {
-        question: 'Is immunotherapy covered by insurance?',
-        answer: 'Most insurance plans cover immunotherapy for FDA-approved indications. Coverage may vary by plan, and prior authorization is typically required. We can help navigate insurance requirements.'
       }
     ]
   }

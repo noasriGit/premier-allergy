@@ -65,9 +65,9 @@ export default function HeroSection() {
         <div className={styles.ctaText}>
           <p className={styles.ctaCall}>
             Call to book an appointment now: <a 
-              href="tel:1234567890"
+              href="tel:18555287348"
             >
-              (123) 456-7890
+              (1-855-528-7348)
             </a>
           </p>
           <p className={styles.ctaLocations}>
@@ -83,7 +83,7 @@ export default function HeroSection() {
 }
 */
 
-// NEW AWARD-WINNING HERO SECTION
+// REFACTORED HERO SECTION - NO FLOATING BUBBLES, INTEGRATED LAYOUT
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -93,25 +93,12 @@ export default function HeroSection() {
 
   return (
     <section className={styles.hero}>
-      {/* Animated Background */}
+      {/* Background with subtle gradient */}
       <div className={styles.background}>
         <div className={styles.gradientOverlay}></div>
-        <div className={styles.floatingShapes}>
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className={styles.shape}
-              style={{
-                '--delay': `${i * 0.5}s`,
-                '--duration': `${3 + i * 0.5}s`,
-                '--size': `${20 + i * 10}px`,
-              }}
-            />
-          ))}
-        </div>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content - Integrated Layout */}
       <div className={styles.content}>
         <div className={styles.textSection}>
           <div className={styles.badge}>
@@ -131,19 +118,19 @@ export default function HeroSection() {
             that bring lasting relief to patients of all ages.
           </p>
 
-                     <div className={styles.ctaSection}>
-             <a 
-               href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" 
-               className={styles.primaryButton} 
-               target="_blank" 
-               rel="noopener noreferrer"
-               onClick={() => gtag_report_conversion('https://allergyandasthmaclinicalcenters.imscare.com/abs/login')}
-             >
-               <span>Book An Appointment</span>
-               <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
-                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-               </svg>
-             </a>
+          <div className={styles.ctaSection}>
+            <a 
+              href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" 
+              className={styles.primaryButton} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => gtag_report_conversion('https://allergyandasthmaclinicalcenters.imscare.com/abs/login')}
+            >
+              <span>Book An Appointment</span>
+              <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
             
             <Link href="/services" className={styles.secondaryButton}>
               View Our Services
@@ -157,22 +144,9 @@ export default function HeroSection() {
             </a>
           </div>
 
-          <div className={styles.statsGrid}>
-            <div className={styles.stat}>
-              <div className={styles.statNumber}>25+</div>
-              <div className={styles.statLabel}>Years Experience</div>
-            </div>
-            <div className={styles.stat}>
-              <div className={styles.statNumber}>10K+</div>
-              <div className={styles.statLabel}>Patients Helped</div>
-            </div>
-            <div className={styles.stat}>
-              <div className={styles.statNumber}>98%</div>
-              <div className={styles.statLabel}>Success Rate</div>
-            </div>
-          </div>
         </div>
 
+        {/* Integrated Image Section */}
         <div className={styles.visualSection}>
           <div className={styles.heroImage}>
             <div className={styles.imageContainer}>
@@ -185,47 +159,22 @@ export default function HeroSection() {
               />
               <div className={styles.imageOverlay}></div>
             </div>
-            
-            {/* Floating Elements */}
-            <div className={styles.floatingElements}>
-              <div className={styles.element} style={{ '--delay': '0s' }}>
-                <span className={styles.elementIcon}>🔬</span>
-                <span className={styles.elementText}>Advanced Testing</span>
-              </div>
-              <div className={styles.element} style={{ '--delay': '1s' }}>
-                <span className={styles.elementIcon}>💊</span>
-                <span className={styles.elementText}>Personalized Care</span>
-              </div>
-              <div className={styles.element} style={{ '--delay': '2s' }}>
-                <span className={styles.elementIcon}>🎯</span>
-                <span className={styles.elementText}>Proven Results</span>
-              </div>
+          </div>
+          
+          {/* Stats Section */}
+          <div className={styles.statsGrid}>
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>25+</div>
+              <div className={styles.statLabel}>Years Experience</div>
+            </div>
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>10K+</div>
+              <div className={styles.statLabel}>Patients Helped</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Trust Indicators */}
-      <div className={styles.trustSection}>
-        <div className={styles.trustContent}>
-          <div className={styles.trustItem}>
-            <div className={styles.trustIcon}>⭐</div>
-            <span>Board-Certified Specialists</span>
-          </div>
-          <div className={styles.trustItem}>
-            <div className={styles.trustIcon}>🏥</div>
-            <span>State-of-the-Art Facilities</span>
-          </div>
-          <div className={styles.trustItem}>
-            <div className={styles.trustIcon}>📱</div>
-            <span>Same-Day Appointments</span>
-          </div>
-          <div className={styles.trustItem}>
-            <div className={styles.trustIcon}>💳</div>
-            <span>Insurance Accepted</span>
-          </div>
-        </div>
-      </div>
 
       {/* Scroll Indicator */}
       <div className={styles.scrollIndicator}>

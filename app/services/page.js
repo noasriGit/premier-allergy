@@ -88,13 +88,6 @@ const services = [
     category: 'Gastrointestinal'
   },
   {
-    slug: 'immune-disorders-diagnostics',
-    title: 'Immune Disorders Diagnostics',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&h=400&fit=crop',
-    description: 'Comprehensive evaluation and treatment for primary and secondary immune system disorders.',
-    category: 'Specialized'
-  },
-  {
     slug: 'immunotherapy',
     title: 'Immunotherapy',
     image: '/images/pediatric.jpg',

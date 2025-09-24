@@ -54,15 +54,10 @@ export default function InsurancePage() {
             <div className={styles.insuranceCard}>
               <h3>UNITED HEALTHCARE</h3>
             </div>
-          </div>
-
-          <div className={styles.infoBox}>
-            <p>
-              We accept payments but are non-participating providers with most other insurance carriers. 
-              As a courtesy to our patients, the staff at our billing department will submit insurance 
-              claims on your behalf and help you to their best abilities to get reimbursement from your 
-              insurance company.
-            </p>
+            <div className={styles.insuranceCard}>
+              <h3>MEDICAID HMO</h3>
+              <p className={styles.note}>some, please call to confirm that we accept your plan</p>
+            </div>
           </div>
         </div>
       </section>
@@ -70,13 +65,10 @@ export default function InsurancePage() {
       {/* Not Accepted Section */}
       <section className={styles.notAcceptedSection}>
         <div className={styles.content}>
-          <h2>We Do Not Accept</h2>
+          <h2>We do not accept:</h2>
           <div className={styles.notAcceptedGrid}>
             <div className={styles.notAcceptedCard}>
               <h3>MEDICAID</h3>
-            </div>
-            <div className={styles.notAcceptedCard}>
-              <h3>MEDICAID HMO</h3>
             </div>
           </div>
         </div>
@@ -85,7 +77,7 @@ export default function InsurancePage() {
       {/* Important Information Section */}
       <section className={styles.importantSection}>
         <div className={styles.content}>
-          <h2>Important Insurance Information</h2>
+          <h2>Other important insurance information:</h2>
           
           <div className={styles.infoCards}>
             <div className={styles.infoCard}>
@@ -139,28 +131,13 @@ export default function InsurancePage() {
               <h3>Claims Processing</h3>
               <p>
                 We always strive to minimize the likelihood that the claim to your insurance carrier is 
-                declined and you are made liable for charges incurred. Please help us in this process by 
-                following these steps:
+                declined, and you are made liable for the charges incurred. Please help us in this process by following these steps:
               </p>
               <ul>
-                <li>Bring picture ID and valid insurance card to your first visit</li>
-                <li>We keep copy of your insurance card on file</li>
-                <li>Please inform us immediately of any change in insurance coverage and/or benefits</li>
-                <li>Inform us of any change of personal information</li>
+                <li>Bring picture ID and valid insurance card to your first visit. We keep a copy of your insurance card on file.</li>
+                <li>Please inform us immediately of any change in insurance coverage and/or benefits and change of personal information.</li>
+                <li>This helps us to assure proper and timely reimbursement from your insurance company.</li>
               </ul>
-            </div>
-
-            <div className={styles.infoCard}>
-              <h3>Referrals & Authorizations</h3>
-              <p>
-                If you have an insurance plan that requires any referrals, pre-certifications or 
-                authorizations to receive any specialty care and diagnostic testing, it is your 
-                responsibility to obtain such authorizations from your primary care provider or your 
-                insurance company prior to your visit at AACC. If you choose to be treated without a 
-                referral, you understand you will be held responsible for all charges for services 
-                rendered. If you choose to reschedule your appointment, we reserve the right to charge 
-                a missed appointment fee.
-              </p>
             </div>
           </div>
         </div>
@@ -172,12 +149,12 @@ export default function InsurancePage() {
           <h2>Questions About Your Bill?</h2>
           <p>
             If you have any questions regarding your bill, please call our billing department for 
-            assistance at <strong>(703) 249-8500</strong>.
+            assistance at <strong>1-855-528-7348 EXT. 704</strong>.
           </p>
           <div className={styles.contactInfo}>
             <div className={styles.contactItem}>
               <h3>Billing Department</h3>
-              <p>Phone: (703) 249-8500</p>
+              <p>Phone: 1-855-528-7348 EXT. 704</p>
               <p>Available during business hours</p>
             </div>
           </div>

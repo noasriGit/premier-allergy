@@ -1,0 +1,348 @@
+/* Epinephrine Administration Page Styles */
+.container {
+  min-height: 100vh;
+  background: #ffffff;
+  padding-top: 120px; /* Adjust for fixed header */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.overviewSection, .importanceSection, .devicesSection, .importantInfoSection, .emergencySection, .contactSection {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.overviewSection {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.importanceSection {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.devicesSection {
+  background-color: #f0f7ff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.importantInfoSection {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.emergencySection {
+  background-color: #fff0f0;
+  border-left: 5px solid #dc3545;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+
+.contactSection {
+  background-color: #e6ffe6;
+}
+
+.content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.introText {
+  font-size: 1.2rem;
+  color: #495057;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* Warning Box */
+.warningBox {
+  background: #dc3545;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+  margin-top: 30px;
+}
+
+.warningBox h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.warningBox p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Importance Grid */
+.importanceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.importanceCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--secondary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.importanceCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.importanceCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.importanceCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+}
+
+/* Device Info */
+.deviceInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.deviceCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--primary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deviceCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.deviceCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.deviceCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+}
+
+/* Info Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.infoCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--secondary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.infoCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.infoCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+}
+
+/* Emergency Steps */
+.emergencySteps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.stepCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #dc3545;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stepNumber {
+  background: #dc3545;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.stepContent h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.stepContent p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+}
+
+/* Contact Section */
+.contactInfo {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.callButton {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.callButton:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
+}
+
+.contactNote {
+  font-size: 1.1rem;
+  color: #6c757d;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  .content h2 {
+    font-size: 1.8rem;
+  }
+  .importanceGrid, .deviceInfo, .infoGrid {
+    grid-template-columns: 1fr;
+  }
+  .stepCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  .stepNumber {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 15px;
+  }
+  .heroTitle {
+    font-size: 2rem;
+  }
+  .overviewSection, .importanceSection, .devicesSection, .importantInfoSection, .emergencySection, .contactSection {
+    padding: 40px 15px;
+  }
+  .content h2 {
+    font-size: 1.6rem;
+  }
+  .stepCard {
+    padding: 20px;
+  }
+  .callButton {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+}
+

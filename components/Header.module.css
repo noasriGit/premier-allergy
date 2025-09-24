@@ -94,7 +94,8 @@
     font-weight: 500;
   }
   .navLink:hover {
-    text-decoration: underline;
+    color: #6bb742;
+    text-decoration: none;
   }
   
   /* Emphasized button styles */
@@ -295,13 +296,19 @@
     list-style: none;
     padding: 0.5rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none;
     z-index: 100;
     border-radius: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    min-width: 200px;
   }
   
   .showDropdown {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .navLink,
@@ -324,10 +331,15 @@
     color: #095ea3;
     text-decoration: none;
     font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    margin: 0.25rem 0.5rem;
   }
   
   .dropdownLink:hover {
     background-color: #f0f0f0;
+    color: #095ea3;
+    transform: translateX(5px);
   }
   
   /* Mobile dropdown under service */

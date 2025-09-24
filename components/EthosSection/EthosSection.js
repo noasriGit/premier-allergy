@@ -373,12 +373,12 @@ export default function EthosSection() {
           <h3 className={styles.reviewsTitle}>What Our Patients Say</h3>
           <div className={styles.testimonials}>
             <blockquote className={styles.testimonial}>
-              <p>&quot;Truly the best allergist I&apos;ve ever been to. Dr. Bocek is incredibly thorough and kind.&quot;</p>
-              <cite>- Sarah M., Germantown</cite>
+              <p>&quot;First of all, the reception area was comfortable and relaxing. Office staff was friendly and answered numerous questions. Dr. Bocek was very thorough and I felt he really care about finding out what was causing my condition. I never felt rushed to end appointment. Would definitely recommend this practice.&quot;</p>
+              <cite>- Debra Jenkins</cite>
             </blockquote>
             <blockquote className={styles.testimonial}>
-              <p>&quot;Amazing staff and spotless facilities. I finally have relief from my asthma!&quot;</p>
-              <cite>- Michael R., Manassas</cite>
+              <p>&quot;Dr. Bocek is the most knowledgeable doctor for treating pediatric asthma and allergies my daughter has seen since being diagnosed. He took his time, while creating and explaining a new treatment plan to tackle her needs. I&apos;m grateful we found him when we did!&quot;</p>
+              <cite>- Carla Smith</cite>
             </blockquote>
           </div>
         </div>

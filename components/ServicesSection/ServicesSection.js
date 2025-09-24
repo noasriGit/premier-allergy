@@ -23,7 +23,7 @@ const services = [
     alt: 'Asthma management and treatment services',
   },
   {
-    href: '/services/immunotherapy',
+    href: '/immunotherapy',
     img: '/services3.jpg',
     title: 'Immunotherapy',
     description: 'Long-term allergy treatment through immunotherapy solutions',
