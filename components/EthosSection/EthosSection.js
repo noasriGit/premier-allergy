@@ -194,7 +194,7 @@ export default function EthosSection() {
     }
 
     fetchReviews()
-  }, [])
+  }, [locations])
 
   const achievementImages = [
     { src: '/achievements/award1.jpg', alt: '2017 Top Doctor Award' },

@@ -1,5 +1,6 @@
 // app/layout.js
 import './globals.css'
+import Script from 'next/script'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { EB_Garamond } from 'next/font/google'
@@ -210,42 +211,43 @@ export default function RootLayout({ children }) {
     <html lang="en" className={ebGaramond.className}>
       <head>
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-435370936"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-435370936');
-              
-              // Event snippet for book appointment click conversion page
-              function gtag_report_conversion(url) {
-                var callback = function () {
-                  if (typeof(url) != 'undefined') {
-                    window.location = url;
-                  }
-                };
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-435370936/DcrbCJeBrJQbELj3zM8B',
-                    'value': 1.0,
-                    'currency': 'USD',
-                    'event_callback': callback
-                });
-                return false;
-              }
-              
-              // Event snippet for phone call conversion tracking
-              function gtag_report_phone_conversion() {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-435370936/5vM-CIHF7ZgbELj3zM8B',
-                    'value': 1.0,
-                    'currency': 'USD'
-                });
-              }
-            `
-          }}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-435370936"
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-435370936');
+            
+            // Event snippet for book appointment click conversion page
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-435370936/DcrbCJeBrJQbELj3zM8B',
+                  'value': 1.0,
+                  'currency': 'USD',
+                  'event_callback': callback
+              });
+              return false;
+            }
+            
+            // Event snippet for phone call conversion tracking
+            function gtag_report_phone_conversion() {
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-435370936/5vM-CIHF7ZgbELj3zM8B',
+                  'value': 1.0,
+                  'currency': 'USD'
+              });
+            }
+          `}
+        </Script>
         
         {/* Logo and Brand Meta Tags */}
         <meta property="og:image" content="https://www.allergyandasthmaclinicalcenters.com/logo.png" />

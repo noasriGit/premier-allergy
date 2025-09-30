@@ -155,25 +155,25 @@ export default function BeforeYouVisitPage() {
         <div className={styles.linksContent}>
           <h2>Additional Resources</h2>
           <div className={styles.linksGrid}>
-            <a href="/forms" className={styles.linkCard}>
+            <Link href="/forms" className={styles.linkCard}>
               <h3>Patient Forms</h3>
               <p>Download and complete required forms before your visit</p>
-            </a>
+            </Link>
             
-            <a href="/insurance" className={styles.linkCard}>
+            <Link href="/insurance" className={styles.linkCard}>
               <h3>Insurance Information</h3>
               <p>Verify your benefits and check our participating insurance carriers</p>
-            </a>
+            </Link>
             
-            <a href="/#ethos-section" className={styles.linkCard}>
+            <Link href="/#ethos-section" className={styles.linkCard}>
               <h3>Office Locations</h3>
               <p>Get directions to our office locations</p>
-            </a>
+            </Link>
             
-            <a href="/contact" className={styles.linkCard}>
+            <Link href="/contact" className={styles.linkCard}>
               <h3>Contact Us</h3>
               <p>Have questions? Reach out to our team</p>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
