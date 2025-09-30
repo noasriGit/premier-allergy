@@ -91,21 +91,27 @@ export default function ServicePageClient({ service, availableSections }) {
             </h2>
           </div>
           
-          <div className={styles.infoGrid}>
-            <div className={styles.infoText}>
+          {service.info.image ? (
+            <div className={styles.infoGrid}>
+              <div className={styles.infoText}>
+                <p className={styles.infoParagraph}>{service.info.text}</p>
+              </div>
+              <div className={styles.infoImage}>
+                <Image
+                  src={service.info.image}
+                  alt={`${service.title} information`}
+                  width={500}
+                  height={350}
+                  className={styles.image}
+                  priority
+                />
+              </div>
+            </div>
+          ) : (
+            <div className={styles.infoFullWidth}>
               <p className={styles.infoParagraph}>{service.info.text}</p>
             </div>
-            <div className={styles.infoImage}>
-              <Image
-                src={service.info.image}
-                alt={`${service.title} information`}
-                width={500}
-                height={350}
-                className={styles.image}
-                priority
-              />
-            </div>
-          </div>
+          )}
         </motion.section>
 
         {/* Symptoms Section */}

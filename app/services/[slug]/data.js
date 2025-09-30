@@ -2,7 +2,7 @@ export const servicesData = {
   'asthma': {
     title: 'Asthma Management',
     heroImage: '/images/asthma.jpg',
-    heroDescription: 'In our <a href="/">allergy and asthma</a> centers our specialists offer state of the art asthma evaluation, diagnosis, and treatment to both adult and pediatric asthma patients.',
+    heroDescription: 'In our allergy and asthma centers our specialists offer state of the art asthma evaluation, diagnosis, and treatment to both adult and pediatric asthma patients.',
     info: {
       heading: 'Asthma Treatment Clinic - Maryland and Virginia',
       text: 'In our allergy and asthma centers our specialists offer state of the art asthma evaluation, diagnosis, and treatment to both adult and pediatric asthma patients. We are proud to serve Montgomery County, Maryland and Prince William, Loudon and Fairfax Counties in Virginia. Our asthma specialists will not only carry out careful evaluation and diagnosis of asthma, but they will also offer treatment and propose a course of asthma management, review with you the causes of your asthma, discuss signs and symptoms of an asthma attack and suggest an asthma action plan.',
@@ -70,7 +70,7 @@ export const servicesData = {
   'nasal-allergies': {
     title: 'Nasal Allergies',
     heroImage: '/images/sneezing.jpg',
-    heroDescription: 'Premier Allergy and Asthma Centers provide comprehensive nasal allergy relief and treatment for all patients suffering from <a href="/">nasal congestion</a>, post nasal drip and other seasonal allergy symptoms.',
+    heroDescription: 'Premier Allergy and Asthma Centers provide comprehensive nasal allergy relief and treatment for all patients suffering from nasal congestion, post nasal drip and other seasonal allergy symptoms.',
     info: {
       heading: 'Nasal Allergy Diagnosis and Treatments',
       text: 'Premier Allergy and Asthma Centers provide comprehensive nasal allergy relief and treatment for all patients suffering from nasal congestion, post nasal drip and other seasonal allergy symptoms. We serve patients in Clarksburg, Urbana, Germantown, Gaithersburg, Montgomery Village, Rockville in Montgomery County, MD as well as in Manassas, Manassas Park, Chantilly, Gainesville, Woodbridge and Centerville and surrounding areas of Northern Virginia.',
@@ -119,7 +119,7 @@ export const servicesData = {
       },
       {
         question: 'How effective is immunotherapy for nasal allergies?',
-        answer: 'Allergen immunotherapy (AIT) conducted at Premier Allergy and Asthma Centers leads to long-term remission of allergy symptoms and potentially permanent relief. The treatment is highly effective when properly administered and maintained, with many patients experiencing significant improvement within the first year of treatment.'
+        answer: 'Allergen immunotherapy (AIT) conducted at Premier Allergy and Asthma Centers leads to long-term remission of allergy symptoms and potentially permanent relief. The treatment is highly effective when properly administered and maintained, with many patients experiencing significant improvement within 6-8 months from starting the treatment.'
       },
       {
         question: 'Can nasal allergies affect children\'s learning and development?',
@@ -131,7 +131,7 @@ export const servicesData = {
       },
       {
         question: 'How long do I need to continue immunotherapy treatment?',
-        answer: 'Immunotherapy treatment typically lasts 3-5 years for optimal long-term benefits. The AIT program at Premier Allergy and Asthma Centers is designed to provide lasting relief, with many patients experiencing permanent improvement in their nasal allergy symptoms after completing the full course of treatment.'
+        answer: 'Immunotherapy treatment typically lasts 3-5 years for optimal long-term benefits. However, the resolution of symptoms is expected to occur as early as 6 – 8 months from starting the treatment. The rest of the treatment is to prevent the allergies from coming back. The AIT program at Premier Allergy and Asthma Centers is designed to provide lasting relief, with many patients experiencing permanent improvement in their nasal allergy symptoms after completing the full course of treatment.'
       }
     ]
   },
@@ -160,7 +160,7 @@ export const servicesData = {
         'Allergy testing to identify specific triggers',
         'Differentiation from other eye conditions and infections'
       ],
-      additionalInfo: 'Unlike conditions such as pink eye, <a href="/services/sinus-disease">allergic conjunctivitis</a> is not contagious. If your symptoms are related to an eye allergy, chances are you will have problems in both eyes. Our Board Certified Allergist can accurately distinguish between allergic and non-allergic eye conditions to ensure proper treatment.'
+      additionalInfo: 'Unlike conditions such as pink eye, allergic conjunctivitis is not contagious. If your symptoms are related to an eye allergy, chances are you will have problems in both eyes. Our Board Certified Allergist can accurately distinguish between allergic and non-allergic eye conditions to ensure proper treatment.'
     },
     treatment: {
       description: 'If you wear contact lenses you will benefit greatly from switching to daily disposable lenses. Topical eye antihistamines can provide immediate relief. However, their use may be limited if you use contact lenses. Steroid nasal sprays may be useful for eye symptoms related to nasal allergies, indirectly, in milder cases. Over-the-counter oral antihistamines can help as well but may lead to dry eye problems.',
@@ -331,7 +331,7 @@ export const servicesData = {
       },
       {
         question: 'What are biologic medications for eczema?',
-        answer: 'Biologic medications like Dupixent (Dupilumab) are advanced treatments for severe atopic dermatitis. These medications target specific inflammatory pathways and can provide significant relief for patients with difficult-to-control eczema.'
+        answer: 'Biologic medications like Dupixent (Dupilumab) and Nemluvio (nemolizumab-ilto) are advanced treatments for severe atopic dermatitis. These medications target specific inflammatory pathways and can provide significant relief for patients with difficult-to-control eczema.'
       },
       {
         question: 'Can stress affect eczema?',
@@ -381,7 +381,7 @@ export const servicesData = {
       additionalInfo: 'Our comprehensive diagnostic approach helps identify the specific materials causing your allergic reaction and guides treatment decisions including potential implant replacement options.'
     },
     treatment: {
-      description: 'Treatment for contact and implant allergies focuses on removing the offending material, managing symptoms, and preventing future reactions through material selection and desensitization when possible.',
+      description: 'Treatment for contact and implant allergies focuses on removing the offending material, managing symptoms, and preventing future contact with the identified allergen.',
       treatmentOptions: [
         'Removal or replacement of allergenic materials',
         'Topical corticosteroids for skin reactions',
@@ -441,7 +441,7 @@ export const servicesData = {
       image: '/services/hives-angioedema-info.jpg'
     },
     symptoms: {
-      description: 'Hives are probably the <a href="/">most common allergic</a> skin condition and is characterized by a skin rash notable for pale red, raised and intensely itchy bumps. Acute hives are frequently caused by allergic reactions; however, there are many non-allergic causes.',
+      description: 'Hives are probably the most common allergic skin condition and is characterized by a skin rash notable for pale red, raised and intensely itchy bumps. Acute hives are frequently caused by allergic reactions; however, there are many non-allergic causes.',
       commonSymptoms: [
         'Pale red, raised and intensely itchy bumps',
         'Linear hives from stroking skin (dermographism)',
@@ -505,7 +505,7 @@ export const servicesData = {
     heroDescription: 'Food allergies affect millions of people with reactions ranging from discomfort to the life-threatening events.',
     info: {
       heading: 'Food Allergy diagnosis and treatments',
-      text: '<a href="/">Food allergies</a> affect millions of people with reactions ranging from discomfort to the life-threatening events. Let us address your food allergy symptoms, perform food allergy testing and offer solutions in our clinics in in Germantown Montgomery County, MD as well as in Manassas, Manassas Park in Northern Virginia.',
+      text: 'Food allergies affect millions of people with reactions ranging from discomfort to the life-threatening events. Let us address your food allergy symptoms, perform food allergy testing and offer solutions in our clinics in in Germantown Montgomery County, MD as well as in Manassas, Manassas Park in Northern Virginia.',
       image: '/images/beeAllergy.jpg'
     },
     symptoms: {
@@ -573,7 +573,7 @@ export const servicesData = {
     heroDescription: 'Only very small fractions of patients who believe they are allergic to antibiotics or who carry a label of being penicillin-allergic have truly significant and specific reaction to the given antibiotic.',
     info: {
       heading: 'Drug/Medication Allergies',
-      text: 'Only very small fractions of patients who believe they are allergic to antibiotics or who carry a label of being penicillin-allergic have truly significant and specific reaction to the given antibiotic. Our Board Certified allergy specialists are here to evaluate your drug reactions and to distinguish between true <a href="/">medication/drug</a> allergies and side effects or adverse effects of antibiotics or other drugs. We can also help you with your possible contrast dye allergic reactions whether you live in Montgomery County, MD, Northern Virginia or other parts of DC Metro area.',
+      text: 'Only very small fractions of patients who believe they are allergic to antibiotics or who carry a label of being penicillin-allergic have truly significant and specific reaction to the given antibiotic. Our Board Certified allergy specialists are here to evaluate your drug reactions and to distinguish between true medication/drug allergies and side effects or adverse effects of antibiotics or other drugs. We can also help you with your possible contrast dye allergic reactions whether you live in Montgomery County, MD, Northern Virginia or other parts of DC Metro area.',
       image: '/images/medicine.jpg'
     },
     symptoms: {
@@ -583,7 +583,7 @@ export const servicesData = {
         'Neurologic and respiratory symptoms',
         'Various adverse reactions to medications'
       ],
-      additionalInfo: 'It is estimated that only 5-10% of these reactions are true <a href="/common-allergens">allergic reactions</a>. Whether allergic or not, such reactions can range from mild to life-threatening. It takes our experienced and well-trained experts to identify and diagnose reactions to medications, drugs and vaccines and guide the patients towards their prevention.'
+      additionalInfo: 'It is estimated that only 5-10% of these reactions are true allergic reactions. Whether allergic or not, such reactions can range from mild to life-threatening. It takes our experienced and well-trained experts to identify and diagnose reactions to medications, drugs and vaccines and guide the patients towards their prevention.'
     },
     diagnosis: {
       description: 'We will also be able to guide you which vaccines are safe for your egg or gelatin allergic children and nearly eliminate the risk of reaction to penicillin be penicillin skin testing.',
@@ -641,8 +641,7 @@ export const servicesData = {
     heroDescription: 'Biotherapeutics/Biologics are a rapidly advancing field of medications/therapeutic agents prepared using molecular biology and molecular genetics techniques.',
     info: {
       heading: 'Novel Biologic Treatments – Biotherapeutics/Biologics',
-      text: 'Biotherapeutics/Biologics are a rapidly advancing field of medications/therapeutic agents prepared using molecular biology and molecular genetics techniques. These biologics are derived from living cells in the laboratory. They are specifically designed to target key molecules and immunological mechanisms that have been identified as attributing to immune and allergic disorders.',
-      image: '/services/novel-biologic-therapies-info.jpg'
+      text: 'Biotherapeutics/Biologics are a rapidly advancing field of medications/therapeutic agents prepared using molecular biology and molecular genetics techniques. These biologics are derived from living cells in the laboratory. They are specifically designed to target key molecules and immunological mechanisms that have been identified as attributing to immune and allergic disorders.'
     },
     symptoms: {
       description: 'The biologics target and interact with very specific inflammatory or regulatory molecules, usually proteins, and inhibit or hinder their actions. This subsequently leads to a reduction of frequency and severity of symptoms in specific allergic and immune diseases.',
@@ -687,7 +686,7 @@ export const servicesData = {
       },
       {
         question: 'What are the current biologic medications available?',
-        answer: 'Current biologics include Nucala (Mepolizumab) for asthma and COPD, Xolair (Omalizumab) for asthma and hives, Dupixent (Dupilumab) for eczema and asthma, and Tezspire (Tezepelumab) for severe asthma. New options are continuously being approved by the FDA.'
+        answer: 'Nucala (Mepolizumab) for moderate to severe asthma, COPD, sinusitis with nasal polyps, eosinophilic granulomatosis with polyangiitis and hypereosinophilic syndrome. Xolair (Omalizumab) for both moderate to severe asthma, food allergies, sinusitis with nasal polyps and chronic hives/urticaria. Dupixent (Dupilumab) for atopic dermatitis/eczema, allergic asthma, chronic urticaria, COPD, sinusitis with nasal polyps, eosinophilic esophagitis, bullous pemphigoid and prurigo nodularis. Tezspire (Tezepelumab) for moderate to severe asthma. Nemluvio (Nemolizumab-ilto) for atopic dermatitis/eczema'
       },
       {
         question: 'How long do I need to stay on biologic therapy?',
@@ -709,8 +708,7 @@ export const servicesData = {
     heroDescription: 'The number of children and young adults being diagnosed with <a href="/">chronic allergic inflammation</a> of the esophagus ("swallowing tube") has been rising in recent years.',
     info: {
       heading: 'Eosinophilic Esophagitis Treatments',
-      text: 'The number of children and young adults being diagnosed with chronic allergic inflammation of the esophagus ("swallowing tube") has been rising in recent years. It seems to be due to both increased awareness as well as the increase in prevalence of the disease. If you suffer from symptoms of heartburns, chest pains associated with food ingestion or feeling of food "getting stuck in your throat", you want to seek help of our gastrointestinal allergy experts to have evaluation for food allergies and to rule out eosinophilic esophagitis.',
-      image: '/services/eosinophilic-esophagitis-info.jpg'
+      text: 'The number of children and young adults being diagnosed with chronic allergic inflammation of the esophagus ("swallowing tube") has been rising in recent years. It seems to be due to both increased awareness as well as the increase in prevalence of the disease. If you suffer from symptoms of heartburns, chest pains associated with food ingestion or feeling of food "getting stuck in your throat", you want to seek help of our gastrointestinal allergy experts to have evaluation for food allergies and to rule out eosinophilic esophagitis.'
     },
     symptoms: {
       description: 'Eosinophilic esophagitis (EE or EoE) and Eosinophilic Gastroenteritis are complex, chronic allergic inflammatory disorders involving esophagus and/or stomach. The hallmark of the inflammation is the presence of eosinophils, otherwise rare inflammatory white blood cells.',

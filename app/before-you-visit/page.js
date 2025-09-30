@@ -165,7 +165,7 @@ export default function BeforeYouVisitPage() {
               <p>Verify your benefits and check our participating insurance carriers</p>
             </a>
             
-            <a href="/locations" className={styles.linkCard}>
+            <a href="/#ethos-section" className={styles.linkCard}>
               <h3>Office Locations</h3>
               <p>Get directions to our office locations</p>
             </a>

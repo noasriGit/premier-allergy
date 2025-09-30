@@ -94,6 +94,11 @@ html {
   font-size: 16px;
 }
 
+/* Scroll offset for specific sections */
+#ethos-section {
+  scroll-margin-top: 120px; /* Additional offset when scrolling to this section */
+}
+
 body {
   font-family: var(--font-family-primary);
   line-height: var(--line-height-normal);

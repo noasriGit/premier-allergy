@@ -95,6 +95,10 @@
   order: 2;
 }
 
+.infoFullWidth {
+  max-width: 100%;
+}
+
 .infoParagraph {
   font-size: 1rem;
   line-height: 1.6;

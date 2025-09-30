@@ -97,10 +97,10 @@ export default function LinksResourcesPage() {
               <h3>Asthma Guidelines (2007 Expert Panel Report, NHLBI)</h3>
               <p>Comprehensive asthma management guidelines</p>
               <div className={styles.linkGroup}>
-                <a href="https://www.nhlbi.nih.gov/files/docs/guidelines/asthgdln.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                <a href=" https://ginasthma.org/2024-report/" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
                   Full Report →
                 </a>
-                <a href="https://www.nhlbi.nih.gov/files/docs/guidelines/asthsumm.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                <a href=" https://ginasthma.org/2025-gina-summary-guide/" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
                   Summary →
                 </a>
               </div>
