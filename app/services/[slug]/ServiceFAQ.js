@@ -65,7 +65,7 @@ const ServiceFAQ = forwardRef(({ id, title, icon, faqs }, ref) => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className={styles.answerText}>{faq.answer}</p>
+                    <div className={styles.answerText} dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </motion.div>
                 )}
               </AnimatePresence>

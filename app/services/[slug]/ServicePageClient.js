@@ -84,12 +84,14 @@ export default function ServicePageClient({ service, availableSections }) {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>
-              <span className={styles.sectionIcon}>📋</span>
-              {service.info.heading}
-            </h2>
-          </div>
+          {service.info.heading && (
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.sectionTitle}>
+                <span className={styles.sectionIcon}>📋</span>
+                {service.info.heading}
+              </h2>
+            </div>
+          )}
           
           {service.info.image ? (
             <div className={styles.infoGrid}>

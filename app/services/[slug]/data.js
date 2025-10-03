@@ -686,7 +686,7 @@ export const servicesData = {
       },
       {
         question: 'What are the current biologic medications available?',
-        answer: 'Nucala (Mepolizumab) for moderate to severe asthma, COPD, sinusitis with nasal polyps, eosinophilic granulomatosis with polyangiitis and hypereosinophilic syndrome. Xolair (Omalizumab) for both moderate to severe asthma, food allergies, sinusitis with nasal polyps and chronic hives/urticaria. Dupixent (Dupilumab) for atopic dermatitis/eczema, allergic asthma, chronic urticaria, COPD, sinusitis with nasal polyps, eosinophilic esophagitis, bullous pemphigoid and prurigo nodularis. Tezspire (Tezepelumab) for moderate to severe asthma. Nemluvio (Nemolizumab-ilto) for atopic dermatitis/eczema'
+        answer: '• Nucala (Mepolizumab) for moderate to severe asthma, COPD, sinusitis with nasal polyps, eosinophilic granulomatosis with polyangiitis and hypereosinophilic syndrome<br/>• Xolair (Omalizumab) for both moderate to severe asthma, food allergies, sinusitis with nasal polyps and chronic hives/urticaria<br/>• Dupixent (Dupilumab) for atopic dermatitis/eczema, allergic asthma, chronic urticaria, COPD, sinusitis with nasal polyps, eosinophilic esophagitis, bullous pemphigoid and prurigo nodularis<br/>• Tezspire (Tezepelumab) for moderate to severe asthma<br/>• Nemluvio (Nemolizumab-ilto) for atopic dermatitis/eczema'
       },
       {
         question: 'How long do I need to stay on biologic therapy?',
@@ -705,9 +705,8 @@ export const servicesData = {
   'eosinophilic-esophagitis': {
     title: 'Eosinophilic Esophagitis',
     heroImage: '/services/eosinophilic-esophagitis.jpg',
-    heroDescription: 'The number of children and young adults being diagnosed with <a href="/">chronic allergic inflammation</a> of the esophagus ("swallowing tube") has been rising in recent years.',
+    heroDescription: 'The number of children and young adults being diagnosed with chronic allergic inflammation of the esophagus ("swallowing tube") has been rising in recent years.',
     info: {
-      heading: 'Eosinophilic Esophagitis Treatments',
       text: 'The number of children and young adults being diagnosed with chronic allergic inflammation of the esophagus ("swallowing tube") has been rising in recent years. It seems to be due to both increased awareness as well as the increase in prevalence of the disease. If you suffer from symptoms of heartburns, chest pains associated with food ingestion or feeling of food "getting stuck in your throat", you want to seek help of our gastrointestinal allergy experts to have evaluation for food allergies and to rule out eosinophilic esophagitis.'
     },
     symptoms: {
