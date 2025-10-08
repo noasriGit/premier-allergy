@@ -104,7 +104,7 @@ const locations = [
     hours: 'Tuesday: <strong>12:00 pm to 6:00 pm</strong> | Thursday: <strong>10:00 am to 6:00 pm</strong>',
     immunotherapyHours: 'Tuesday: <strong>12:00 pm to 5:45 pm</strong> | Thursday: <strong>10:00 am to 5:45 pm</strong>',
     description: 'Our Germantown office is conveniently located in the Germantown Medical Center on Boland Farm Road. From Rt. 118 Germantown Road take Observation Drive towards Boland Farm Road where you make a left. The Medical Center will be on your right. ',
-    image: '/germantown.png',
+    image: '/germantown2.png',
     alt: 'Germantown Clinic Exterior',
     placeId: 'ChIJk_JrOhUstokRsZ_yFXoEOfk',
     googleMapsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJk_JrOhUstokRsZ_yFXoEOfk',
