@@ -352,12 +352,12 @@ export default function EthosSection() {
                     </a>
                     
                     <a
-                      href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login"
+                      href="https://portal.allergyandasthmaclinicalcenters.com/abs"
                       className={`${styles.actionButton} ${styles.primaryButton}`}
                       aria-label={`Schedule appointment at ${location.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => gtag_report_conversion('https://allergyandasthmaclinicalcenters.imscare.com/abs/login')}
+                      onClick={() => gtag_report_conversion('https://portal.allergyandasthmaclinicalcenters.com/abs')}
                     >
                       <span aria-hidden="true">📅</span>
                       Schedule Visit

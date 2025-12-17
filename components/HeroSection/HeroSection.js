@@ -120,11 +120,11 @@ export default function HeroSection() {
 
           <div className={styles.ctaSection}>
             <a 
-              href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" 
+              href="https://portal.allergyandasthmaclinicalcenters.com/abs" 
               className={styles.primaryButton} 
               target="_blank" 
               rel="noopener noreferrer"
-              onClick={() => gtag_report_conversion('https://allergyandasthmaclinicalcenters.imscare.com/abs/login')}
+              onClick={() => gtag_report_conversion('https://portal.allergyandasthmaclinicalcenters.com/abs')}
             >
               <span>Book An Appointment</span>
               <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
