@@ -169,22 +169,22 @@ const nextConfig = {
       // Online payment / portal
       {
         source: '/online-payment',
-        destination: 'https://portal.allergyandasthmaclinicalcenters.com/general/index.php',
+        destination: 'https://portal.allergyandasthmaclinicalcenters.com/',
         permanent: true,
       },
       {
         source: '/pay-your-bill',
-        destination: 'https://portal.allergyandasthmaclinicalcenters.com/general/index.php',
+        destination: 'https://portal.allergyandasthmaclinicalcenters.com/',
         permanent: true,
       },
       {
         source: '/portal',
-        destination: 'https://allergyandasthmaclinicalcenters.imscare.com/abs/login',
+        destination: 'https://portal.allergyandasthmaclinicalcenters.com/',
         permanent: true,
       },
       {
         source: '/my-care-account-portal',
-        destination: 'https://allergyandasthmaclinicalcenters.imscare.com/abs/login',
+        destination: 'https://portal.allergyandasthmaclinicalcenters.com/',
         permanent: true,
       },
 

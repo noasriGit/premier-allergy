@@ -69,8 +69,8 @@ export default function Header() {
     { href: '/meet-our-doctor', label: 'Meet Our Doctor' },
     { href: '/#ethos-section', label: 'Locations' },
     { href: '/immunotherapy', label: 'Immunotherapy' },
-    { href: 'https://portal.allergyandasthmaclinicalcenters.com/general/index.php', label: 'Patient Portal' },
-    { href: 'https://portal.allergyandasthmaclinicalcenters.com/general/index.php', label: 'Online Payment', emphasized: true },
+    { href: 'https://portal.allergyandasthmaclinicalcenters.com/', label: 'Patient Portal' },
+    { href: 'https://portal.allergyandasthmaclinicalcenters.com/', label: 'Online Payment', emphasized: true },
   ]
 
   return (

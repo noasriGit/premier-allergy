@@ -124,7 +124,12 @@ export default function HeroSection() {
               className={styles.primaryButton} 
               target="_blank" 
               rel="noopener noreferrer"
-              onClick={() => gtag_report_conversion('https://portal.allergyandasthmaclinicalcenters.com/abs')}
+              onClick={(e) => {
+                e.preventDefault();
+                const url = 'https://portal.allergyandasthmaclinicalcenters.com/abs';
+                gtag_report_conversion(undefined);
+                window.open(url, '_blank', 'noopener,noreferrer');
+              }}
             >
               <span>Book An Appointment</span>
               <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
@@ -136,7 +141,7 @@ export default function HeroSection() {
               View Our Services
             </Link>
             
-            <a href="https://portal.allergyandasthmaclinicalcenters.com/general/index.php" className={styles.tertiaryButton} target="_blank" rel="noopener noreferrer">
+            <a href="https://portal.allergyandasthmaclinicalcenters.com/" className={styles.tertiaryButton} target="_blank" rel="noopener noreferrer">
               <span>Online Payment</span>
               <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

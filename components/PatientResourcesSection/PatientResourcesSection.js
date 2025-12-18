@@ -22,7 +22,7 @@ export default function PatientResourcesSection() {
       description: 'Access your medical records, test results, and appointment history',
       image: '/resources/portal.png',
       alt: 'Patient Portal Icon',
-      href: 'https://allergyandasthmaclinicalcenters.imscare.com/abs/login',
+      href: 'https://portal.allergyandasthmaclinicalcenters.com/',
       icon: '🏥'
     },
     {
@@ -115,11 +115,11 @@ export default function PatientResourcesSection() {
             Need help? Our team is here to assist you with any questions.
           </p>
           <a 
-            href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" 
+            href="https://portal.allergyandasthmaclinicalcenters.com/" 
             className={styles.ctaButton} 
             target="_blank" 
             rel="noopener noreferrer"
-            onClick={() => gtag_report_conversion('https://allergyandasthmaclinicalcenters.imscare.com/abs/login')}
+            onClick={() => gtag_report_conversion('https://portal.allergyandasthmaclinicalcenters.com/')}
           >
             Contact Us
           </a>

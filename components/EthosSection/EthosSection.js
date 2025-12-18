@@ -357,7 +357,12 @@ export default function EthosSection() {
                       aria-label={`Schedule appointment at ${location.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => gtag_report_conversion('https://portal.allergyandasthmaclinicalcenters.com/abs')}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const url = 'https://portal.allergyandasthmaclinicalcenters.com/abs';
+                        gtag_report_conversion(undefined);
+                        window.open(url, '_blank', 'noopener,noreferrer');
+                      }}
                     >
                       <span aria-hidden="true">📅</span>
                       Schedule Visit

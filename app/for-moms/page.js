@@ -139,7 +139,7 @@ export default function ForMomsPage() {
             <div className={styles.contactCard}>
               <h3>Patient Portal</h3>
               <p>Access your child&apos;s medical records and communicate with our team</p>
-              <a href="https://allergyandasthmaclinicalcenters.imscare.com/abs/login" target="_blank" rel="noopener noreferrer" className={styles.portalButton}>
+              <a href="https://portal.allergyandasthmaclinicalcenters.com/" target="_blank" rel="noopener noreferrer" className={styles.portalButton}>
                 Access Patient Portal →
               </a>
             </div>
