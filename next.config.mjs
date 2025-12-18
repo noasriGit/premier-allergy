@@ -161,6 +161,11 @@ const nextConfig = {
 
       // Locations
       {
+        source: '/locations',
+        destination: '/#ethos-section',
+        permanent: true,
+      },
+      {
         source: '/office-hours-locations',
         destination: '/#ethos-section',
         permanent: true,
