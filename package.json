@@ -12,6 +12,7 @@
     "clean": "rm -rf .next node_modules && npm install"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "framer-motion": "^12.23.0",
     "next": "^16.0.10",
     "next-seo": "6.8.0",

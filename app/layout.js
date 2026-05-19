@@ -4,6 +4,7 @@ import Script from 'next/script'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { EB_Garamond } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 const ebGaramond = EB_Garamond({ 
   subsets: ['latin'], 
@@ -288,6 +289,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
