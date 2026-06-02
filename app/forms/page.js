@@ -87,12 +87,12 @@ export default function FormsPage() {
                 <p>Complete registration packet for adult patients including registration form, financial policies, and consent forms</p>
               </div>
               <a 
-                href="/forms/ADULT NEW PATIENT FORMS.pdf" 
+                href="/forms/adult-new-patient-forms.pdf" 
                 className={styles.downloadButton}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                📥 Download PDF
+                📄 View PDF
               </a>
             </div>
 
@@ -102,12 +102,12 @@ export default function FormsPage() {
                 <p>Complete registration packet for pediatric patients including registration form, financial policies, and consent forms</p>
               </div>
               <a 
-                href="/forms/PEDIATRIC NEW PATIENT FORMS.pdf" 
+                href="/forms/pediatric-new-patient-forms.pdf" 
                 className={styles.downloadButton}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                📥 Download PDF
+                📄 View PDF
               </a>
             </div>
           </div>

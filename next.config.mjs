@@ -117,6 +117,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/forms/ADULT NEW PATIENT FORMS.pdf',
+        destination: '/forms/adult-new-patient-forms.pdf',
+        permanent: true,
+      },
+      {
+        source: '/forms/PEDIATRIC NEW PATIENT FORMS.pdf',
+        destination: '/forms/pediatric-new-patient-forms.pdf',
+        permanent: true,
+      },
+      {
         source: '/locations.html',
         destination: '/#ethos-section',
         permanent: true,
