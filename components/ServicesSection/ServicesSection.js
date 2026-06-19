@@ -90,7 +90,11 @@ export default function ServicesSection() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className={styles.imageOverlay}>
-                  <Link href={service.href} className={styles.learnMore}>
+                  <Link
+                    href={service.href}
+                    className={styles.learnMore}
+                    aria-label={`Learn more about ${service.title}`}
+                  >
                     Learn More
                     <span aria-hidden="true">→</span>
                   </Link>

@@ -10,8 +10,16 @@ export default function Footer() {
             <h4>Premier Allergy & Asthma Centers</h4>
             <p>Providing expert care in Maryland and Virginia for allergy and asthma patients.</p>
             <div className={styles.contactInfo}>
-              <p>Email: info@allergycurecenters.com</p>
-              <p>Phone: (1-855-528-7348)</p>
+              <p>
+                Email:{' '}
+                <a href="mailto:info@allergycurecenters.com">info@allergycurecenters.com</a>
+              </p>
+              <p>
+                Phone:{' '}
+                <a href="tel:18555287348" aria-label="Call us at 1-855-528-7348">
+                  (1-855-528-7348)
+                </a>
+              </p>
             </div>
             
             <div className={styles.followUsSection}>
@@ -22,7 +30,7 @@ export default function Footer() {
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
-                <a href="https://www.google.com/maps?cid=17958389911517306801&_ga=2.1331121.1084745702.1516208594-1639186704.1516208594" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Google+">
+                <a href="https://www.google.com/maps?cid=17958389911517306801&_ga=2.1331121.1084745702.1516208594-1639186704.1516208594" target="_blank" rel="noopener noreferrer" aria-label="View our location on Google Maps (opens in new tab)">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                     <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -92,6 +100,7 @@ export default function Footer() {
                 <li><Link href="/insurance">Insurance</Link></li>
                 <li><Link href="/#ethos-section">Locations</Link></li>
                 <li><Link href="/portal">Patient Portal</Link></li>
+                <li><Link href="/accessibility">Accessibility</Link></li>
               </ul>
             </div>
           </div>
@@ -99,6 +108,9 @@ export default function Footer() {
   
         <div className={styles.bottomBar}>
           <p>&copy; {new Date().getFullYear()} Premier Allergy and Asthma Centers</p>
+          <p>
+            <Link href="/accessibility">Accessibility</Link>
+          </p>
         </div>
       </footer>
     );

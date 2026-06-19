@@ -92,7 +92,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} aria-labelledby="hero-heading">
       {/* Background with subtle gradient */}
       <div className={styles.background}>
         <div className={styles.gradientOverlay}></div>
@@ -102,11 +102,11 @@ export default function HeroSection() {
       <div className={styles.content}>
         <div className={styles.textSection}>
           <div className={styles.badge}>
-            <span className={styles.badgeIcon}>🏆</span>
+            <span className={styles.badgeIcon} aria-hidden="true">🏆</span>
             <span>Board-Certified Specialists</span>
           </div>
           
-          <h1 className={styles.heading}>
+          <h1 id="hero-heading" className={styles.heading}>
             <span className={styles.headingLine1}>Expert Allergy &</span>
             <span className={styles.headingLine2}>Asthma Care</span>
             <span className={styles.headingLine3}>That Actually Works</span>
@@ -124,6 +124,7 @@ export default function HeroSection() {
               className={styles.primaryButton} 
               target="_blank" 
               rel="noopener noreferrer"
+              aria-label="Book an appointment (opens in new tab)"
               onClick={(e) => {
                 e.preventDefault();
                 const url = 'https://portal.allergyandasthmaclinicalcenters.com/abs';
@@ -132,7 +133,7 @@ export default function HeroSection() {
               }}
             >
               <span>Book An Appointment</span>
-              <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
+              <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
@@ -141,9 +142,9 @@ export default function HeroSection() {
               View Our Services
             </Link>
             
-            <a href="https://portal.allergyandasthmaclinicalcenters.com/" className={styles.tertiaryButton} target="_blank" rel="noopener noreferrer">
+            <a href="https://portal.allergyandasthmaclinicalcenters.com/" className={styles.tertiaryButton} target="_blank" rel="noopener noreferrer" aria-label="Online payment (opens in new tab)">
               <span>Online Payment</span>
-              <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none">
+              <svg className={styles.buttonArrow} viewBox="0 0 24 24" fill="none" aria-hidden="true">
                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                </svg>
             </a>
@@ -182,7 +183,7 @@ export default function HeroSection() {
 
 
       {/* Scroll Indicator */}
-      <div className={styles.scrollIndicator}>
+      <div className={styles.scrollIndicator} aria-hidden="true">
         <div className={styles.scrollText}>Discover More</div>
         <div className={styles.scrollArrow}></div>
       </div>

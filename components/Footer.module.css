@@ -86,6 +86,11 @@
 }
 
 .bottomBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
   margin-top: 1.5rem;
   border-top: 1px solid #ddd;

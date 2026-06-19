@@ -147,7 +147,21 @@ a:hover {
 }
 
 /* Focus styles for accessibility */
-:focus {
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
@@ -252,9 +266,9 @@ input, textarea, select {
   transition: border-color var(--transition-fast);
 }
 
-input:focus, textarea:focus, select:focus {
-  outline: none;
+input:focus-visible, textarea:focus-visible, select:focus-visible {
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color);
 }
 
 /* Utility classes */

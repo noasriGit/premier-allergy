@@ -1,14 +1,19 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Header.module.css'
 
+function dropdownId(label) {
+  return `nav-dropdown-${label.toLowerCase().replace(/\s+/g, '-')}`
+}
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  
   const [openDropdown, setOpenDropdown] = useState(null)
+  const hamburgerRef = useRef(null)
+  const mobileMenuRef = useRef(null)
 
   const handleToggleDropdown = (dropdownLabel) => {
     setOpenDropdown(openDropdown === dropdownLabel ? null : dropdownLabel)
@@ -22,10 +27,61 @@ export default function Header() {
     setOpenDropdown(null)
   }
 
-  const closeAllMenus = () => {
+  const closeAllMenus = useCallback(() => {
     setMenuOpen(false)
     setOpenDropdown(null)
-  }
+  }, [])
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        closeAllMenus()
+        hamburgerRef.current?.focus()
+        return
+      }
+
+      if (e.key === 'Tab' && mobileMenuRef.current) {
+        const focusable = mobileMenuRef.current.querySelectorAll(
+          'a[href], button:not([disabled])'
+        )
+        if (focusable.length === 0) return
+
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    requestAnimationFrame(() => {
+      const firstFocusable = mobileMenuRef.current?.querySelector('a[href], button:not([disabled])')
+      firstFocusable?.focus()
+    })
+
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [menuOpen, closeAllMenus])
+
+  useEffect(() => {
+    if (!openDropdown || menuOpen) return
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setOpenDropdown(null)
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [openDropdown, menuOpen])
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -69,19 +125,45 @@ export default function Header() {
     { href: '/meet-our-doctor', label: 'Meet Our Doctor' },
     { href: '/#ethos-section', label: 'Locations' },
     { href: '/immunotherapy', label: 'Immunotherapy' },
-    { href: 'https://portal.allergyandasthmaclinicalcenters.com/', label: 'Patient Portal' },
-    { href: 'https://portal.allergyandasthmaclinicalcenters.com/', label: 'Online Payment', emphasized: true },
+    {
+      href: 'https://portal.allergyandasthmaclinicalcenters.com/',
+      label: 'Patient Portal',
+      externalLabel: 'Patient Portal (opens in new tab)',
+    },
+    {
+      href: 'https://portal.allergyandasthmaclinicalcenters.com/',
+      label: 'Online Payment',
+      emphasized: true,
+      externalLabel: 'Online Payment (opens in new tab)',
+    },
   ]
+
+  const renderExternalLink = (link, className, isMobile = false) => (
+    <a
+      href={link.href}
+      className={className}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={link.externalLabel || `${link.label} (opens in new tab)`}
+      onClick={() => {
+        closeAllMenus()
+        if (link.href.includes('imscare.com')) {
+          gtag_report_conversion(link.href)
+        }
+      }}
+    >
+      {link.label}
+    </a>
+  )
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        {/* Logo */}
         <div className={styles.logo}>
           <Link href="/" onClick={closeAllMenus}>
             <Image
               src="/logo.png"
-              alt="Premier Allergy and Asthma logo"
+              alt="Premier Allergy and Asthma Centers"
               width={260}
               height={60}
               className={styles.logoImage}
@@ -90,62 +172,72 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Contact Info */}
         <div className={styles.contact}>
-          <a href="tel:18555287348" className={styles.phone}>
+          <a href="tel:18555287348" className={styles.phone} aria-label="Call us at 1-855-528-7348">
             (1-855-528-7348)
           </a>
           <span className={styles.cta}>Call and make an appointment</span>
-          <a 
-            href="tel:18555287348" 
+          <a
+            href="tel:18555287348"
             className={styles.callNowButton}
+            aria-label="Call now to make an appointment at 1-855-528-7348"
             onClick={() => {
-              gtag_report_phone_conversion();
+              gtag_report_phone_conversion()
             }}
           >
             Call Now
           </a>
         </div>
 
-        {/* Hamburger Icon */}
         <button
+          ref={hamburgerRef}
           type="button"
           className={styles.hamburger}
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          ☰
+          <span aria-hidden="true">{menuOpen ? '✕' : '☰'}</span>
         </button>
       </div>
 
-      {/* Desktop Nav */}
       <nav className={styles.navbar} aria-label="Primary navigation">
         <ul className={styles.navList}>
           {navLinks.map((link) =>
             link.dropdown ? (
-              <li 
-                key={link.label} 
+              <li
+                key={link.label}
                 className={styles.navItem}
                 onMouseEnter={() => handleMouseEnter(link.label)}
                 onMouseLeave={handleMouseLeave}
               >
                 <button
+                  type="button"
                   className={styles.navLink}
                   onClick={() => handleToggleDropdown(link.label)}
                   aria-haspopup="true"
                   aria-expanded={openDropdown === link.label}
+                  aria-controls={dropdownId(link.label)}
                 >
                   {link.label}
                   <span
                     className={`${styles.arrow} ${openDropdown === link.label ? styles.arrowUp : styles.arrowDown}`}
+                    aria-hidden="true"
                   />
                 </button>
-                <ul className={`${styles.dropdownMenu} ${openDropdown === link.label ? styles.showDropdown : ''}`}>
+                <ul
+                  id={dropdownId(link.label)}
+                  className={`${styles.dropdownMenu} ${openDropdown === link.label ? styles.showDropdown : ''}`}
+                  role="menu"
+                  aria-label={`${link.label} submenu`}
+                >
                   {link.dropdown.map((sub) => (
-                    <li key={sub.href}>
-                      <Link 
-                        href={sub.href} 
+                    <li key={sub.href} role="none">
+                      <Link
+                        href={sub.href}
                         className={styles.dropdownLink}
+                        role="menuitem"
                         onClick={closeAllMenus}
                       >
                         {sub.label}
@@ -155,25 +247,15 @@ export default function Header() {
                 </ul>
               </li>
             ) : (
-              <li key={link.href} className={styles.navItem}>
+              <li key={link.href + link.label} className={styles.navItem}>
                 {link.href.startsWith('http') ? (
-                  <a 
-                    href={link.href} 
-                    className={`${styles.navLink} ${link.emphasized ? styles.emphasizedLink : ''}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => {
-                      closeAllMenus();
-                      if (link.href.includes('imscare.com')) {
-                        gtag_report_conversion(link.href);
-                      }
-                    }}
-                  >
-                    {link.label}
-                  </a>
+                  renderExternalLink(
+                    link,
+                    `${styles.navLink} ${link.emphasized ? styles.emphasizedLink : ''}`
+                  )
                 ) : (
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className={`${styles.navLink} ${link.emphasized ? styles.emphasizedLink : ''}`}
                     onClick={closeAllMenus}
                   >
@@ -186,31 +268,44 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* Mobile Menu */}
       {menuOpen && (
-        <nav className={styles.mobileMenu} aria-label="Mobile navigation">
+        <nav
+          ref={mobileMenuRef}
+          id="mobile-navigation"
+          className={styles.mobileMenu}
+          aria-label="Mobile navigation"
+        >
           <ul className={styles.mobileNavList}>
             {navLinks.map((link) =>
               link.dropdown ? (
                 <li key={link.label} className={styles.mobileNavItem}>
                   <button
+                    type="button"
                     onClick={() => handleToggleDropdown(link.label)}
                     className={styles.mobileLink}
                     aria-haspopup="true"
                     aria-expanded={openDropdown === link.label}
+                    aria-controls={`mobile-${dropdownId(link.label)}`}
                   >
                     {link.label}
                     <span
                       className={`${styles.arrow} ${openDropdown === link.label ? styles.arrowUp : styles.arrowDown}`}
+                      aria-hidden="true"
                     />
                   </button>
                   {openDropdown === link.label && (
-                    <ul className={styles.mobileDropdown}>
+                    <ul
+                      id={`mobile-${dropdownId(link.label)}`}
+                      className={styles.mobileDropdown}
+                      role="menu"
+                      aria-label={`${link.label} submenu`}
+                    >
                       {link.dropdown.map((sub) => (
-                        <li key={sub.href}>
-                          <Link 
-                            href={sub.href} 
+                        <li key={sub.href} role="none">
+                          <Link
+                            href={sub.href}
                             className={styles.mobileSubLink}
+                            role="menuitem"
                             onClick={closeAllMenus}
                           >
                             {sub.label}
@@ -221,26 +316,17 @@ export default function Header() {
                   )}
                 </li>
               ) : (
-                <li key={link.href} className={styles.mobileNavItem}>
+                <li key={link.href + link.label} className={styles.mobileNavItem}>
                   {link.href.startsWith('http') ? (
-                    <a 
-                      href={link.href} 
-                      className={`${styles.mobileLink} ${link.emphasized ? styles.emphasizedMobileLink : ''}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => {
-                        closeAllMenus();
-                        if (link.href.includes('imscare.com')) {
-                          gtag_report_conversion(link.href);
-                        }
-                      }}
-                    >
-                      {link.label}
-                    </a>
+                    renderExternalLink(
+                      link,
+                      `${styles.mobileLink} ${link.emphasized ? styles.emphasizedMobileLink : ''}`,
+                      true
+                    )
                   ) : (
-                    <Link 
-                      href={link.href} 
-                      className={`${styles.mobileLink} ${link.emphasized ? styles.emphasizedMobileLink : ''}`} 
+                    <Link
+                      href={link.href}
+                      className={`${styles.mobileLink} ${link.emphasized ? styles.emphasizedMobileLink : ''}`}
                       onClick={closeAllMenus}
                     >
                       {link.label}

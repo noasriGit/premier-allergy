@@ -17,7 +17,7 @@ export default function ServicesGrid({ services, categories }) {
           transition={{ duration: 0.6, delay: index * 0.1 }}
           whileHover={{ y: -5 }}
         >
-          <Link href={`/services/${service.slug}`} className={styles.cardLink}>
+          <Link href={`/services/${service.slug}`} className={styles.cardLink} aria-label={`Learn more about ${service.title}`}>
             <div className={styles.imageWrapper}>
               <Image
                 src={service.image}
@@ -40,7 +40,7 @@ export default function ServicesGrid({ services, categories }) {
             <div className={styles.cardContent}>
               <h2 className={styles.cardTitle}>{service.title}</h2>
               <p className={styles.cardDesc}>{service.description}</p>
-              <div className={styles.learnMore}>
+              <div className={styles.learnMore} aria-hidden="true">
                 Learn More →
               </div>
             </div>

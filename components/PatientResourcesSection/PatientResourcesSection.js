@@ -119,9 +119,10 @@ export default function PatientResourcesSection() {
             className={styles.ctaButton} 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label="Access patient portal for assistance (opens in new tab)"
             onClick={() => gtag_report_conversion('https://portal.allergyandasthmaclinicalcenters.com/')}
           >
-            Contact Us
+            Access Patient Portal
           </a>
         </div>
       </div>

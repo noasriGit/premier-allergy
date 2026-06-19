@@ -322,6 +322,14 @@
   font: inherit;
   display: inline-flex; /* to align arrow inline */
   align-items: center;
+  cursor: pointer;
+}
+
+.navItem > button:focus-visible,
+.mobileNavItem > button:focus-visible,
+.hamburger:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
   .dropdownLink {

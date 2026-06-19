@@ -18,7 +18,7 @@ export default function ServicePage({
         <meta name="description" content={metaDescription} />
       </Head>
 
-      <main className="service-card" role="main">
+      <div className="service-card">
         {mainImageUrl && (
           <img
             src={mainImageUrl}

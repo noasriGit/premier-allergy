@@ -91,6 +91,7 @@ export default function FormsPage() {
                 className={styles.downloadButton}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="View adult new patient forms PDF (opens in new tab)"
               >
                 📄 View PDF
               </a>
@@ -106,6 +107,7 @@ export default function FormsPage() {
                 className={styles.downloadButton}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="View pediatric new patient forms PDF (opens in new tab)"
               >
                 📄 View PDF
               </a>

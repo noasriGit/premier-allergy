@@ -6,7 +6,7 @@ export const metadata = {
   export default function AboutPage() {
     return (
       <div>
-        <h2>About Us</h2>
+        <h1>About Us</h1>
         <p>We’re a family-run allergy & asthma clinic dedicated to personalized care.</p>
       </div>
     );

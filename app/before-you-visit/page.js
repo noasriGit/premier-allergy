@@ -129,7 +129,8 @@ export default function BeforeYouVisitPage() {
               <p>
                 If you have medical insurance, please make sure you verify your benefits under your 
                 insurance plan with your insurance carrier prior to your visit at PAAC. For a list of 
-                insurance carriers we participate with <a href="/insurance">click here</a>.
+                insurance carriers we participate with, see our{' '}
+                <Link href="/insurance">insurance information page</Link>.
               </p>
             </div>
 

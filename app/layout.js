@@ -284,6 +284,9 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Header />
         <main id="main-content" tabIndex="-1">
           {children}
